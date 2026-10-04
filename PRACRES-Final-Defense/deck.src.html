@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Susulung king Pyalung</title>
+<meta name="description" content="Final defense deck, Psychology Group, Holy Angel University 12 - Aaron">
+<style>
+@font-face{font-family:"Poppins";font-weight:400;font-style:normal;src:url({{asset:poppins-400.woff2}}) format("woff2")}
+@font-face{font-family:"Poppins";font-weight:500;font-style:normal;src:url({{asset:poppins-500.woff2}}) format("woff2")}
+@font-face{font-family:"Poppins";font-weight:600;font-style:normal;src:url({{asset:poppins-600.woff2}}) format("woff2")}
+@font-face{font-family:"Poppins";font-weight:700;font-style:normal;src:url({{asset:poppins-700.woff2}}) format("woff2")}
+@font-face{font-family:"Poppins";font-weight:400;font-style:italic;src:url({{asset:poppins-400i.woff2}}) format("woff2")}
+@font-face{font-family:"Poppins";font-weight:500;font-style:italic;src:url({{asset:poppins-500i.woff2}}) format("woff2")}
+@font-face{font-family:"Archivo Black";font-weight:400;font-style:normal;src:url({{asset:archivo-black.woff2}}) format("woff2")}
+
+:root{
+  --paper:#FBF7F6;
+  --paper-2:#F4ECEE;
+  --ink:#3A1424;
+  --muted:#6B4A57;
+  --line:#E3D2D9;
+  --maroon:#5A1E33;
+  --maroon-deep:#2E0F1C;
+  --rose:#8C2F5A;
+  --rose-mid:#B0507F;
+  --pink:#E8A6CB;
+  --pink-pale:#F6E3EC;
+  --teal:#1E6F6A;      /* interpretation, support */
+  --teal-pale:#E2F0EE;
+  --amber:#94560C;     /* requires attention */
+  --amber-pale:#FBEBD6;
+  --plum:#5E4389;      /* relationships, context */
+  --plum-pale:#ECE6F4;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:#14070D;color:var(--ink);font-family:"Poppins",system-ui,sans-serif;overflow:hidden}
+
+/* ---------- stage ---------- */
+.deck{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center center;transform:translate(-50%,-50%) scale(var(--scale,.5))}
+.slide{position:absolute;inset:0;width:1920px;height:1080px;background:var(--paper);overflow:hidden;display:none;font-size:30px;line-height:1.35}
+.slide.active{display:block;animation:slideIn .38s var(--ease)}
+@keyframes slideIn{from{opacity:0}to{opacity:1}}
+html:not(.js) body{overflow:auto;background:#ddd}
+html:not(.js) .deck{position:static;transform:none;margin:24px auto}
+html:not(.js) .slide{display:block;position:relative;margin-bottom:24px}
+
+/* soft diagonal light, echoing the proposal deck */
+.slide.light::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    linear-gradient(120deg,transparent 58%,rgba(214,226,245,.55) 58%,rgba(214,226,245,.55) 62%,transparent 62%),
+    linear-gradient(120deg,transparent 66%,rgba(214,226,245,.35) 66%,rgba(214,226,245,.35) 71%,transparent 71%),
+    linear-gradient(120deg,transparent 80%,rgba(214,226,245,.3) 80%,rgba(214,226,245,.3) 83%,transparent 83%)}
+
+/* ---------- chrome (light slides) ---------- */
+.band-top{position:absolute;left:0;right:0;top:0;height:52px;background:var(--maroon)}
+.band-top::before{content:"";position:absolute;left:0;top:0;width:700px;height:84px;
+  background:linear-gradient(90deg,#E9A3C8,#F8C8E8 55%,#E7A1C6);clip-path:polygon(0 0,100% 0,90% 100%,0 100%)}
+.band-top::after{content:"";position:absolute;left:250px;top:0;width:160px;height:84px;background:rgba(255,255,255,.35);clip-path:polygon(0 0,40% 0,100% 100%,60% 100%)}
+.band-bot{position:absolute;left:0;right:0;bottom:0;height:48px;background:var(--maroon)}
+.band-bot::before{content:"";position:absolute;right:0;bottom:0;width:600px;height:90px;
+  background:linear-gradient(90deg,#E7A1C6,#F8C8E8 55%,#E9A3C8);clip-path:polygon(10% 0,100% 0,100% 100%,0 100%)}
+.band-bot::after{content:"";position:absolute;right:300px;bottom:0;width:150px;height:90px;background:rgba(255,255,255,.35);clip-path:polygon(0 0,40% 0,100% 100%,60% 100%)}
+
+.speaker{position:absolute;right:56px;top:0;height:52px;display:flex;align-items:center;gap:12px;color:#fff;font-size:24px;font-weight:500;letter-spacing:.3px;transition:opacity .3s}
+.speaker::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--pink)}
+.speaker b{font-weight:700}
+.speaker.off{opacity:0}
+
+.brand{position:absolute;left:96px;top:96px;display:flex;align-items:center;gap:14px}
+.seal{width:84px;height:84px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px rgba(90,30,51,.15)}
+.brand-text{margin-left:10px;color:var(--rose);font-weight:600;font-size:24px;line-height:1.35}
+.kicker{position:absolute;right:96px;top:112px;font-size:24px;font-weight:600;letter-spacing:.4px;color:#fff;background:var(--maroon);padding:10px 24px;border-radius:999px;box-shadow:0 0 0 3px var(--pink)}
+.kicker.k1{background:var(--teal)}.kicker.k2{background:var(--plum)}.kicker.k3{background:var(--rose)}
+
+.title{position:absolute;left:96px;right:96px;top:196px;font-family:"Archivo Black",sans-serif;font-weight:400;font-size:64px;line-height:1.05;text-transform:uppercase;letter-spacing:.5px;
+  background:linear-gradient(90deg,#6E1F42 0%,#9C3F6C 50%,#C0679A 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(3px 4px 2px rgba(58,20,36,.28))}
+
+.content{position:absolute;left:96px;right:96px;top:300px;bottom:118px}
+.source{position:absolute;left:96px;right:620px;bottom:66px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:24px;line-height:1.3;color:var(--muted)}
+.counter{position:absolute;left:96px;bottom:0;height:48px;display:flex;align-items:center;color:#fff;font-size:24px;font-weight:600;letter-spacing:1px}
+
+/* ---------- step machinery ---------- */
+[data-at]{transition:opacity .42s var(--ease),transform .42s var(--ease)}
+.pending{opacity:0;transform:translateY(14px);pointer-events:none}
+.focusable{transition:box-shadow .35s var(--ease),transform .35s var(--ease),border-color .35s var(--ease),background-color .35s var(--ease)}
+
+/* ---------- shared bits ---------- */
+.card{background:#fff;border:2px solid var(--line);border-radius:22px;padding:28px 32px}
+.card-dark{background:var(--maroon);color:#fff;border-radius:22px;padding:30px 40px;box-shadow:inset 0 0 0 4px rgba(232,166,203,.55)}
+.tag{display:inline-block;font-size:22px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 14px;border-radius:999px;color:#fff;background:var(--rose)}
+.tag.t1{background:var(--teal)}.tag.t2{background:var(--plum)}.tag.t3{background:var(--rose)}
+.small{font-size:24px;line-height:1.35;color:var(--muted)}
+.ital{font-style:italic}
+
+/* ============ SLIDE 1: title ============ */
+.s1{background:radial-gradient(ellipse at 50% 45%,#4A1A2E 0%,#2E0F1C 55%,#1E0912 100%);color:#fff}
+.s1 .screen{position:absolute;left:470px;top:300px;width:980px;height:480px;border-radius:30px;border:3px solid rgba(232,166,203,.9);
+  background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
+  box-shadow:0 0 90px rgba(232,166,203,.33),inset 0 0 60px rgba(232,166,203,.12);
+  transition:left .9s var(--ease),top .9s var(--ease),width .9s var(--ease),height .9s var(--ease),border-color .9s,box-shadow .9s}
+.s1 .hook{position:absolute;left:470px;top:300px;width:980px;height:480px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:26px;text-align:center;transition:opacity .35s}
+.s1 .hook p{font-size:52px;font-weight:600;line-height:1.15}
+.s1 .hook .q1{color:#9FDCD5}.s1 .hook .q2{color:#F6C98E}
+.s1 .tbody{position:absolute;inset:0;opacity:0;transition:opacity .6s .45s}
+.s1:not([data-step="0"]) .screen{left:36px;top:36px;width:1848px;height:1008px;border-color:rgba(232,166,203,.35);box-shadow:0 0 0 rgba(0,0,0,0),inset 0 0 120px rgba(232,166,203,.08)}
+.s1:not([data-step="0"]) .hook{opacity:0}
+.s1:not([data-step="0"]) .tbody{opacity:1}
+.s1 .brand-text{color:#fff}
+.s1 .brand{top:84px}
+.s1 .eyebrow{position:absolute;left:110px;top:226px;font-size:26px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--pink)}
+.s1 .big{position:absolute;left:104px;top:270px;font-family:"Archivo Black",sans-serif;font-size:124px;line-height:1;text-transform:uppercase;letter-spacing:1px;
+  background:linear-gradient(180deg,#FFFFFF 0%,#F8D3E7 55%,#E8A6CB 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 0 rgba(140,47,90,.85)) drop-shadow(0 12px 22px rgba(0,0,0,.4))}
+.s1 .sub{position:absolute;left:110px;top:552px;width:1500px;font-size:40px;font-weight:500;line-height:1.28;color:#F7E6EE}
+.s1 .rule{position:absolute;left:110px;top:682px;width:1000px;height:3px;background:linear-gradient(90deg,var(--pink),rgba(232,166,203,0))}
+.s1 .pill{position:absolute;left:110px;top:716px;font-size:26px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:8px 26px;border-radius:999px;border:3px solid var(--pink);color:#fff}
+.s1 .names{position:absolute;left:110px;top:790px;width:1680px;display:grid;grid-template-columns:repeat(3,1fr);row-gap:12px;column-gap:40px;font-size:30px;color:#fff}
+.s1 .names li{list-style:none;display:flex;align-items:center;gap:14px}
+.s1 .names li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--pink);flex:none}
+
+/* ============ SLIDE 2: purpose ============ */
+.s2 .purpose{display:flex;gap:44px;align-items:center}
+.s2 .purpose .label{flex:none;width:260px;font-size:26px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--pink);line-height:1.25}
+.s2 .purpose p{font-size:36px;font-weight:500;line-height:1.32}
+.s2 .scope{margin-top:20px;font-size:24px;color:var(--muted);display:flex;align-items:center;gap:12px}
+.s2 .scope::before{content:"";width:28px;height:3px;background:var(--rose-mid)}
+.s2 .sops{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.s2 .sop{border-radius:22px;padding:26px 30px 30px;border:3px solid var(--line);background:#fff}
+.s2 .sop h3{margin:16px 0 10px;font-size:40px;line-height:1.12;font-weight:700}
+.s2 .sop p{font-size:28px;line-height:1.36;color:var(--muted)}
+.s2 .sop.c1 h3{color:var(--teal)}.s2 .sop.c2 h3{color:var(--plum)}.s2 .sop.c3 h3{color:var(--rose)}
+.s2 .sop.focus{transform:translateY(-6px)}
+.s2 .sop.c1.focus{border-color:var(--teal);box-shadow:0 0 0 6px var(--teal-pale),0 22px 40px rgba(30,111,106,.18)}
+.s2 .sop.c2.focus{border-color:var(--plum);box-shadow:0 0 0 6px var(--plum-pale),0 22px 40px rgba(94,67,137,.18)}
+.s2 .sop.c3.focus{border-color:var(--rose);box-shadow:0 0 0 6px var(--pink-pale),0 22px 40px rgba(140,47,90,.18)}
+
+/* ============ SLIDE 3: method ============ */
+.s3 .design{font-size:30px;font-weight:600;color:var(--rose);margin-bottom:22px}
+.s3 .design span{color:var(--ink);font-weight:500}
+.s3 .cols{display:grid;grid-template-columns:560px 1fr 470px;gap:36px;height:560px}
+.s3 .col{display:flex;flex-direction:column}
+.s3 .col h4{font-size:24px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.s3 .col h4 i{font-style:normal;width:38px;height:38px;border-radius:50%;background:var(--maroon);color:#fff;display:grid;place-items:center;font-size:22px;letter-spacing:0}
+.s3 .people{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 10px;padding:26px 20px 18px}
+.s3 .person{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:22px;font-weight:600;color:var(--maroon)}
+.s3 .person svg{width:96px;height:96px}
+.s3 .person.solid svg .fig{fill:var(--maroon)}
+.s3 .person.written svg .fig{fill:none;stroke:var(--maroon);stroke-width:3.5}
+.s3 .person.written{color:var(--amber)}
+.s3 .people-note{font-size:24px;line-height:1.38;color:var(--ink);padding:0 4px}
+.s3 .people-note b{color:var(--rose)}
+.s3 .flow{display:flex;flex-direction:column;gap:0}
+.s3 .stage{display:flex;gap:18px;align-items:flex-start;background:#fff;border:2px solid var(--line);border-radius:18px;padding:18px 24px}
+.s3 .stage .ico{flex:none;width:52px;height:52px;border-radius:14px;background:var(--pink-pale);display:grid;place-items:center}
+.s3 .stage .ico svg{width:30px;height:30px;stroke:var(--rose);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.s3 .stage b{display:block;font-size:30px;line-height:1.2;color:var(--maroon)}
+.s3 .stage span{display:block;font-size:24px;line-height:1.35;color:var(--muted)}
+.s3 .arrow{height:34px;display:grid;place-items:center}
+.s3 .arrow svg{width:26px;height:30px;stroke:var(--rose-mid);stroke-width:3;fill:none}
+.s3 .counts{display:flex;flex-direction:column;gap:16px}
+.s3 .count{display:flex;align-items:center;gap:22px;border-radius:18px;padding:16px 26px;background:var(--maroon);color:#fff;box-shadow:inset 0 0 0 3px rgba(232,166,203,.5)}
+.s3 .count b{font-family:"Archivo Black",sans-serif;font-weight:400;font-size:62px;line-height:1;min-width:130px;color:#FBD3E8}
+.s3 .count span{font-size:26px;line-height:1.25}
+.s3 .count small{display:block;font-size:22px;color:#F0C6DC}
+.s3 .units{font-size:22px;color:var(--muted);line-height:1.35;margin-top:4px}
+
+/* ============ SLIDE 4: theme board ============ */
+.s4 .board{display:grid;grid-template-columns:1fr 1fr 1.28fr;gap:28px;align-items:stretch}
+.s4 .col{background:#fff;border:3px solid var(--line);border-radius:22px;padding:24px 26px 20px;position:relative}
+.s4 .col.focus.c1{border-color:var(--teal);box-shadow:0 0 0 7px var(--teal-pale)}
+.s4 .col.focus.c2{border-color:var(--plum);box-shadow:0 0 0 7px var(--plum-pale)}
+.s4 .col.focus.c3{border-color:var(--rose);box-shadow:0 0 0 7px var(--pink-pale)}
+.s4 .head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.s4 .col h3{font-size:31px;line-height:1.15;margin:12px 0 0;font-weight:700}
+.s4 .c1 h3{color:var(--teal)}.s4 .c2 h3{color:var(--plum)}.s4 .c3 h3{color:var(--rose)}
+.s4 .units{display:flex;gap:5px;align-items:center}
+.s4 .units i{width:18px;height:18px;border-radius:4px;display:block}
+.s4 .c1 .units i{background:var(--teal)}.s4 .c2 .units i{background:var(--plum)}.s4 .c3 .units i{background:var(--rose)}
+.s4 .units em{font-style:normal;font-size:22px;color:var(--muted);margin-left:8px;font-weight:600}
+.s4 ol{list-style:none;margin-top:10px;border-top:2px solid var(--line);padding-top:10px}
+.s4 li{display:flex;gap:14px;font-size:28px;line-height:1.24;padding:5px 0;font-weight:500}
+.s4 li b{flex:none;width:52px;font-weight:700;color:var(--muted)}
+.s4 .grp{font-size:21px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--rose-mid);padding:6px 0 0}
+.s4 .differ{margin-top:16px;justify-content:flex-end;font-size:24px;color:var(--amber);font-weight:600;display:flex;align-items:center;gap:10px}
+.s4 .differ::before{content:"";width:14px;height:14px;transform:rotate(45deg);background:var(--amber)}
+
+/* ============ SLIDE 5: SOP 1 conclusion ============ */
+.s5 .wrap{display:grid;grid-template-columns:1040px 1fr;gap:44px;height:100%}
+.s5 .map{position:relative;height:640px}
+.s5 .map svg.links{position:absolute;inset:0;width:100%;height:100%}
+.s5 .map svg.links line{stroke:#C99AB0;stroke-width:3;stroke-dasharray:2 9;stroke-linecap:round}
+.s5 .node{position:absolute;transform:translate(-50%,-50%);width:236px;padding:16px 10px;border-radius:18px;text-align:center;background:#fff;border:3px solid var(--line);font-size:30px;font-weight:600;color:var(--maroon)}
+.s5 .node small{display:block;font-size:21px;font-weight:500;color:var(--muted);line-height:1.25;margin-top:2px}
+.s5 .node.pending{transform:translate(-50%,-50%) scale(.92)}
+.s5 .core{position:absolute;left:520px;top:330px;transform:translate(-50%,-50%);width:290px;padding:24px 10px;border-radius:24px;text-align:center;background:var(--maroon);color:#fff;font-family:"Archivo Black",sans-serif;font-size:40px;letter-spacing:1px;text-transform:uppercase;box-shadow:inset 0 0 0 4px rgba(232,166,203,.6),0 16px 30px rgba(58,20,36,.25)}
+.s5 .clock{position:absolute;left:0;top:0;display:flex;align-items:center;gap:14px;font-size:24px;font-weight:600;color:var(--muted)}
+.s5 .clock svg{width:44px;height:44px;stroke:var(--muted);fill:none;stroke-width:2.6;stroke-linecap:round}
+.s5 .points{display:flex;flex-direction:column;gap:18px}
+.s5 .pt{border-left:8px solid var(--line);padding:12px 0 12px 24px;font-size:32px;line-height:1.28;font-weight:500;border-radius:4px}
+.s5 .pt b{color:var(--teal)}
+.s5 .pt.focus{border-left-color:var(--teal);background:linear-gradient(90deg,var(--teal-pale),rgba(226,240,238,0))}
+.s5 .diverge{margin-top:10px;border:2px dashed var(--amber);border-radius:16px;padding:14px 20px;font-size:23px;line-height:1.35;color:var(--ink);background:rgba(251,235,214,.55)}
+.s5 .diverge b{color:var(--amber);display:block;font-size:22px;letter-spacing:1px;text-transform:uppercase}
+
+/* ============ SLIDE 6: SOP 2 conclusion ============ */
+.s6 .wrap{display:grid;grid-template-columns:1000px 1fr;gap:70px;height:100%}
+.s6 .net{position:relative;width:1000px;height:600px;margin-top:10px}
+.s6 .net svg{position:absolute;inset:0;width:100%;height:100%}
+.s6 .net svg line{stroke:#B9A7CF;stroke-width:4}
+.s6 .fac{position:absolute;width:400px;height:200px;background:#fff;border:3px solid var(--plum);border-radius:22px;padding:20px 26px}
+.s6 .fac .id{font-size:21px;font-weight:700;color:var(--plum);letter-spacing:1px}
+.s6 .fac h4{font-size:33px;line-height:1.15;color:var(--ink);margin:2px 0 6px}
+.s6 .fac p{font-size:25px;line-height:1.3;color:var(--muted)}
+.s6 .f1{left:0;top:0}.s6 .f2{left:600px;top:0}.s6 .f3{left:0;top:400px}.s6 .f4{left:600px;top:400px}
+.s6 .hub{position:absolute;left:400px;top:200px;width:200px;height:200px;border-radius:50%;background:var(--plum);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:25px;line-height:1.22;font-weight:600;box-shadow:0 0 0 8px var(--plum-pale)}
+.s6 .hub .id{font-size:19px;opacity:.85;letter-spacing:1px}
+.s6 .loopbox{position:relative}
+.s6 .loopbox h4{font-size:24px;letter-spacing:2px;text-transform:uppercase;color:var(--amber);font-weight:700}
+.s6 .by{font-size:22px;font-style:italic;color:var(--muted)}
+.s6 .loop{position:relative;width:648px;height:540px;margin-top:4px}
+.s6 .loop svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.s6 .loop path{fill:none;stroke:#D8B98E;stroke-width:5;stroke-linecap:round}
+.s6 .loop .center{position:absolute;left:324px;top:270px;transform:translate(-50%,-50%);width:250px;text-align:center;font-size:22px;font-style:italic;color:var(--muted);line-height:1.3}
+.s6 .ln{position:absolute;transform:translate(-50%,-50%);width:236px;min-height:86px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 14px;border-radius:16px;background:#fff;border:3px solid #E2CDB0;font-size:24px;line-height:1.22;font-weight:600;color:var(--ink)}
+.s6 .n1{left:324px;top:90px}.s6 .n2{left:524px;top:270px}.s6 .n3{left:324px;top:450px}.s6 .n4{left:124px;top:270px}
+.s6 .caveat{font-size:23px;color:var(--amber);font-weight:600;line-height:1.3;margin-top:4px}
+.s6[data-step="1"] .ln{animation:lit .7s var(--ease) forwards;animation-delay:calc(var(--k) * 1.15s)}
+.s6[data-step="1"] .loop path{stroke-dasharray:260;stroke-dashoffset:260;animation:draw .6s var(--ease) forwards;animation-delay:calc(var(--k) * 1.15s + .55s)}
+.s6[data-step="all"] .ln{background:var(--amber-pale);border-color:var(--amber)}
+@keyframes lit{0%{background:#fff;border-color:#E2CDB0;transform:translate(-50%,-50%) scale(1)}45%{transform:translate(-50%,-50%) scale(1.06)}100%{background:var(--amber-pale);border-color:var(--amber);transform:translate(-50%,-50%) scale(1)}}
+@keyframes draw{to{stroke-dashoffset:0;stroke:var(--amber)}}
+.s6[data-step="all"] .loop path{stroke:var(--amber)}
+
+/* ============ SLIDE 7: SOP 3 conclusion ============ */
+.s7 .wrap{display:grid;grid-template-columns:1080px 1fr;gap:48px;height:100%}
+.s7 .left{display:flex;flex-direction:column;gap:20px}
+.s7 .venn{position:relative;height:236px}
+.s7 .vc{position:absolute;top:0;width:560px;height:200px;border-radius:24px;padding:22px 30px;transition:left .8s var(--ease),right .8s var(--ease)}
+.s7 .vc h4{font-size:24px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+.s7 .vc p{font-size:29px;line-height:1.28;font-weight:500;margin-top:6px}
+.s7 .ben{left:0;background:rgba(30,111,106,.12);border:3px solid var(--teal);padding-right:150px}
+.s7 .ben h4{color:var(--teal)}
+.s7 .con{right:0;background:rgba(148,86,12,.12);border:3px solid var(--amber);padding-left:150px;text-align:right}
+.s7 .con h4{color:var(--amber)}
+.s7:not([data-step="0"]) .ben{left:30px}
+.s7:not([data-step="0"]) .con{right:30px}
+.s7 .both{position:absolute;left:50%;top:206px;transform:translateX(-50%);font-size:24px;font-weight:700;color:var(--maroon);white-space:nowrap;display:flex;align-items:center;gap:10px}
+.s7 .both::before{content:"";width:16px;height:16px;border-radius:4px;background:linear-gradient(135deg,var(--teal) 50%,var(--amber) 50%)}
+.s7 .both.pending{transform:translateX(-50%) translateY(10px)}
+.s7 .note{font-size:22px;color:var(--muted);text-align:center;margin-top:-6px}
+.s7 .chal{display:flex;gap:18px;align-items:flex-start;border-left:8px solid var(--amber);background:rgba(251,235,214,.6);border-radius:6px 16px 16px 6px;padding:14px 22px;font-size:27px;line-height:1.3}
+.s7 .chal b{flex:none;color:var(--amber);font-size:23px;letter-spacing:1.4px;text-transform:uppercase;padding-top:3px}
+.s7 .strat h5{font-size:23px;letter-spacing:1.4px;text-transform:uppercase;color:var(--rose);font-weight:700;margin-bottom:10px}
+.s7 .steps{display:grid;grid-template-columns:1fr 46px 1fr 46px 1fr;align-items:stretch}
+.s7 .stp{background:#fff;border:3px solid var(--rose);border-radius:18px;padding:14px 18px}
+.s7 .stp b{display:block;font-size:27px;line-height:1.15;color:var(--maroon)}
+.s7 .stp span{display:block;font-size:22px;line-height:1.3;color:var(--muted);margin-top:4px}
+.s7 .chev{display:grid;place-items:center}
+.s7 .chev svg{width:30px;height:36px;stroke:var(--rose-mid);stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.s7 .quote{position:relative;height:100%;border-radius:26px;background:linear-gradient(160deg,#4A1A2E,#2E0F1C);color:#fff;padding:60px 52px 44px;display:flex;flex-direction:column;justify-content:center;box-shadow:inset 0 0 0 4px rgba(232,166,203,.45)}
+.s7 .quote .mark{position:absolute;left:40px;top:6px;font-family:"Archivo Black",sans-serif;font-size:190px;line-height:1;color:var(--pink);opacity:.55}
+.s7 .quote blockquote{font-size:47px;line-height:1.24;font-weight:500}
+.s7 .quote blockquote em{font-style:normal;color:#FBD3E8;font-weight:700}
+.s7 .quote cite{display:block;margin-top:30px;font-style:normal;font-size:26px;color:var(--pink);font-weight:600}
+
+/* ============ SLIDE 8: recommendations ============ */
+.s8 .wrap{display:grid;grid-template-columns:1.32fr 1fr;gap:34px;height:100%}
+.s8 .panel{background:#fff;border:3px solid var(--line);border-radius:24px;padding:26px 34px}
+.s8 .panel.focus{border-color:var(--rose);box-shadow:0 0 0 7px var(--pink-pale),0 22px 40px rgba(140,47,90,.14)}
+.s8 .panel.fut.focus{border-color:var(--plum);box-shadow:0 0 0 7px var(--plum-pale),0 22px 40px rgba(94,67,137,.14)}
+.s8 .panel h3{font-family:"Archivo Black",sans-serif;font-weight:400;font-size:38px;text-transform:uppercase;letter-spacing:.5px;color:var(--rose);margin-bottom:12px}
+.s8 .fut h3{color:var(--plum)}
+.s8 .row{display:grid;grid-template-columns:250px 1fr;gap:20px;padding:13px 0;border-top:2px solid var(--line)}
+.s8 .row b{font-size:26px;line-height:1.25;color:var(--maroon)}
+.s8 .row span{font-size:28px;line-height:1.3}
+.s8 .fut ul{list-style:none}
+.s8 .fut li{display:flex;gap:16px;padding:12px 0;border-top:2px solid var(--line);font-size:27px;line-height:1.3}
+.s8 .fut li i{flex:none;width:14px;height:14px;margin-top:12px;border-radius:50%;background:var(--plum)}
+.s8 .fut li b{color:var(--plum)}
+
+/* ============ SLIDE 9: thanks ============ */
+.s9{background:radial-gradient(ellipse at 30% 40%,#4A1A2E 0%,#2E0F1C 60%,#1E0912 100%);color:#fff}
+.s9 .band{position:absolute;left:0;top:280px;width:1240px;height:330px;background:linear-gradient(90deg,#8C2F5A,#B0507F 55%,#D17FAA);box-shadow:0 20px 40px rgba(0,0,0,.3)}
+.s9 .brand{top:84px}
+.s9 .brand-text{color:#fff}
+.s9 .ty{position:absolute;left:96px;top:318px;font-family:"Archivo Black",sans-serif;font-size:150px;line-height:1;text-transform:uppercase;letter-spacing:1px;
+  background:linear-gradient(180deg,#FFFFFF 0%,#FBE2EF 60%,#F2BCD9 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 0 rgba(90,30,51,.75))}
+.s9 .welcome{position:absolute;left:100px;top:500px;font-size:50px;font-weight:600;color:#fff}
+.s9 .group{position:absolute;left:100px;top:648px;font-size:26px;color:#F3D3E3;font-weight:500}
+.s9 .refs{position:absolute;left:100px;top:716px;width:1060px}
+.s9 .refs h4{font-size:22px;letter-spacing:2px;text-transform:uppercase;color:var(--pink);margin-bottom:10px}
+.s9 .refs p{font-size:24px;line-height:1.33;color:#F7E6EE;padding-left:36px;text-indent:-36px;margin-bottom:10px}
+.s9 .qr{position:absolute;right:110px;top:150px;width:560px;padding:30px;border-radius:30px;background:#fff;box-shadow:0 0 0 6px rgba(232,166,203,.55),0 24px 50px rgba(0,0,0,.35);text-align:center}
+.s9 .qr img{width:500px;height:500px;display:block}
+.s9 .qr b{display:inline-block;margin-top:18px;background:var(--maroon);color:#fff;font-size:30px;letter-spacing:2px;text-transform:uppercase;padding:10px 34px;border-radius:14px}
+.s9 .qr span{display:block;margin-top:12px;font-size:23px;color:var(--muted)}
+.s9 .laus{position:absolute;right:110px;bottom:70px;width:560px;text-align:center;font-size:28px;font-style:italic;color:var(--pink)}
+
+/* ---------- UI (never projected unless summoned) ---------- */
+.ui{font-family:"Poppins",system-ui,sans-serif}
+.controls{position:fixed;right:18px;bottom:18px;display:flex;gap:6px;padding:6px;border-radius:14px;background:rgba(20,7,13,.78);backdrop-filter:blur(6px);opacity:0;transform:translateY(8px);transition:opacity .25s,transform .25s;z-index:10}
+.controls.show{opacity:1;transform:none}
+.controls button{all:unset;cursor:pointer;color:#fff;font-size:14px;font-weight:600;min-width:36px;height:36px;padding:0 10px;border-radius:10px;display:grid;place-items:center}
+.controls button:hover,.controls button:focus-visible{background:rgba(232,166,203,.25)}
+.controls .pos{color:#F3D3E3;font-weight:500;padding:0 10px;display:flex;align-items:center;font-size:14px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:rgba(20,7,13,.88);color:#fff;font-size:15px;padding:10px 18px;border-radius:12px;opacity:0;transition:opacity .25s;z-index:12;pointer-events:none}
+.toast.show{opacity:1}
+.overlay{position:fixed;inset:0;background:rgba(20,7,13,.86);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:20;padding:24px}
+.overlay.show{display:flex}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,280px));gap:14px}
+.grid button{all:unset;cursor:pointer;background:#fff;border-radius:14px;padding:16px 18px;color:var(--ink);box-shadow:inset 0 0 0 3px transparent}
+.grid button:hover,.grid button:focus-visible{box-shadow:inset 0 0 0 3px var(--rose)}
+.grid button.cur{box-shadow:inset 0 0 0 3px var(--pink);background:var(--pink-pale)}
+.grid b{display:block;font-family:"Archivo Black",sans-serif;font-weight:400;font-size:26px;color:var(--rose)}
+.grid span{display:block;font-size:16px;font-weight:600;line-height:1.3}
+.grid small{display:block;font-size:13px;color:var(--muted);margin-top:4px}
+.help{background:#fff;color:var(--ink);border-radius:18px;padding:26px 30px;max-width:560px;width:100%;font-size:15px}
+.help h2{font-size:20px;margin-bottom:12px;color:var(--rose)}
+.help table{border-collapse:collapse;width:100%}
+.help td{padding:6px 0;border-top:1px solid var(--line);vertical-align:top}
+.help td:first-child{width:46%;font-weight:600;color:var(--maroon)}
+.help kbd{font-family:inherit;font-size:13px;background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:1px 7px}
+.help p{margin-top:12px;color:var(--muted);font-size:13px}
+
+/* ---------- motion & print ---------- */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .s6[data-step="1"] .ln{background:var(--amber-pale);border-color:var(--amber)}
+  .s6[data-step="1"] .loop path{stroke:var(--amber);stroke-dasharray:none}
+}
+@media print{
+  @page{size:1920px 1080px;margin:0}
+  html,body{height:auto;overflow:visible;background:#fff}
+  .deck{position:static;transform:none!important;width:1920px;height:auto}
+  .slide{display:block!important;position:relative;break-after:page;page-break-after:always;animation:none!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .pending{opacity:1!important;transform:none!important}
+  .ui{display:none!important}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<main class="deck" id="deck" aria-live="polite">
+
+<!-- 1 ─ Title -->
+<section class="slide s1" data-title="Title" aria-label="Slide 1: title">
+  <div class="screen" aria-hidden="true"></div>
+  <div class="hook">
+    <p class="q1">What does gaming provide?</p>
+    <p class="q2">What does it displace?</p>
+  </div>
+  <div class="tbody">
+    <div class="brand">
+      <img class="seal" src="{{asset:seal-hau.png}}" alt="Holy Angel University seal">
+      <img class="seal" src="{{asset:seal-bed.png}}" alt="HAU Basic Education seal">
+      <div class="brand-text">Holy Angel University<br>12 - Aaron</div>
+    </div>
+    <div class="eyebrow">Practical Research 1 · Final Defense</div>
+    <h1 class="big">Susulung<br>king Pyalung</h1>
+    <p class="sub">Describing the Lived Professional Experiences of Psychologists in Luzon on Adolescent Digital Well-Being in Gaming Environments</p>
+    <div class="rule"></div>
+    <div class="pill">Presented by: Psychology Group</div>
+    <ul class="names">
+      <li>Balanon, Princess Angeli O.</li>
+      <li>Canlas, Rinoa Heart J.</li>
+      <li>Guevarra, Rhianna J.</li>
+      <li>Bano, Matthew Angelo D.</li>
+      <li>Flores, Chase Jarish C.</li>
+      <li>Ocampo, Michan Calyx S.</li>
+      <li>Regala, Leon Vito S.</li>
+      <li>Sazon, Michelle Anne J.</li>
+      <li>Sumang, Wohan Jace P.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 2 ─ Purpose & SSOPs -->
+<section class="slide light s2" data-title="Purpose &amp; research questions" data-kicker="GSOP &amp; SSOPs" aria-label="Slide 2: purpose and research questions">
+  <h2 class="title">Purpose &amp; research questions</h2>
+  <div class="content">
+    <div class="card-dark purpose">
+      <div class="label">Purpose of the study</div>
+      <div>
+        <p>To describe the lived professional experiences of psychologists in Luzon on adolescent digital well-being in gaming environments.</p>
+      </div>
+    </div>
+    <div class="scope">Scope: psychologists' professional accounts, practicing in Luzon</div>
+    <div class="sops">
+      <div class="sop c1 focusable" data-focus="1">
+        <span class="tag t1">SSOP 1</span>
+        <h3>Encounter and interpret</h3>
+        <p>How do they describe encountering and interpreting adolescent digital well-being in gaming?</p>
+      </div>
+      <div class="sop c2 focusable" data-focus="2">
+        <span class="tag t2">SSOP 2</span>
+        <h3>Weigh surrounding factors</h3>
+        <p>How do they describe the factors that shape it?</p>
+      </div>
+      <div class="sop c3 focusable" data-focus="3">
+        <span class="tag t3">SSOP 3</span>
+        <h3>Respond in practice</h3>
+        <p>(a) Benefits and concerns, (b) challenges, and (c) strategies.</p>
+      </div>
+    </div>
+  </div>
+  <p class="source">Statement of the problem, current Luzon version.</p>
+</section>
+
+<!-- 3 ─ Method -->
+<section class="slide light s3" data-title="Method" data-kicker="Methodology" aria-label="Slide 3: method">
+  <h2 class="title">Method</h2>
+  <div class="content">
+    <p class="design">Design: <span>qualitative phenomenology</span></p>
+    <div class="cols">
+      <div class="col">
+        <h4><i>1</i>Participants</h4>
+        <div class="card" style="padding:0 26px 22px">
+          <div class="people" role="img" aria-label="Six participants: five interviews and one written questionnaire">
+            <div class="person solid"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="fig" cx="32" cy="19" r="12"/><path class="fig" d="M9 60c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg>Interview</div>
+            <div class="person solid"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="fig" cx="32" cy="19" r="12"/><path class="fig" d="M9 60c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg>Interview</div>
+            <div class="person solid"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="fig" cx="32" cy="19" r="12"/><path class="fig" d="M9 60c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg>Interview</div>
+            <div class="person solid"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="fig" cx="32" cy="19" r="12"/><path class="fig" d="M9 60c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg>Interview</div>
+            <div class="person solid"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="fig" cx="32" cy="19" r="12"/><path class="fig" d="M9 60c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg>Interview</div>
+            <div class="person written"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="fig" cx="32" cy="19" r="11"/><path class="fig" d="M10.5 58.5c0-12.5 9.7-20 21.5-20s21.5 7.5 21.5 20z"/></svg>Written</div>
+          </div>
+          <p class="people-note"><b>6</b> PRC-licensed psychologists practicing in Luzon: <b>5</b> in-depth interviews (in person or video call), <b>1</b> written questionnaire.</p>
+        </div>
+      </div>
+      <div class="col" data-at="1">
+        <h4><i>2</i>Analysis</h4>
+        <div class="flow">
+          <div class="stage"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h3"/></svg></div><div><b>Transcripts</b><span>Transcribed manually, checked against the recordings</span></div></div>
+          <div class="arrow"><svg viewBox="0 0 26 30"><path d="M13 2v24M4 18l9 9 9-9"/></svg></div>
+          <div class="stage"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 13h7v7h-7z"/><path d="M13 7h7M4 17h7"/></svg></div><div><b>Codes</b><span>Generated from the data, then organized with the bioecological model (Bronfenbrenner &amp; Morris, 2007)</span></div></div>
+          <div class="arrow"><svg viewBox="0 0 26 30"><path d="M13 2v24M4 18l9 9 9-9"/></svg></div>
+          <div class="stage"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 4.5-8 4.5-8-4.5z"/><path d="M4 12l8 4.5 8-4.5M4 16.5l8 4.5 8-4.5"/></svg></div><div><b>Themes</b><span>Six-phase thematic analysis (Braun &amp; Clarke, 2006)</span></div></div>
+        </div>
+      </div>
+      <div class="col" data-at="2">
+        <h4><i>3</i>Dataset</h4>
+        <div class="counts">
+          <div class="count"><b>191</b><span>coded extracts<small>passages from the six accounts</small></span></div>
+          <div class="count"><b>86</b><span>distinct code labels<small>initial codes</small></span></div>
+          <div class="count"><b>15</b><span>themes<small>4 · 5 · 6 per SSOP</small></span></div>
+        </div>
+        <p class="units">Three different units, not a conversion rate.</p>
+      </div>
+    </div>
+  </div>
+  <p class="source">Written response: no live follow-up. Counts describe this dataset only, not prevalence.</p>
+</section>
+
+<!-- 4 ─ Findings map -->
+<section class="slide light s4" data-title="Findings: 15 themes" data-kicker="Chapter 3 · Themes" aria-label="Slide 4: findings, fifteen themes">
+  <h2 class="title">Fifteen themes, three questions</h2>
+  <div class="content">
+    <div class="board">
+      <div class="col c1 focusable" data-focus="0">
+        <div class="head"><span class="tag t1">SSOP 1</span><div class="units" aria-label="4 themes"><i></i><i></i><i></i><i></i><em>4 themes</em></div></div>
+        <h3>Encounter and interpret</h3>
+        <ol>
+          <li><b>1.1</b>Gaming behind other concerns</li>
+          <li><b>1.2</b>Function over frequency</li>
+          <li><b>1.3</b>Balance and control</li>
+          <li><b>1.4</b>Understanding the gamer</li>
+        </ol>
+      </div>
+      <div class="col c2 focusable" data-focus="0">
+        <div class="head"><span class="tag t2">SSOP 2</span><div class="units" aria-label="5 themes"><i></i><i></i><i></i><i></i><i></i><em>5 themes</em></div></div>
+        <h3>Weigh surrounding factors</h3>
+        <ol>
+          <li><b>2.1</b>Emotions, motives, basic needs</li>
+          <li><b>2.2</b>Family: stress and support</li>
+          <li><b>2.3</b>Online peers: belonging and risk</li>
+          <li><b>2.4</b>Content, cost, public image</li>
+          <li><b>2.5</b>Interlocking factors; individual differences</li>
+        </ol>
+      </div>
+      <div class="col c3 focusable" data-focus="1">
+        <div class="head"><span class="tag t3">SSOP 3</span><div class="units" aria-label="6 themes"><i></i><i></i><i></i><i></i><i></i><i></i><em>6 themes</em></div></div>
+        <h3>Respond in practice</h3>
+        <ol>
+          <li class="grp">(a) Benefits and concerns</li>
+          <li><b>3.1</b>Relief, connection, skills</li>
+          <li><b>3.2</b>Disrupted daily functioning</li>
+          <li><b>3.3</b>Benefits and concerns coexist</li>
+          <li class="grp">(b) Challenges</li>
+          <li><b>3.4</b>Parents and adolescent commitment</li>
+          <li class="grp">(c) Strategies</li>
+          <li><b>3.5</b>Understand before acting</li>
+          <li><b>3.6</b>Gradual regulation, alternatives, psychoeducation</li>
+        </ol>
+      </div>
+    </div>
+    <p class="differ">Accounts also differed: see 1.3, 1.4, 3.2, 3.3</p>
+  </div>
+  <p class="source">Findings; Coding Workbook v3.1. Squares count themes per SSOP, not importance.</p>
+</section>
+
+<!-- 5 ─ Conclusion SSOP 1 -->
+<section class="slide light s5" data-title="Conclusion, SSOP 1" data-kicker="Chapter 4 · Conclusion, SSOP 1" data-kclass="k1" aria-label="Slide 5: conclusion for SSOP 1">
+  <h2 class="title">Interpret gaming within daily life</h2>
+  <div class="content">
+    <div class="wrap">
+      <div class="map" role="img" aria-label="Gaming at the center, surrounded by sleep, school, mood, relationships and purpose">
+        <svg class="links" viewBox="0 0 1040 640" aria-hidden="true">
+          <g data-at="1"><line x1="520" y1="330" x2="520" y2="80"/><line x1="520" y1="330" x2="890" y2="250"/><line x1="520" y1="330" x2="770" y2="540"/><line x1="520" y1="330" x2="270" y2="540"/><line x1="520" y1="330" x2="150" y2="250"/></g>
+        </svg>
+        <div class="node" style="left:520px;top:80px" data-at="1">Sleep<small>rest, late nights</small></div>
+        <div class="node" style="left:890px;top:250px" data-at="1">School<small>attendance, focus</small></div>
+        <div class="node" style="left:770px;top:540px" data-at="1">Mood<small>stress, irritability</small></div>
+        <div class="node" style="left:270px;top:540px" data-at="1">Relationships<small>family, friends</small></div>
+        <div class="node" style="left:150px;top:250px" data-at="1">Purpose<small>what gaming does</small></div>
+        <div class="core">Gaming</div>
+        <div class="clock"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 6.5V12l3.5 2.5"/></svg>Hours alone are insufficient</div>
+      </div>
+      <div class="points">
+        <p class="pt focusable" data-focus="1">Read gaming by its <b>function and daily-life effects</b>, not screen time alone.</p>
+        <p class="pt focusable" data-focus="2">Digital well-being is <b>balance and control</b>, not the absence of gaming.</p>
+        <p class="pt focusable" data-focus="3">Look beyond the game to the adolescent's <b>experiences and needs</b>.</p>
+        <div class="diverge"><b>One account differed</b>Long passive screen use may itself shape the developing brain (Interviewee 4). Kept as a reported view; not tested here.</div>
+      </div>
+    </div>
+  </div>
+  <p class="source">Findings, Themes 1.1–1.4.</p>
+</section>
+
+<!-- 6 ─ Conclusion SSOP 2 -->
+<section class="slide light s6" data-title="Conclusion, SSOP 2" data-kicker="Chapter 4 · Conclusion, SSOP 2" data-kclass="k2" aria-label="Slide 6: conclusion for SSOP 2">
+  <h2 class="title">No factor acts alone</h2>
+  <div class="content">
+    <div class="wrap">
+      <div class="net" role="img" aria-label="Four factor clusters connected to each other and to a center labelled interlocking, weight differs per adolescent">
+        <svg viewBox="0 0 1000 600" aria-hidden="true">
+          <line x1="200" y1="100" x2="800" y2="100"/><line x1="200" y1="500" x2="800" y2="500"/>
+          <line x1="200" y1="100" x2="200" y2="500"/><line x1="800" y1="100" x2="800" y2="500"/>
+          <line x1="400" y1="200" x2="600" y2="400"/><line x1="600" y1="200" x2="400" y2="400"/>
+        </svg>
+        <div class="fac f1"><span class="id">2.1</span><h4>The adolescent</h4><p>Emotions, motives, basic needs</p></div>
+        <div class="fac f2"><span class="id">2.2</span><h4>Family</h4><p>A source of stress and of support</p></div>
+        <div class="fac f3"><span class="id">2.3</span><h4>Online peers</h4><p>Belonging, and also risk</p></div>
+        <div class="fac f4"><span class="id">2.4</span><h4>The game itself</h4><p>Content, cost, public image</p></div>
+        <div class="hub"><span class="id">2.5</span>Interlocking; weight varies</div>
+      </div>
+      <div class="loopbox" data-at="1">
+        <h4>A cycle participants described</h4>
+        <p class="by">Described independently by Interviewees 1 and 5</p>
+        <div class="loop" role="img" aria-label="Cycle: academic or family stress, gaming for relief, late nights and school struggles, failing and more stress, back to stress">
+          <svg viewBox="0 0 648 540" aria-hidden="true">
+            <defs><marker id="ah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#94560C"/></marker></defs>
+            <path style="--k:0" d="M452.6 106.8 A200 200 0 0 1 511.9 201.6" marker-end="url(#ah)"/>
+            <path style="--k:1" d="M511.9 338.4 A200 200 0 0 1 452.6 433.2" marker-end="url(#ah)"/>
+            <path style="--k:2" d="M195.4 433.2 A200 200 0 0 1 136.1 338.4" marker-end="url(#ah)"/>
+            <path style="--k:3" d="M136.1 201.6 A200 200 0 0 1 195.4 106.8" marker-end="url(#ah)"/>
+          </svg>
+          <div class="ln n1" style="--k:0">Academic or family stress</div>
+          <div class="ln n2" style="--k:1">Gaming for relief</div>
+          <div class="ln n3" style="--k:2">Late nights, school struggles</div>
+          <div class="ln n4" style="--k:3">Failing, then more stress</div>
+        </div>
+        <p class="caveat">Pattern described by participants; causal links not tested.</p>
+      </div>
+    </div>
+  </div>
+  <p class="source">Findings, Themes 2.1–2.5. Cycle: Interviewee 1 [22:03]; Interviewee 5 [24:45].</p>
+</section>
+
+<!-- 7 ─ Conclusion SSOP 3 -->
+<section class="slide light s7" data-title="Conclusion, SSOP 3" data-kicker="Chapter 4 · Conclusion, SSOP 3" data-kclass="k3" aria-label="Slide 7: conclusion for SSOP 3">
+  <h2 class="title">Understand, then regulate</h2>
+  <div class="content">
+    <div class="wrap">
+      <div class="left">
+        <div class="venn">
+          <div class="vc ben"><h4>Reported benefits</h4><p>Relief, connection, problem-solving skills</p></div>
+          <div class="vc con"><h4>Reported concerns</h4><p>Lost sleep, self-neglect, withdrawal, online risk</p></div>
+          <div class="both" data-at="1">Often in the same adolescent</div>
+        </div>
+        <p class="note" data-at="1">Two participants reported no mixed case.</p>
+        <div class="chal" data-at="2"><b>Challenges</b><span>Parents who see gaming as the whole problem; securing the adolescent's own commitment to change.</span></div>
+        <div class="strat" data-at="2">
+          <h5>Reported strategies</h5>
+          <div class="steps">
+            <div class="stp"><b>Understand</b><span>non-judgmental, holistic</span></div>
+            <div class="chev"><svg viewBox="0 0 30 36"><path d="M8 4l14 14-14 14"/></svg></div>
+            <div class="stp"><b>Agree on a plan</b><span>the adolescent has a say</span></div>
+            <div class="chev"><svg viewBox="0 0 30 36"><path d="M8 4l14 14-14 14"/></svg></div>
+            <div class="stp"><b>Regulate gradually</b><span>small steps, offline activities, psychoeducation</span></div>
+          </div>
+        </div>
+      </div>
+      <figure class="quote" data-at="3">
+        <span class="mark" aria-hidden="true">“</span>
+        <blockquote>The goal is not to simply reduce gaming, but to <em>understand the gamer.</em></blockquote>
+        <cite>Interviewee 5, 49:26</cite>
+      </figure>
+    </div>
+  </div>
+  <p class="source">Findings, Themes 3.1–3.6. Strategies as reported; effectiveness was not measured.</p>
+</section>
+
+<!-- 8 ─ Recommendations -->
+<section class="slide light s8" data-title="Recommendations" data-kicker="Chapter 4 · Recommendations" aria-label="Slide 8: recommendations">
+  <h2 class="title">Recommendations</h2>
+  <div class="content">
+    <div class="wrap">
+      <div class="panel focusable" data-focus="0">
+        <h3>Practice</h3>
+        <div class="row"><b>Psychologists &amp; counselors</b><span>Ask about gaming at intake; assess its purpose and its effect on sleep, school and relationships.</span></div>
+        <div class="row"><b>Parents</b><span>Ask why and what they play; set limits together.</span></div>
+        <div class="row"><b>Schools</b><span>Sleep and gaming psychoeducation; offline activities that build belonging.</span></div>
+        <div class="row"><b>Adolescents</b><span>Use phone well-being settings; notice when gaming displaces sleep, meals or school.</span></div>
+      </div>
+      <div class="panel fut focusable" data-focus="1">
+        <h3>Future research</h3>
+        <ul>
+          <li><i></i><span><b>Broader sample:</b> complete the intended 10 psychologists</span></li>
+          <li><i></i><span><b>More perspectives:</b> adolescents and parents</span></li>
+          <li><i></i><span><b>Culture:</b> Kapampangan values, family responses</span></li>
+          <li><i></i><span><b>Emerging concerns:</b> doomscrolling, social media; test screen-exposure claims separately</span></li>
+          <li><i></i><span><b>Over time:</b> follow the stress, gaming, sleep-loss cycle</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="source">RA 12080 (2024): possible use in school mental-health programs; proposals are ours, not the law's.</p>
+</section>
+
+<!-- 9 ─ Thanks -->
+<section class="slide s9" data-title="References &amp; thank you" aria-label="Slide 9: references and thank you">
+  <div class="brand">
+    <img class="seal" src="{{asset:seal-hau.png}}" alt="Holy Angel University seal">
+    <img class="seal" src="{{asset:seal-bed.png}}" alt="HAU Basic Education seal">
+    <div class="brand-text">Holy Angel University<br>12 - Aaron</div>
+  </div>
+  <div class="band" aria-hidden="true"></div>
+  <h2 class="ty">Thank you.</h2>
+  <p class="welcome">We welcome your questions.</p>
+  <p class="group">Psychology Group · Susulung king Pyalung</p>
+  <div class="refs">
+    <h4>Selected references</h4>
+    <p>Braun, V., &amp; Clarke, V. (2006). Using thematic analysis in psychology. <i>Qualitative Research in Psychology, 3</i>(2), 77–101.</p>
+    <p>Bronfenbrenner, U., &amp; Morris, P. A. (2007). The bioecological model of human development. In <i>Handbook of child psychology</i> (6th ed., Vol. 1). Wiley.</p>
+    <p>Republic Act No. 12080. (2024). <i>Basic Education Mental Health and Well-Being Promotion Act.</i></p>
+  </div>
+  <div class="qr">
+    <img src="{{asset:qr-references.png}}" alt="QR code linking to the full reference list">
+    <b>References</b>
+    <span>Scan for the full reference list</span>
+  </div>
+  <p class="laus">Laus Deo Semper</p>
+</section>
+
+</main>
+
+<!-- operator UI -->
+<div class="ui controls" id="controls" role="toolbar" aria-label="Deck controls">
+  <button id="bPrev" title="Previous (Left arrow)" aria-label="Previous">‹</button>
+  <span class="pos" id="pos">1 / 9</span>
+  <button id="bNext" title="Next (Right arrow or Space)" aria-label="Next">›</button>
+  <button id="bGrid" title="Jump to slide (G)">Slides</button>
+  <button id="bPres" title="Presenter view (P)">Presenter</button>
+  <button id="bFull" title="Full screen (F)">Full screen</button>
+  <button id="bSound" title="Sound on/off (M)">Sound off</button>
+  <button id="bHelp" title="Keys (?)">?</button>
+</div>
+<div class="ui toast" id="toast" role="status"></div>
+<div class="ui overlay" id="gridOv" aria-hidden="true"><div class="grid" id="grid"></div></div>
+<div class="ui overlay" id="helpOv" aria-hidden="true">
+  <div class="help" role="dialog" aria-label="Keyboard shortcuts">
+    <h2>Operator keys</h2>
+    <table>
+      <tr><td><kbd>→</kbd> <kbd>Space</kbd> <kbd>PgDn</kbd> click</td><td>Next step or slide</td></tr>
+      <tr><td><kbd>←</kbd> <kbd>PgUp</kbd></td><td>Back one step</td></tr>
+      <tr><td><kbd>1</kbd>–<kbd>9</kbd></td><td>Jump to a slide, fully built (for Q&amp;A)</td></tr>
+      <tr><td><kbd>G</kbd></td><td>Slide picker</td></tr>
+      <tr><td><kbd>P</kbd></td><td>Presenter view with scripts and timer (second window)</td></tr>
+      <tr><td><kbd>F</kbd></td><td>Full screen</td></tr>
+      <tr><td><kbd>M</kbd></td><td>Optional opening and closing tone (off by default)</td></tr>
+      <tr><td><kbd>Home</kbd> <kbd>End</kbd></td><td>First or last slide</td></tr>
+      <tr><td><kbd>Esc</kbd></td><td>Close this panel</td></tr>
+    </table>
+    <p>Nothing advances on its own. Every scene also has a complete static state for printing and reduced-motion settings.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+document.documentElement.classList.add("js");
+
+/* ---------- timing, speakers, scripts ---------- */
+const NOTES = [
+  { speaker:"All", window:[0,20], cue:"Hook for at most 8 seconds, then one click widens the screen into the title. Silence before Rinoa starts.",
+    steps:[{label:"Hook: two questions"},{label:"Title and researchers"}],
+    scripts:[{who:"All", text:"No script. Optional skit or the two on-screen questions only."}] },
+  { speaker:"Rinoa", window:[20,60], cue:"Click once per question as Rinoa names it. All three stay visible.",
+    steps:[{label:"Purpose"},{label:"SSOP 1 highlighted"},{label:"SSOP 2 highlighted"},{label:"SSOP 3 highlighted"}],
+    scripts:[{who:"Rinoa", limit:65, flag:"Script doc said 'Pampanga'. Changed to 'Luzon' to match the current title and SSOPs.",
+      text:"I am Canlas, Rinoa Heart, and I will now present the purpose statement and research questions. Our study aims to describe the lived professional experiences of psychologists in Luzon regarding adolescent digital well-being in gaming environments. Specifically, we ask how they understand digital well-being, what factors shape it, and how they respond to gaming-related benefits and concerns, challenges, and strategies in their professional practice."}] },
+  { speaker:"Chase", window:[60,120], cue:"Click 1 reveals analysis, click 2 the counts. Pause after explaining the written questionnaire.",
+    steps:[{label:"Participants"},{label:"Analysis"},{label:"Dataset counts"}],
+    scripts:[{who:"Chase", limit:100,
+      text:"For the Methodology, I am Chase Jarish C. Flores. We utilized a qualitative phenomenological design with six PRC-licensed psychologists in Luzon via five verified interviews and one questionnaire. Data was analyzed through Braun and Clarke's thematic analysis. We generated initial codes directly from participants' transcripts before organizing them within the bioecological model framework. In total, 191 extracts yielded 86 codes and 15 central themes."}] },
+  { speaker:"Leon", window:[120,210], cue:"Leon covers SSOP 1 and 2. At 2:45, one click moves the outline to SSOP 3 for Matthew. No slide change.",
+    steps:[{label:"SSOP 1 and 2 outlined", speaker:"Leon", window:[120,165]},{label:"SSOP 3 outlined", speaker:"Matthew", window:[165,210]}],
+    scripts:[
+      {who:"Leon", limit:75, step:0, flag:"DRAFT written for this deck: Leon's section in the script doc was empty. Adapt it and time it.",
+       text:"For the themes of SSOP 1 and 2, I am Regala, Leon Vito S. Gaming rarely arrived as the referral concern; it surfaced behind sleep, school, and mood problems. Psychologists judged its function over its frequency, defined well-being as balance and control, and shifted toward understanding the gamer. For SSOP 2, they weighed the adolescent's emotions and basic needs, family, online peers, and the game's content and cost, all interlocking differently per adolescent."},
+      {who:"Matthew", limit:75, step:1, flag:"86 words against a 75-word limit. Time it aloud.",
+       text:"And for our third and final SSOP, I am Matthew Angelo D. Bano. Psychologists described gaming as a source of relief, connection, and skills, such as stress relief, belonging, and problem solving. Yet it can also disrupt sleep, self-care, and safety. Often, both appear in the same adolescent, so gaming is never labeled simply good or bad. This complexity shaped their challenges: parents who saw gaming as the whole problem, and difficulty securing the adolescent's commitment. In response, they first understood the adolescent, then used gradual regulation, offline alternatives, and psychoeducation, explaining why limits matter instead of dictating them."}] },
+  { speaker:"Michelle", window:[210,260], cue:"Click 1 as she names daily-life effects (domains appear), then one click each for balance and control, and looking beyond the game. Pause on 'function and daily-life effects'.",
+    steps:[{label:"Screen time alone"},{label:"Life domains: function and effects"},{label:"Balance and control"},{label:"Look beyond the game"}],
+    scripts:[{who:"Michelle", limit:85,
+      text:"For the conclusion of SSOP 1, I am Sazon, Michelle Anne J. The findings show that psychologists do not view adolescent gaming simply in terms of screen time. Instead, they consider the concerns behind gaming, its purpose, and its effects on daily life. Digital well-being was understood as maintaining balance and control rather than completely avoiding gaming. Overall, the findings highlight the importance of looking beyond the game itself and understanding the adolescent's experiences, needs, and circumstances that may influence their gaming behavior and well-being."}] },
+  { speaker:"Michan", window:[260,310], cue:"One click lights the loop once as Michan describes it. Pause as it returns to stress.",
+    steps:[{label:"Four factor clusters"},{label:"Loop lights once"}],
+    scripts:[{who:"Michan", limit:85, flag:"Script names 'gaming habits' and 'school and community'. The final SSOP 2 themes are the adolescent, family, online peers, and the game's content, cost and public image (2.1–2.5). The slide follows the findings; consider aligning the script.",
+      text:"For SSOP 2, I'm Ocampo, Michan Calyx S. The findings show that adolescent digital well-being within gaming environments is shaped by several interconnected factors. Family and parental influences affect adolescents' gaming experiences, while peer relationships and social interactions shape their experiences with others. Gaming habits and patterns of use also influence digital well-being, alongside the school and community environment. Overall, psychologists emphasized that gaming behavior does not exist in isolation, but is shaped by the different relationships, habits, and environments surrounding the adolescent."}] },
+  { speaker:"Wohan", window:[310,360], cue:"Click 1: cards overlap as he explains coexistence. Click 2: challenges and strategies. Click 3: the quote. Then stop; pause before and after it.",
+    steps:[{label:"Benefits and concerns"},{label:"They overlap"},{label:"Challenges and strategies"},{label:"Quote"}],
+    scripts:[{who:"Wohan", limit:85, flag:"Added 'simply' to the quote to match the transcript (Interviewee 5, 49:26). Without it the line sounds like a rejection of any reduction.",
+      text:"For SSOP 3, I'm Sumang, Wohan Jace P. Overall, psychologists usually saw gaming's benefits and concerns in the same adolescent, so they avoided calling it simply good or bad. Their main challenges were parents who often saw gaming as the whole problem, and securing the adolescent's own commitment to change. Their strategies began with understanding the adolescent, then gradual regulation, offline activities, and psychoeducation, rather than prohibition. As one psychologist put it, the goal is not to simply reduce gaming, but to understand the gamer."}] },
+  { speaker:"Princess", window:[360,410], cue:"Princess: Practice, about 25 seconds. One click moves the outline to Future research for Rhianna.",
+    steps:[{label:"Practice outlined", speaker:"Princess", window:[360,385]},{label:"Future research outlined", speaker:"Rhianna", window:[385,410]}],
+    scripts:[
+      {who:"Princess", limit:40, step:0, text:"For practice, we recommend assessing gaming beyond screen time by considering its purpose and effects. Parents and schools can set collaborative limits, promote healthy sleep, and provide offline activities, while adolescents can monitor their gaming and recognize early signs of disruption."},
+      {who:"Rhianna", limit:40, step:1, text:"For future research, we recommend expanding the sample, including adolescents and parents, and exploring emerging concerns such as doomscrolling and social media use. Studies may also examine cultural influences and how gaming, stress, and sleep patterns change over time."}] },
+  { speaker:"Rhianna", window:[410,420], cue:"Closing line, then stop. Hold this slide into Q&A. Number keys 1–9 jump back to any slide, fully built.",
+    steps:[{label:"Thank you and references"}],
+    scripts:[{who:"Rhianna / All", text:"Thank you for your time and attention. We would also like to acknowledge the references and sources that supported our study. We are now ready for your questions."}] }
+];
+
+const deck = document.getElementById("deck");
+const slides = Array.from(deck.querySelectorAll(".slide"));
+const N = slides.length;
+const state = { i:0, step:0, sound:false, t0:null, paused:0, pausedAt:null };
+
+/* ---------- chrome for light slides ---------- */
+const sealHau = slides[0].querySelector(".seal").getAttribute("src");
+const sealBed = slides[0].querySelectorAll(".seal")[1].getAttribute("src");
+slides.forEach((s, idx) => {
+  s.dataset.idx = idx;
+  if (!s.classList.contains("light")) return;
+  const frag = document.createElement("div");
+  frag.innerHTML =
+    '<div class="band-top"></div><div class="band-bot"></div>' +
+    '<div class="speaker" aria-live="polite">Presenting · <b></b></div>' +
+    '<div class="brand"><img class="seal" alt="Holy Angel University seal"><img class="seal" alt="HAU Basic Education seal"><div class="brand-text">Holy Angel University<br>12 - Aaron</div></div>' +
+    (s.dataset.kicker ? '<div class="kicker ' + (s.dataset.kclass || "") + '"></div>' : "") +
+    '<div class="counter">' + (idx + 1) + " / " + N + "</div>";
+  frag.querySelectorAll(".seal")[0].src = sealHau;
+  frag.querySelectorAll(".seal")[1].src = sealBed;
+  const k = frag.querySelector(".kicker"); if (k) k.innerHTML = s.dataset.kicker;
+  s.prepend(...Array.from(frag.childNodes));
+});
+
+/* ---------- scaling ---------- */
+function fit(){
+  const sc = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+  deck.style.setProperty("--scale", sc);
+}
+window.addEventListener("resize", fit); fit();
+
+/* ---------- step engine ---------- */
+function stepCount(i){ return NOTES[i].steps.length; }
+function applyStep(s, step){
+  s.dataset.step = String(step);
+  const all = step === "all";
+  s.querySelectorAll("[data-at]").forEach(el => {
+    el.classList.toggle("pending", !all && step < Number(el.dataset.at));
+  });
+  s.querySelectorAll("[data-focus]").forEach(el => {
+    const list = el.dataset.focus.split(",").map(Number);
+    el.classList.toggle("focus", !all && list.includes(step));
+  });
+  const sp = s.querySelector(".speaker");
+  if (sp){
+    const n = NOTES[Number(s.dataset.idx)];
+    const who = all ? null : ((n.steps[step] && n.steps[step].speaker) || n.speaker);
+    sp.classList.toggle("off", !who);
+    if (who) sp.querySelector("b").textContent = who;
+  }
+}
+function render(fromNav){
+  slides.forEach((s, idx) => {
+    const on = idx === state.i;
+    if (on && !s.classList.contains("active")){ s.classList.add("active"); }
+    if (!on) s.classList.remove("active");
+    s.setAttribute("aria-hidden", on ? "false" : "true");
+  });
+  applyStep(slides[state.i], state.step);
+  document.getElementById("pos").textContent = (state.i + 1) + " / " + N;
+  const h = "#" + (state.i + 1) + (state.step === "all" ? ".all" : state.step ? "." + state.step : "");
+  if (location.hash !== h) history.replaceState(null, "", h);
+  updatePresenter();
+}
+function go(i, step){
+  const prevI = state.i, prevStep = state.step;
+  state.i = Math.max(0, Math.min(N - 1, i));
+  state.step = step;
+  if (state.t0 === null && (state.i > 0 || (state.step !== 0 && state.step !== "all"))) startTimer();
+  // optional tones
+  if (state.sound){
+    if (state.i === 0 && prevI === 0 && prevStep === 0 && state.step === 1) tone(0);
+    if (state.i === N - 1 && prevI !== N - 1) tone(1);
+  }
+  render(true);
+}
+function next(){
+  const n = stepCount(state.i);
+  if (state.step !== "all" && state.step < n - 1) go(state.i, state.step + 1);
+  else if (state.i < N - 1) go(state.i + 1, 0);
+}
+function prev(){
+  if (state.step !== "all" && state.step > 0) go(state.i, state.step - 1);
+  else if (state.i > 0) go(state.i - 1, stepCount(state.i - 1) - 1);
+}
+function jump(i){ go(i, "all"); closeOverlays(); }
+
+/* ---------- timer ---------- */
+function startTimer(){ state.t0 = Date.now(); state.paused = 0; state.pausedAt = null; }
+function elapsed(){
+  if (state.t0 === null) return 0;
+  const end = state.pausedAt || Date.now();
+  return Math.max(0, (end - state.t0 - state.paused) / 1000);
+}
+function toggleTimer(){
+  if (state.t0 === null){ startTimer(); return; }
+  if (state.pausedAt){ state.paused += Date.now() - state.pausedAt; state.pausedAt = null; }
+  else state.pausedAt = Date.now();
+}
+function resetTimer(){ state.t0 = null; state.paused = 0; state.pausedAt = null; updatePresenter(); }
+const mmss = s => { s = Math.round(s); const sign = s < 0 ? "-" : ""; s = Math.abs(s); return sign + Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
+
+/* ---------- sound (optional, off by default) ---------- */
+let actx = null;
+function tone(kind){
+  try{
+    actx = actx || new (window.AudioContext || window.webkitAudioContext)();
+    const t = actx.currentTime;
+    const freqs = kind === 0 ? [392, 587.33] : [587.33, 392];
+    freqs.forEach((f, k) => {
+      const o = actx.createOscillator(), g = actx.createGain();
+      o.type = "sine"; o.frequency.value = f;
+      g.gain.setValueAtTime(0.0001, t + k * 0.18);
+      g.gain.exponentialRampToValueAtTime(0.06, t + k * 0.18 + 0.04);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + k * 0.18 + 1.4);
+      o.connect(g).connect(actx.destination); o.start(t + k * 0.18); o.stop(t + k * 0.18 + 1.5);
+    });
+  }catch(e){}
+}
+function toggleSound(){
+  state.sound = !state.sound;
+  document.getElementById("bSound").textContent = state.sound ? "Sound on" : "Sound off";
+  toast(state.sound ? "Opening and closing tones on" : "Sound off");
+}
+
+/* ---------- UI ---------- */
+const controls = document.getElementById("controls");
+let hideT = null;
+function showControls(){ controls.classList.add("show"); clearTimeout(hideT); hideT = setTimeout(() => controls.classList.remove("show"), 2200); }
+document.addEventListener("mousemove", showControls);
+let toastT = null;
+function toast(msg){ const t = document.getElementById("toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove("show"), 1400); }
+function fullscreen(){
+  if (!document.fullscreenElement) document.documentElement.requestFullscreen && document.documentElement.requestFullscreen().catch(()=>{});
+  else document.exitFullscreen && document.exitFullscreen();
+}
+const gridOv = document.getElementById("gridOv"), helpOv = document.getElementById("helpOv");
+function buildGrid(){
+  const g = document.getElementById("grid"); g.innerHTML = "";
+  slides.forEach((s, idx) => {
+    const b = document.createElement("button");
+    b.className = idx === state.i ? "cur" : "";
+    const who = NOTES[idx].steps.map(x => x.speaker).filter(Boolean).join(" → ") || NOTES[idx].speaker;
+    b.innerHTML = "<b>" + (idx + 1) + "</b><span>" + s.dataset.title + "</span><small>" + esc(who) + " · " + mmss(NOTES[idx].window[0]) + "–" + mmss(NOTES[idx].window[1]) + "</small>";
+    b.addEventListener("click", e => { e.stopPropagation(); jump(idx); });
+    g.appendChild(b);
+  });
+}
+function toggleOverlay(ov){
+  const open = !ov.classList.contains("show");
+  closeOverlays();
+  if (open){ if (ov === gridOv) buildGrid(); ov.classList.add("show"); ov.setAttribute("aria-hidden", "false"); const f = ov.querySelector("button"); if (f) f.focus(); }
+}
+function closeOverlays(){ [gridOv, helpOv].forEach(o => { o.classList.remove("show"); o.setAttribute("aria-hidden", "true"); }); }
+[gridOv, helpOv].forEach(o => o.addEventListener("click", closeOverlays));
+
+document.getElementById("bPrev").addEventListener("click", e => { e.stopPropagation(); prev(); });
+document.getElementById("bNext").addEventListener("click", e => { e.stopPropagation(); next(); });
+document.getElementById("bGrid").addEventListener("click", e => { e.stopPropagation(); toggleOverlay(gridOv); });
+document.getElementById("bHelp").addEventListener("click", e => { e.stopPropagation(); toggleOverlay(helpOv); });
+document.getElementById("bFull").addEventListener("click", e => { e.stopPropagation(); fullscreen(); });
+document.getElementById("bSound").addEventListener("click", e => { e.stopPropagation(); toggleSound(); });
+document.getElementById("bPres").addEventListener("click", e => { e.stopPropagation(); openPresenter(); });
+controls.addEventListener("click", e => e.stopPropagation());
+deck.addEventListener("click", () => { if (!gridOv.classList.contains("show") && !helpOv.classList.contains("show")) next(); });
+
+function onKey(e){
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+  const k = e.key;
+  const overlayOpen = gridOv.classList.contains("show") || helpOv.classList.contains("show");
+  if (k === "Escape"){ closeOverlays(); return; }
+  if (overlayOpen && (k === "Enter" || k === " ")) return;
+  if (["ArrowRight","ArrowDown","PageDown"," ","Enter"].includes(k)){ e.preventDefault(); closeOverlays(); next(); }
+  else if (["ArrowLeft","ArrowUp","PageUp","Backspace"].includes(k)){ e.preventDefault(); closeOverlays(); prev(); }
+  else if (k === "Home"){ e.preventDefault(); go(0, 0); }
+  else if (k === "End"){ e.preventDefault(); jump(N - 1); }
+  else if (/^[1-9]$/.test(k) && Number(k) <= N){ jump(Number(k) - 1); }
+  else if (k === "f" || k === "F"){ fullscreen(); }
+  else if (k === "g" || k === "G"){ toggleOverlay(gridOv); }
+  else if (k === "p" || k === "P"){ openPresenter(); }
+  else if (k === "m" || k === "M"){ toggleSound(); }
+  else if (k === "?" || k === "h" || k === "H"){ toggleOverlay(helpOv); }
+  else if (k === "t" || k === "T"){ toggleTimer(); updatePresenter(); }
+}
+document.addEventListener("keydown", onKey);
+
+/* ---------- presenter view (second window, same document origin) ---------- */
+let pw = null;
+const PSTYLE = `
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,system-ui,sans-serif;background:#1B0A12;color:#F7E6EE;padding:22px;display:grid;grid-template-columns:1.45fr 1fr;gap:18px;min-height:100vh}
+.box{background:#2A1019;border-radius:16px;padding:18px 20px}
+h1{font-size:15px;letter-spacing:1.5px;text-transform:uppercase;color:#E8A6CB;margin-bottom:8px}
+.big{font-size:30px;font-weight:700;color:#fff;line-height:1.2}
+.sub{font-size:16px;color:#D9B8C8;margin-top:4px}
+.timer{font-size:64px;font-weight:700;letter-spacing:1px;color:#fff;line-height:1}
+.pace{font-size:18px;font-weight:600;margin-top:6px}
+.ok{color:#9FDCD5}.warn{color:#F6C98E}.over{color:#FF9DA7}
+.cue{font-size:18px;line-height:1.45;color:#fff}
+.script{font-size:21px;line-height:1.55;color:#F7E6EE;margin-top:10px;white-space:pre-wrap}
+.who{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-top:14px;padding-top:12px;border-top:1px solid #4A2434}
+.who b{font-size:17px;color:#E8A6CB}
+.who span{font-size:14px;color:#D9B8C8}
+.dim{opacity:.45}
+.flag{margin-top:8px;font-size:14px;line-height:1.4;color:#1B0A12;background:#F6C98E;border-radius:8px;padding:6px 10px}
+.steps{list-style:none;margin-top:6px}
+.steps li{font-size:16px;padding:5px 0;color:#D9B8C8;display:flex;gap:8px}
+.steps li.cur{color:#fff;font-weight:700}
+.steps li.cur::before{content:"▶";color:#E8A6CB}
+.steps li:not(.cur)::before{content:"·";width:12px;text-align:center}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+button{font:inherit;font-size:15px;font-weight:600;background:#4A1A2E;color:#fff;border:0;border-radius:10px;padding:10px 14px;cursor:pointer}
+button:hover{background:#6A2A44}
+.col{display:flex;flex-direction:column;gap:14px}
+.next{font-size:17px;color:#fff}
+.kbd{font-size:13px;color:#B996A8;margin-top:10px;line-height:1.5}
+`;
+function openPresenter(){
+  if (pw && !pw.closed){ pw.focus(); return; }
+  pw = window.open("", "susulung-presenter", "width=1180,height=760");
+  if (!pw){ toast("Pop-up blocked: allow pop-ups for this file to use presenter view"); return; }
+  pw.document.open();
+  pw.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Presenter · Susulung king Pyalung</title><style>' + PSTYLE + '</style></head><body>' +
+    '<div class="col"><div class="box"><h1 id="pSlide"></h1><div class="big" id="pTitle"></div><div class="sub" id="pWin"></div><ul class="steps" id="pSteps"></ul></div>' +
+    '<div class="box"><h1>Cue</h1><div class="cue" id="pCue"></div></div>' +
+    '<div class="box" style="flex:1"><h1>Script</h1><div id="pScripts"></div></div></div>' +
+    '<div class="col"><div class="box"><h1>Elapsed</h1><div class="timer" id="pTime">0:00</div><div class="pace" id="pPace"></div>' +
+    '<div class="btns"><button id="pToggle">Start / pause</button><button id="pReset">Reset</button></div></div>' +
+    '<div class="box"><h1>Next</h1><div class="next" id="pNext"></div><div class="btns"><button id="pPrev">‹ Back</button><button id="pFwd">Next ›</button></div></div>' +
+    '<div class="box"><h1>Keys</h1><div class="kbd">→ / Space next · ← back · 1–9 jump (fully built) · T start/pause timer · G slide picker in main window · F full screen in main window.<br>The timer starts on the first click after the hook. Total talk: 7:00, then 13:00 Q&amp;A.</div></div></div>' +
+    '</body></html>');
+  pw.document.close();
+  pw.document.addEventListener("keydown", onKey);
+  pw.document.getElementById("pToggle").addEventListener("click", () => { toggleTimer(); updatePresenter(); });
+  pw.document.getElementById("pReset").addEventListener("click", resetTimer);
+  pw.document.getElementById("pPrev").addEventListener("click", prev);
+  pw.document.getElementById("pFwd").addEventListener("click", next);
+  updatePresenter();
+}
+const words = t => t.trim().split(/\s+/).filter(Boolean).length;
+function esc(t){ return String(t).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function updatePresenter(){
+  if (!pw || pw.closed) return;
+  const d = pw.document, n = NOTES[state.i], st = state.step;
+  const $ = id => d.getElementById(id);
+  if (!$("pSlide")) return;
+  $("pSlide").textContent = "Slide " + (state.i + 1) + " / " + N;
+  $("pTitle").textContent = slides[state.i].dataset.title.replace(/&amp;/g, "&");
+  const win = (st !== "all" && n.steps[st] && n.steps[st].window) || n.window;
+  $("pWin").textContent = (st === "all" ? "Q&A view: fully built" : "Speaker: " + ((n.steps[st] && n.steps[st].speaker) || n.speaker)) + " · planned " + mmss(win[0]) + "–" + mmss(win[1]);
+  $("pSteps").innerHTML = n.steps.map((s, k) => '<li class="' + (st === k ? "cur" : "") + '">' + (k + 1) + ". " + esc(s.label) + (s.speaker ? " (" + esc(s.speaker) + ")" : "") + "</li>").join("");
+  $("pCue").textContent = n.cue;
+  $("pScripts").innerHTML = n.scripts.map(sc => {
+    const dim = st !== "all" && sc.step !== undefined && sc.step !== st;
+    const w = words(sc.text);
+    const over = sc.limit && w > sc.limit;
+    return '<div class="' + (dim ? "dim" : "") + '"><div class="who"><b>' + esc(sc.who) + '</b><span' + (over ? ' class="warn"' : "") + ">" + w + " words" + (sc.limit ? " / " + sc.limit + " max" : "") + "</span></div>" +
+      (sc.flag ? '<div class="flag">' + esc(sc.flag) + "</div>" : "") + '<div class="script">' + esc(sc.text) + "</div></div>";
+  }).join("");
+  let nx;
+  if (st !== "all" && st < n.steps.length - 1) nx = "Same slide, step " + (st + 2) + ": " + n.steps[st + 1].label + (n.steps[st + 1].speaker ? " (" + n.steps[st + 1].speaker + ")" : "");
+  else if (state.i < N - 1) nx = "Slide " + (state.i + 2) + ": " + slides[state.i + 1].dataset.title.replace(/&amp;/g, "&") + " (" + NOTES[state.i + 1].speaker + ")";
+  else nx = "End of deck. Hold here for Q&A.";
+  $("pNext").textContent = nx;
+  tick();
+}
+function tick(){
+  if (!pw || pw.closed) return;
+  const d = pw.document; const t = elapsed();
+  const el = d.getElementById("pTime"); if (!el) return;
+  el.textContent = mmss(t) + (state.pausedAt ? " ❚❚" : "");
+  const n = NOTES[state.i], st = state.step;
+  const win = (st !== "all" && n.steps[st] && n.steps[st].window) || n.window;
+  const p = d.getElementById("pPace");
+  if (state.t0 === null){ p.className = "pace"; p.textContent = "Not started"; return; }
+  if (st === "all"){ p.className = "pace"; p.textContent = t > 420 ? "Q&A: " + mmss(t - 420) + " of 13:00" : "Jumped view"; return; }
+  if (t > win[1] + 5){ p.className = "pace over"; p.textContent = "Behind by " + mmss(t - win[1]); }
+  else if (t < win[0] - 5){ p.className = "pace warn"; p.textContent = "Ahead by " + mmss(win[0] - t); }
+  else { p.className = "pace ok"; p.textContent = "On pace · " + mmss(Math.max(0, win[1] - t)) + " left in this part"; }
+}
+setInterval(tick, 250);
+
+/* ---------- print: show every scene fully built ---------- */
+window.addEventListener("beforeprint", () => slides.forEach(s => applyStep(s, "all")));
+window.addEventListener("afterprint", () => render());
+
+/* ---------- start (supports #n, #n.step, #n.all) ---------- */
+(function init(){
+  const m = location.hash.match(/^#(\d+)(?:\.(\w+))?$/);
+  if (m){
+    const i = Math.min(N, Math.max(1, Number(m[1]))) - 1;
+    let st = m[2] === "all" ? "all" : Number(m[2] || 0);
+    if (st !== "all") st = Math.min(stepCount(i) - 1, Math.max(0, st || 0));
+    state.i = i; state.step = st;
+  }
+  render();
+})();
+})();
+</script>
+</body>
+</html>
