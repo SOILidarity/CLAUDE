@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inline fonts and images into deck.src.html so the deck is one offline file.
+"""Inline fonts, images and audio into deck.src.html so the deck is one offline file.
 
 Usage: python3 build.py
 Writes Susulung-king-Pyalung-Final-Defense.html next to this script.
@@ -13,7 +13,7 @@ SRC = ROOT / "deck.src.html"
 OUT = ROOT / "Susulung-king-Pyalung-Final-Defense.html"
 ASSETS = ROOT / "assets"
 
-MIME = {".woff2": "font/woff2", ".png": "image/png", ".jpg": "image/jpeg", ".svg": "image/svg+xml"}
+MIME = {".woff2": "font/woff2", ".png": "image/png", ".jpg": "image/jpeg", ".svg": "image/svg+xml", ".mp3": "audio/mpeg"}
 
 
 def data_uri(name: str) -> str:
