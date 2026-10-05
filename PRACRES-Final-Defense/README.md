@@ -28,13 +28,13 @@ Open `Susulung-king-Pyalung-Final-Defense.html` in Chrome or Edge. It is one sel
 
 ## The opening skit (slide 1)
 
-The deck opens on a lobby screen. The operator clicks the **main** screen (not the presenter window), so the browser allows sound:
+The deck opens on a lobby screen. The operator clicks the **main** screen (not the presenter window), so the browser allows sound. The skit poses the study's question and hands it to the data; it does not state a conclusion.
 
 1. **Click 1:** game sounds play over about 8 s (Welcome to Mobile Legends, Double Kill, Triple Kill, Maniac) while a clock on the phone screen races from 10:47 PM to 2:16 AM. The gamer plays; the mother walks in on "Maniac".
-2. **Click 2, the instant she grabs the phone:** "Defeat". Mother: *"Ilang oras ka na diyan?! Alas-dos na!"* Then the catchphrase appears word by word as the psychologist says it: *"Ma'am, it was never about the clock. Hindi ilang oras, kundi kung naiilang ang bata sa kanyang mundo, kaya sa laro nagtatago."* Everyone faces the panel: *"Not how many hours they play, but how uneasy they feel each day."*
-3. **Click 3:** the title appears and quiet background music starts.
+2. **Click 2, the instant she grabs the phone:** "Defeat". Mother: *"Ilang oras ka na diyan?! Alas-dos na!"* The narrator steps forward as the question appears word by word: *"Is it really about the clock? Ilang oras lang ba? O naiilang ba ang bata sa kanyang mundo, kaya sa laro nagtatago?"* Everyone, to the panel: *"Is it just how many hours they play, or how uneasy they feel each day?"*
+3. **Click 3, as the narrator says it:** *"We asked seven licensed psychologists in Luzon."* Seven figures appear, then the title arrives by itself and quiet background music starts.
 
-The music fades out automatically on slide 9 (a soft "Victory" plays) and stays off for Q&A, including any number-key jumps.
+The music fades out automatically on slide 9 and stays off for Q&A, including any number-key jumps.
 
 ## Edit it
 

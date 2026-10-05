@@ -131,6 +131,13 @@ svg [data-t][data-a="draw"].on{stroke-dashoffset:0}
 .catch .hl.on::after{transform:scaleX(1)}
 .catch .rh{color:var(--pink)}
 .catch .en{margin-top:42px;font-size:36px;font-style:italic;color:#F3D3E3;opacity:0;transform:translateY(10px);transition:opacity .7s,transform .7s}
+.bridge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:44px}
+.bridge .seven{display:flex;gap:22px}
+.bridge .seven i{display:block;width:74px;height:84px;opacity:0;transform:translateY(18px) scale(.9);transition:opacity .45s ease calc(var(--k) * 140ms),transform .45s var(--ease) calc(var(--k) * 140ms)}
+.bridge .seven svg{width:100%;height:100%;fill:var(--pink)}
+.bridge.show .seven i{opacity:1;transform:none}
+.bridge p{font-size:58px;font-weight:600;color:#fff;opacity:0;transform:translateY(12px);transition:opacity .6s ease 1s,transform .6s ease 1s}
+.bridge.show p{opacity:1;transform:none}
 .ttl .brand{left:110px;top:84px}.ttl .brand-text{color:#fff}
 .ttl .eyebrow{position:absolute;left:110px;top:228px;font-size:25px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--pink)}
 .ttl .big{position:absolute;left:104px;top:272px;font-family:"Archivo Black",sans-serif;font-weight:400;font-size:126px;line-height:.98;text-transform:uppercase;letter-spacing:1px;
@@ -261,20 +268,20 @@ svg [data-t][data-a="draw"].on{stroke-dashoffset:0}
 .s6 .mid{font-size:20px;fill:var(--muted)}
 
 /* ---------- 7 · conclusion SSOP 3 ---------- */
-.s7 .both{position:absolute;left:96px;top:262px;width:1100px;height:250px}
-.s7 .both .b{position:absolute;top:0;width:600px;height:200px;border-radius:24px;padding:24px 30px;font-size:27px;line-height:1.4;transition:transform .9s var(--ease),opacity .6s}
-.s7 .both .b h4{font-size:17px;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
-.s7 .both .ben{left:0;background:var(--teal-pale);border:3px solid var(--teal)}.s7 .both .ben h4{color:var(--teal)}
-.s7 .both .con{left:500px;background:var(--amber-pale);border:3px solid var(--amber);padding-left:132px}.s7 .both .con h4{color:var(--amber)}
-.s7 .both .b:not(.on).ben{transform:translateX(-60px);opacity:0}
-.s7 .both .b:not(.on).con{transform:translateX(60px);opacity:0}
-.s7 .both .ado{position:absolute;left:526px;top:62px;width:76px;height:76px;border-radius:50%;background:var(--maroon);display:grid;place-items:center;color:#fff;box-shadow:0 0 0 6px #fff}
-.s7 .both .ado svg{width:40px;height:40px;fill:none;stroke:#fff;stroke-width:1.8}
-.s7 .both .cap{position:absolute;left:0;top:214px;font-size:21px;color:var(--muted)}
-.s7 .chal{position:absolute;left:96px;top:540px;width:1100px;display:flex;gap:22px;align-items:baseline;padding:20px 26px;border-left:6px solid var(--amber);background:var(--amber-pale);border-radius:0 14px 14px 0}
+.s7 .venn{position:absolute;left:96px;top:250px;width:1100px;height:260px;overflow:visible}
+.s7 .venn text{font-family:"Poppins",sans-serif}
+.s7 .venn .vh{font-size:17px;font-weight:700;letter-spacing:2px}
+.s7 .venn .vt{font-size:27px;fill:var(--ink)}
+.s7 .venn .vn{font-size:30px;font-weight:700;fill:#fff}
+.s7 .venn .vs{font-size:17px;fill:#F6E3EC}
+.s7 .venn [data-a="vl"]{transform:translateX(-120px)}
+.s7 .venn [data-a="vr"]{transform:translateX(120px)}
+.s7 .venn [data-a="vl"].on,.s7 .venn [data-a="vr"].on{transform:none;transition:opacity .7s ease,transform 1s var(--ease)}
+.s7 .vcap{position:absolute;left:96px;top:516px;font-size:22px;color:var(--muted)}.s7 .vcap b{color:var(--maroon)}
+.s7 .chal{position:absolute;left:96px;top:566px;width:1100px;display:flex;gap:22px;align-items:baseline;padding:20px 26px;border-left:6px solid var(--amber);background:var(--amber-pale);border-radius:0 14px 14px 0}
 .s7 .chal b{flex:none;font-size:18px;letter-spacing:2px;color:var(--amber);text-transform:uppercase}
 .s7 .chal p{font-size:26px;line-height:1.35}
-.s7 .strat{position:absolute;left:96px;top:690px;width:1100px}
+.s7 .strat{position:absolute;left:96px;top:706px;width:1100px}
 .s7 .strat .eb{color:var(--rose);margin-bottom:12px;font-size:18px}
 .s7 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .s7 .stp{position:relative;background:#fff;border:3px solid var(--rose);border-radius:16px;padding:16px 20px;min-height:130px}
@@ -313,8 +320,9 @@ svg [data-t][data-a="draw"].on{stroke-dashoffset:0}
 .s9 .band{position:absolute;left:0;top:262px;width:1220px;height:300px;background:linear-gradient(90deg,#8C2F5A,#B0507F 60%,#D17FAA);clip-path:polygon(0 0,100% 0,95% 100%,0 100%)}
 .s9 .ty{position:absolute;left:96px;top:292px;font-family:"Archivo Black",sans-serif;font-weight:400;font-size:140px;line-height:1;text-transform:uppercase;color:#fff}
 .s9 .welcome{position:absolute;left:100px;top:460px;font-size:44px;font-weight:600}
-.s9 .echo{position:absolute;left:100px;top:600px;width:1040px;font-size:27px;line-height:1.35;font-style:italic;color:var(--pink)}
-.s9 .refs{position:absolute;left:100px;top:700px;width:1060px}
+.s9 .echo{position:absolute;left:100px;top:584px;width:1080px;font-size:25px;line-height:1.35;font-style:italic;color:var(--pink)}
+.s9 .echo span{display:block;margin-top:4px;font-size:20px;font-style:normal;font-weight:600;color:#F3D3E3}
+.s9 .refs{position:absolute;left:100px;top:730px;width:1060px}
 .s9 .refs h4{font-size:19px;letter-spacing:3px;text-transform:uppercase;color:var(--pink);margin-bottom:10px}
 .s9 .refs p{font-size:21px;line-height:1.35;color:#F7E6EE;padding-left:34px;text-indent:-34px;margin-bottom:8px}
 .s9 .qr{position:absolute;right:110px;top:180px;width:520px;padding:28px;border-radius:28px;background:#fff;text-align:center;box-shadow:0 0 0 6px rgba(232,166,203,.5),0 24px 50px rgba(0,0,0,.35);cursor:pointer}
@@ -379,7 +387,7 @@ svg [data-t][data-a="draw"].on{stroke-dashoffset:0}
   .deck{position:static;transform:none;overflow:visible;background:none}
   .slide{position:relative;visibility:visible!important;page-break-after:always;break-after:page;animation:none!important}
   .ui,.wipe,.s3 .dots .pool{display:none!important}
-  .s1 .lobby,.s1 .match,.s1 .catch{display:none!important}
+  .s1 .lobby,.s1 .match,.s1 .catch,.s1 .bridge{display:none!important}
   .s1 .ttl{opacity:1!important;visibility:visible!important}
   [data-t]{opacity:1!important;transform:none!important}
   svg [data-t][data-a="draw"]{stroke-dashoffset:0!important}
@@ -405,9 +413,13 @@ svg [data-t][data-a="draw"].on{stroke-dashoffset:0}
     </div></div>
   </div>
   <div class="layer catch" id="catch">
-    <p class="lead" id="cLead">It was never about the clock.</p>
-    <p class="tl" id="cTl" lang="fil"><span class="w">Hindi</span> <span class="w hl">ilang</span> <span class="w hl">oras,</span> <br><span class="w">kundi</span> <span class="w">kung</span> <span class="w hl">naiilang</span> <span class="w">ang</span> <span class="w">bata</span> <span class="w">sa</span> <span class="w">kanyang</span> <span class="w rh">mundo,</span> <br><span class="w">kaya</span> <span class="w">sa</span> <span class="w">laro</span> <span class="w rh">nagtatago.</span></p>
-    <p class="en" id="cEn">Not how many hours they play, but how uneasy they feel each day.</p>
+    <p class="lead" id="cLead">Is it really about the clock?</p>
+    <p class="tl" id="cTl" lang="fil"><span class="w hl">Ilang</span> <span class="w hl">oras</span> <span class="w">lang</span> <span class="w">ba?</span> <br><span class="w">O</span> <span class="w hl">naiilang</span> <span class="w">ba</span> <span class="w">ang</span> <span class="w">bata</span> <span class="w">sa</span> <span class="w">kanyang</span> <span class="w rh">mundo,</span> <br><span class="w">kaya</span> <span class="w">sa</span> <span class="w">laro</span> <span class="w rh">nagtatago?</span></p>
+    <p class="en" id="cEn">Is it just how many hours they play, or how uneasy they feel each day?</p>
+  </div>
+  <div class="layer bridge" id="bridge" aria-hidden="true">
+    <div class="seven"><i style="--k:0"><svg viewBox="0 0 64 72" aria-hidden="true"><circle cx="32" cy="19" r="13"/><path d="M8 70c0-15 10.7-25 24-25s24 10 24 25z"/></svg></i><i style="--k:1"><svg viewBox="0 0 64 72" aria-hidden="true"><circle cx="32" cy="19" r="13"/><path d="M8 70c0-15 10.7-25 24-25s24 10 24 25z"/></svg></i><i style="--k:2"><svg viewBox="0 0 64 72" aria-hidden="true"><circle cx="32" cy="19" r="13"/><path d="M8 70c0-15 10.7-25 24-25s24 10 24 25z"/></svg></i><i style="--k:3"><svg viewBox="0 0 64 72" aria-hidden="true"><circle cx="32" cy="19" r="13"/><path d="M8 70c0-15 10.7-25 24-25s24 10 24 25z"/></svg></i><i style="--k:4"><svg viewBox="0 0 64 72" aria-hidden="true"><circle cx="32" cy="19" r="13"/><path d="M8 70c0-15 10.7-25 24-25s24 10 24 25z"/></svg></i><i style="--k:5"><svg viewBox="0 0 64 72" aria-hidden="true"><circle cx="32" cy="19" r="13"/><path d="M8 70c0-15 10.7-25 24-25s24 10 24 25z"/></svg></i><i style="--k:6"><svg viewBox="0 0 64 72" aria-hidden="true"><circle cx="32" cy="19" r="13"/><path d="M8 70c0-15 10.7-25 24-25s24 10 24 25z"/></svg></i></div>
+    <p>We asked seven licensed psychologists in Luzon.</p>
   </div>
   <div class="layer ttl" id="ttl">
     <div class="brand"><img class="seal" src="{{asset:seal-hau.png}}" alt="Holy Angel University seal"><img class="seal" src="{{asset:seal-bed.png}}" alt="HAU Basic Education seal"><div class="brand-text">Holy Angel University<br>12 - Aaron</div></div>
@@ -504,12 +516,17 @@ svg [data-t][data-a="draw"].on{stroke-dashoffset:0}
 
 <section class="slide light s7" data-title="Conclusion, SSOP 3" data-kicker="Chapter 4 · Conclusion, SSOP 3" data-kclass="k3" aria-label="Slide 7: conclusion for SSOP 3">
   <h2 class="title">Understand, then regulate</h2>
-  <div class="both">
-    <div class="b ben" data-t="250" data-a="fade"><h4>Benefits</h4>Relief and connection<br>Problem solving and teamwork</div>
-    <div class="b con" data-t="550" data-a="fade"><h4>Concerns</h4>Lost sleep and self-care<br>Conflict and online risk</div>
-    <div class="ado" data-t="1300" data-a="pop"><svg viewBox="0 0 24 24"><use href="#ico-person"/></svg></div>
-    <p class="cap" data-t="1600" data-a="fade">Often in the same adolescent · Interviewees 2 and 6 had not seen a mixed case.</p>
-  </div>
+  <svg class="venn" viewBox="0 0 1100 260" role="img" aria-label="Venn diagram: benefits and concerns overlap; five of seven psychologists had seen both in the same adolescent">
+    <defs><clipPath id="vClip"><ellipse cx="360" cy="130" rx="300" ry="126"/></clipPath></defs>
+    <g data-t="200" data-a="vl"><ellipse cx="360" cy="130" rx="300" ry="126" fill="#1E6F6A" fill-opacity=".13" stroke="#1E6F6A" stroke-width="3"/>
+      <text class="vh" x="122" y="80" fill="#1E6F6A">BENEFITS</text><text class="vt" x="122" y="120">Relief and connection</text><text class="vt" x="122" y="158">Problem solving,</text><text class="vt" x="122" y="194">teamwork</text></g>
+    <g data-t="200" data-a="vr"><ellipse cx="740" cy="130" rx="300" ry="126" fill="#94560C" fill-opacity=".12" stroke="#94560C" stroke-width="3"/>
+      <text class="vh" x="684" y="80" fill="#94560C">CONCERNS</text><text class="vt" x="684" y="120">Lost sleep, self-care</text><text class="vt" x="684" y="158">Family conflict,</text><text class="vt" x="684" y="194">online risk</text></g>
+    <g data-t="1250" data-a="fade"><ellipse cx="740" cy="130" rx="300" ry="126" clip-path="url(#vClip)" fill="#5A1E33" fill-opacity=".92"/></g>
+    <g data-t="1450" data-a="pop"><circle cx="550" cy="84" r="28" fill="#fff"/><use href="#ico-person" x="534" y="68" width="32" height="32" fill="none" stroke="#5A1E33" stroke-width="1.8"/>
+      <text class="vn" x="550" y="152" text-anchor="middle">5 of 7</text><text class="vs" x="550" y="180" text-anchor="middle">saw both</text></g>
+  </svg>
+  <p class="vcap" data-t="1800" data-a="fade"><b>5 of 7</b> psychologists saw benefits and concerns in the same adolescent; Interviewees 2 and 6 had not.</p>
   <div class="chal" data-t="2100"><b>Challenges</b><p>Parents who see gaming as the whole problem; securing the adolescent's own commitment to change.</p></div>
   <div class="strat">
     <h4 class="eb" data-t="2500" data-a="fade">Strategies</h4>
@@ -547,7 +564,7 @@ svg [data-t][data-a="draw"].on{stroke-dashoffset:0}
   <div class="band" data-t="100" data-a="left"></div>
   <p class="ty" data-t="300" data-a="left">Thank you.</p>
   <p class="welcome" data-t="650" data-a="left">We welcome your questions.</p>
-  <p class="echo" data-t="1100" data-a="fade" lang="fil">Hindi ilang oras, kundi kung naiilang ang bata sa kanyang mundo.</p>
+  <p class="echo" data-t="1100" data-a="fade">“…we need to look at the function rather than just the frequency of their gaming.”<span>Interviewee 1, 07:30</span></p>
   <div class="refs" data-t="1400" data-a="fade">
     <h4>Selected references</h4>
     <p>Braun, V., &amp; Clarke, V. (2006). Using thematic analysis in psychology. <i>Qualitative Research in Psychology, 3</i>(2), 77–101.</p>
@@ -592,11 +609,12 @@ svg [data-t][data-a="draw"].on{stroke-dashoffset:0}
 <script>
 (function(){
 const NOTES = [
-  { speaker:"All", window:[0,20], cue:"Operator: click on the MAIN screen (not the presenter window) so the browser allows sound. Click 1 starts the game sounds (Welcome, Double Kill, Triple Kill, Maniac, about 8 s) while the gamer plays. The mother walks in on Maniac. Click 2 the instant she grabs the phone: Defeat. The psychologist speaks as the words appear; then everyone faces the panel for the English line. Click 3 reveals the title and starts the music quietly. Aim for 20 s in total.",
-    steps:[{label:"Lobby (before the timer starts)"},{label:"Match: game sounds play"},{label:"Phone grabbed: Defeat, then the catchphrase"},{label:"Title and researchers"}],
+  { speaker:"All", window:[0,20], cue:"Operator: click on the MAIN screen (not the presenter window) so the browser allows sound. Click 1 starts the game sounds (Welcome, Double Kill, Triple Kill, Maniac, about 8 s) while the gamer plays. The mother walks in on Maniac. Click 2 the instant she grabs the phone: Defeat. The narrator steps forward and asks the question as the words appear; everyone asks the English line to the panel. Click 3 as the narrator says 'We asked seven licensed psychologists in Luzon': seven figures appear, then the title arrives by itself with quiet music. Aim for 20 s in total.",
+    steps:[{label:"Lobby (before the timer starts)"},{label:"Match: game sounds play"},{label:"Phone grabbed: Defeat, then the question"},{label:"We asked seven psychologists, then the title"}],
     scripts:[{who:"Mother", text:"Ilang oras ka na diyan?! Alas-dos na!"},
-             {who:"Psychologist", text:"Ma'am, it was never about the clock. Hindi ilang oras, kundi kung naiilang ang bata sa kanyang mundo, kaya sa laro nagtatago."},
-             {who:"All, to the panel", text:"Not how many hours they play, but how uneasy they feel each day."}] },
+             {who:"Narrator, to the panel", text:"Is it really about the clock? Ilang oras lang ba? O naiilang ba ang bata sa kanyang mundo, kaya sa laro nagtatago?"},
+             {who:"All, to the panel", text:"Is it just how many hours they play, or how uneasy they feel each day?"},
+             {who:"Narrator (click 3)", text:"We asked seven licensed psychologists in Luzon."}] },
   { speaker:"Rinoa", window:[20,60], cue:"One click brings the slide; everything builds by itself within 2 seconds. No more clicks until Chase.",
     steps:[{label:"Purpose and the three SSOPs"}],
     scripts:[{who:"Rinoa", limit:65, text:"I am Canlas, Rinoa Heart, and I will present the purpose and research questions. Our study aims to describe the lived professional experiences of psychologists in Luzon regarding adolescent digital well-being in gaming environments. Specifically, we ask how they encounter and interpret it, what factors shape it, and how they respond in practice through the benefits and concerns they identify, their challenges, and their strategies."}] },
@@ -620,7 +638,7 @@ const NOTES = [
     steps:[{label:"Practice", speaker:"Princess", window:[360,385]},{label:"Future research", speaker:"Rhianna", window:[385,410]}],
     scripts:[{who:"Princess", limit:40, step:0, text:"For practice, we recommend assessing gaming beyond screen time by considering its purpose and effects. Parents can set limits together with adolescents, schools can promote healthy sleep and offline activities, and adolescents can recognize early signs of disruption."},
              {who:"Rhianna", limit:40, step:1, text:"For future research, we recommend expanding the sample, including adolescents and parents, and exploring emerging concerns such as doomscrolling and social media use. Studies may also examine cultural influences and how gaming, stress, and sleep patterns change over time."}] },
-  { speaker:"Rhianna", window:[410,420], cue:"One click. The music fades out for Q&A and a soft Victory plays. Hold here. During Q&A, number keys 1 to 9 jump to any slide fully built, with no sound.",
+  { speaker:"Rhianna", window:[410,420], cue:"One click. The music fades out for Q&A. Hold here. During Q&A, number keys 1 to 9 jump to any slide fully built, with no sound.",
     steps:[{label:"Thank you, references, Q&A"}],
     scripts:[{who:"Rhianna / All", text:"Thank you for your time and attention. We would also like to acknowledge the references and sources that supported our study. We are now ready for your questions."}] }
 ];
@@ -657,8 +675,8 @@ window.addEventListener("resize", fit); fit();
 
 /* ---------- sound ---------- */
 const SRC = { welcome:"{{asset:sfx-welcome.mp3}}", doublekill:"{{asset:sfx-doublekill.mp3}}", triplekill:"{{asset:sfx-triplekill.mp3}}", maniac:"{{asset:sfx-maniac.mp3}}",
-  defeat:"{{asset:sfx-defeat.mp3}}", victory:"{{asset:sfx-victory.mp3}}", swoosh:"{{asset:sfx-swoosh.mp3}}" };
-const VOL = { welcome:.8, doublekill:.8, triplekill:.8, maniac:.85, defeat:.9, victory:.32, swoosh:.2 };
+  defeat:"{{asset:sfx-defeat.mp3}}", swoosh:"{{asset:sfx-swoosh.mp3}}" };
+const VOL = { welcome:.8, doublekill:.8, triplekill:.8, maniac:.85, defeat:.9, swoosh:.2 };
 const SND = {};
 Object.keys(SRC).forEach(k => { const a = new Audio(SRC[k]); a.preload = "auto"; SND[k] = a; });
 const music = new Audio("{{asset:music-bg.mp3}}"); music.loop = true; music.preload = "auto";
@@ -731,7 +749,7 @@ function build(s, step, mode){
 const FX = {};
 
 /* 1 · intro skit and title */
-const L = { lobby:$("lobby"), match:$("match"), catch:$("catch"), ttl:$("ttl") };
+const L = { lobby:$("lobby"), match:$("match"), catch:$("catch"), bridge:$("bridge"), ttl:$("ttl") };
 function showLayer(name){ Object.keys(L).forEach(k => { L[k].classList.toggle("show", k === name); L[k].setAttribute("aria-hidden", k === name ? "false" : "true"); }); }
 const banner = $("banner"), phone = $("phone"), loadEl = $("load"), clockEl = $("clock"), ampmEl = $("ampm");
 function setClock(min){
@@ -760,7 +778,10 @@ function catchState(on){ $("cLead").classList.toggle("on", on); $("cEn").classLi
 FX[0] = (step, mode) => {
   if (step === "all" || step === 3){
     if (mode === "play" && step === 3){
-      sfx("swoosh"); runWipe(); later(330, () => { showLayer("ttl"); }); later(500, startMusic);
+      showLayer("bridge");
+      later(3600, () => { sfx("swoosh"); runWipe(); });
+      later(3930, () => showLayer("ttl"));
+      later(4100, startMusic);
     } else showLayer("ttl");
     return;
   }
@@ -873,11 +894,8 @@ FX[6] = (step, mode) => {
   later(24000, () => { quote.classList.remove("wait"); quote.classList.add("lit"); });
 };
 
-/* 9 · Q&A: music off, one soft victory */
-FX[8] = (step, mode) => {
-  state.qna = true; stopMusic(2500);
-  if (mode === "play" && step !== "all") later(450, () => sfx("victory"));
-};
+/* 9 · Q&A: music fades out and stays off */
+FX[8] = () => { state.qna = true; stopMusic(2500); };
 
 /* ---------- navigation ---------- */
 let busy = false;
