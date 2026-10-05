@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Susulung king Pyalung</title>
+<title>Susulung king Pyalung · Revised Final Defense</title>
 <meta name="description" content="Final defense deck, Psychology Group, Holy Angel University 12 - Aaron">
 <style>
 @font-face{font-family:"Poppins";font-weight:400;font-style:normal;src:url({{asset:poppins-400.woff2}}) format("woff2")}
@@ -341,9 +341,78 @@ html:not(.js) .slide{display:block;position:relative;margin-bottom:24px}
   .ui{display:none!important}
   *{transition:none!important;animation:none!important}
 }
+
+/* Revised visual system: retain school colors, strengthen diagram hierarchy. */
+.symbol-library{position:absolute;width:0;height:0;overflow:hidden}
+.svg-icon{width:40px;height:40px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.slide.light::before{background:linear-gradient(125deg,transparent 73%,rgba(232,166,203,.07) 73%,rgba(232,166,203,.07) 88%,transparent 88%)}
+.band-top{height:42px}.band-top::before{height:42px;width:560px}.band-top::after{height:42px}.speaker{height:42px;font-size:22px}
+.band-bot{height:38px}.band-bot::before{height:38px;width:480px}.band-bot::after{height:38px}.counter{height:38px;font-size:22px}
+.brand{top:88px}.seal{width:76px;height:76px}.brand-text{font-size:22px}
+.kicker{top:102px;font-size:22px;border-radius:8px;padding:9px 18px;box-shadow:none}
+.title{top:190px;font-size:60px;color:var(--maroon);background:none;filter:none;letter-spacing:-.5px;text-transform:none}
+.content{top:290px;bottom:116px}.source{left:96px;right:96px;bottom:63px;font-size:22px;white-space:normal;overflow:visible;text-overflow:clip;max-height:48px}
+.card,.sop,.col,.panel{box-shadow:none}
+.s1 .big{font-size:116px;filter:none;color:#fff;background:none;letter-spacing:-2px}
+.s1 .sub{font-size:38px;top:542px;width:1640px}
+.s1 .rule{top:674px}.s1 .pill{top:708px}.s1 .names{top:785px;font-size:28px}
+.title-art{position:absolute;right:112px;top:242px;width:570px;height:300px;opacity:.95}
+.s1[data-step="0"] .title-art{opacity:0}
+.s1.active:not([data-step="0"]) .constellation-lines path{stroke-dasharray:1;animation:pathReveal 1.2s .45s both}
+.s1.active:not([data-step="0"]) .title-mini{animation:quietReveal .6s .5s both}
+.question-head{display:flex;align-items:center;justify-content:space-between}.s2 .c1 .svg-icon{color:var(--teal)}.s2 .c2 .svg-icon{color:var(--plum)}.s2 .c3 .svg-icon{color:var(--rose)}
+.s2 .purpose{border-radius:16px;padding:28px 34px}.s2 .purpose p{font-size:34px}.s2 .sop h3{font-size:37px}.s2 .sop p{font-size:27px}.s2 .sop{min-height:310px;border-radius:16px}
+.s3 .cols{grid-template-columns:530px 1fr 455px;gap:30px}.s3 .design{font-size:28px;margin-bottom:17px}
+.s3 .stage{padding:16px 22px}.s3 .stage b{font-size:28px}.s3 .stage span{font-size:23px}
+.s3 .people{padding-top:22px;gap:13px 10px}.s3 .person svg{width:77px;height:77px}.s3 .people-note{font-size:24px}
+.sample-strip{margin-top:18px;padding:12px 18px 8px;background:var(--paper-2);border-radius:12px}.sample-strip svg{width:100%;height:75px;display:block}.sample-strip figcaption{font-size:20px;line-height:1.3;color:var(--muted)}
+.s3 .count{padding:18px 20px;gap:14px}.s3 .count b{font-size:58px;min-width:124px}.s3 .count span{font-size:25px}.s3 .count small{font-size:20px}.s3 .units{font-size:21px}
+.chart-label{fill:var(--ink);font-family:Poppins,sans-serif;font-size:23px;font-weight:600}.chart-value{fill:var(--ink);font-size:24px;font-weight:700}.tick-label{fill:var(--muted);font-size:19px}
+.s4 .board{grid-template-columns:1fr 1fr 1.22fr;gap:26px;height:600px}.s4 .col{padding:21px 23px 17px;border-radius:16px}.s4 .col h3{font-size:29px;min-height:68px;margin-top:12px}.s4 li{font-size:26px;line-height:1.25;padding:7px 0}.s4 li b{width:44px}.s4 .c3 li{font-size:25px;padding:4px 0}.s4 .grp{font-size:18px!important;padding:5px 0 2px!important}.s4 .units em{font-size:21px}.s4 .differ{font-size:22px;margin-top:14px;justify-content:flex-end}
+.theme-chart{margin-top:15px}.theme-chart figcaption{font-size:22px;font-weight:600;display:flex;justify-content:space-between;align-items:center}.theme-chart figcaption span{font-size:20px;color:var(--muted);font-weight:400}.bar-row{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}.bar-row svg{width:100%;height:82px;overflow:visible}.theme-bar{transform-box:fill-box;transform-origin:left;animation:growBar .65s var(--ease) both}.s4:not(.active) .theme-bar{animation:none}
+.s5 .wrap{grid-template-columns:1010px 1fr;gap:44px}.life-figure{width:1010px;height:620px}.life-figure svg{width:100%;height:100%;overflow:visible}
+.diagram-eyebrow{font-family:Poppins,sans-serif;font-size:20px;letter-spacing:1.2px;font-weight:700;fill:var(--muted)}
+.node-heading{font-family:Poppins,sans-serif;font-size:29px;fill:var(--ink);font-weight:600}.node-sub{font-family:Poppins,sans-serif;font-size:21px;fill:var(--muted)}
+.s5 .pt{font-size:30px;padding:16px 0 16px 22px}.s5 .diverge{font-size:23px;padding:18px 22px;line-height:1.4}
+.life-node.pending{transform:none;opacity:0}.life-links.pending{transform:none}.s5.active:not([data-step="0"]) .life-links path{stroke-dasharray:1;animation:pathReveal .65s var(--ease) both}
+.s6 .wrap{grid-template-columns:980px 1fr;gap:42px}.factor-figure{width:980px;height:620px;overflow:visible}.factor-body{font-family:Poppins,sans-serif;font-size:24px;fill:var(--muted)}
+.s6.active .factor-links path{stroke-dasharray:1;animation:pathReveal .8s var(--ease) both}
+.cycle-panel{width:704px;border-left:2px solid var(--line);padding-left:22px;margin-top:0}.cycle-panel figcaption{font-size:28px;color:var(--amber);font-weight:700}.cycle-panel .by{font-size:21px;margin-top:4px}.cycle-svg{display:block;width:680px;height:548px;margin-top:0;overflow:visible}
+.cycle-node rect{fill:#fff;stroke:#e2cdb0;stroke-width:2}.cycle-label{font-family:Poppins,sans-serif;font-size:24px;fill:var(--ink);font-weight:600}.cycle-center{font-size:22px;fill:var(--muted)}.cycle-center-small{font-size:18px;fill:var(--muted)}
+.s6 .cycle-edge{fill:none;stroke:#94560c;stroke-width:4}.s6 .arrow-tip{fill:#94560c!important;stroke:none!important;stroke-dasharray:none!important;animation:none!important}
+.s6[data-step="1"] .cycle-node rect{animation:cycleNode .5s var(--ease) both;animation-delay:calc(var(--k) * .65s)}
+.s6[data-step="1"] .cycle-edge{stroke-dasharray:1;animation:pathReveal .48s var(--ease) both;animation-delay:calc(var(--k) * .65s + .18s)}
+.s6[data-step="all"] .cycle-node rect{fill:var(--amber-pale);stroke:var(--amber)}
+.s6 .caveat{font-size:22px;font-weight:500;margin-top:0;line-height:1.28}
+.coexist-svg{display:block;width:1080px;height:245px;overflow:visible}.coexist-body{font-size:27px;fill:var(--ink);font-weight:500}
+.s7 .left{gap:18px}.s7 .note{font-size:21px;margin-top:-4px}.s7 .chal{font-size:26px}.s7 .quote{padding:68px 42px 40px;border-radius:18px;background:var(--maroon-deep)}.s7 .quote blockquote{font-size:42px;line-height:1.3}.s7 .quote .mark{font-size:156px}.s7 .quote cite{font-size:24px}.s7 .stp b{font-size:25px}.s7 .stp span{font-size:21px}
+.s8 .wrap{grid-template-columns:1.28fr 1fr;gap:34px}.s8 .panel{border-radius:16px;padding:26px 30px}.s8 .panel h3{font-family:Poppins,sans-serif;text-transform:none;font-size:36px;font-weight:700}
+.recommend-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:27px;line-height:1.3}.recommend-table thead{font-size:20px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}.recommend-table th,.recommend-table td{text-align:left;border-bottom:1px solid var(--line);padding:18px 8px;vertical-align:top}.recommend-table th{width:31%;font-size:25px;font-weight:600;color:var(--maroon)}.recommend-table thead th{font-size:20px;font-weight:600;color:var(--muted)}.recommend-table tbody th .svg-icon{display:block;width:34px;height:34px;margin-bottom:6px;color:var(--rose)}.recommend-table td{padding-left:20px}.practice-note{font-size:21px;line-height:1.3;color:var(--muted);margin-top:18px}
+.s8 .fut li{padding:18px 0;font-size:25px;gap:18px}.s8 .fut .svg-icon{width:34px;height:34px;margin-top:4px;color:var(--plum)}
+.s9 .ty{font-size:128px;filter:none;color:#fff;background:none}.s9 .welcome{font-size:46px}.s9 .band{width:1200px;background:#8c2f5a;box-shadow:none}.s9 .group{top:644px}.s9 .refs{top:709px}.s9 .refs p{font-size:23px}
+.qr-card{position:absolute;right:110px;top:150px;width:560px;padding:30px;border-radius:24px;background:#fff;text-align:center;box-shadow:0 0 0 5px rgba(232,166,203,.55)}.qr-card img{width:430px;height:430px;display:block;margin:0 auto}.qr-card b{display:inline-block;margin-top:14px;background:var(--maroon);color:#fff;font-size:28px;letter-spacing:2px;text-transform:uppercase;padding:8px 30px;border-radius:12px}.qr-card span{display:block;margin-top:8px;font-size:22px;color:var(--muted)}.ref-open{margin-top:12px;font:inherit;font-size:21px;font-weight:600;color:var(--rose);background:var(--pink-pale);border:0;border-radius:10px;padding:8px 18px;cursor:pointer}.ref-open:focus-visible{outline:3px solid var(--rose)}.reference-card{position:absolute;right:110px;top:218px;width:520px;min-height:516px;background:var(--paper);border:0;border-radius:18px;padding:40px 44px;text-align:left;color:var(--ink);cursor:pointer;font-family:inherit;box-shadow:0 0 0 3px #b67b99}
+.reference-card:hover,.reference-card:focus-visible{outline:4px solid var(--pink);outline-offset:8px}.reference-icon{width:90px;height:90px;stroke:var(--rose);fill:none;stroke-width:1.2;margin-bottom:22px}.reference-eyebrow{font-size:18px!important;letter-spacing:1px;font-weight:600}.reference-card b{font-size:46px;line-height:1.2;display:block;margin:15px 0 22px}.reference-card span{display:block;font-size:23px;line-height:1.4}.reference-card em{font-style:normal;font-size:23px;color:var(--rose);font-weight:600;display:block;margin-top:24px}.s9 .laus{right:110px;width:520px}
+.deck-progress{position:fixed;left:50%;bottom:8px;transform:translateX(-50%);display:flex;gap:5px;z-index:3;pointer-events:none}.progress-segment{width:24px;height:3px;background:#a7778d;opacity:.45}.progress-segment.done{opacity:.8}.progress-segment.current{background:#fff;opacity:1}
+.controls:focus-within{opacity:1;transform:none}.controls:not(.show):not(:focus-within){pointer-events:none}.controls.show{pointer-events:auto}.controls button{font-size:13px;padding:0 9px}.controls{max-width:calc(100vw - 24px);flex-wrap:wrap}.controls button:focus-visible{outline:2px solid var(--pink);outline-offset:-2px}
+.reference-overlay,.evidence-overlay{position:fixed;inset:0;z-index:25;background:rgba(20,7,13,.9);padding:28px;display:flex;align-items:center;justify-content:center}.reference-overlay[hidden],.evidence-overlay[hidden]{display:none}
+.reference-dialog,.evidence-dialog{position:relative;background:var(--paper);color:var(--ink);border-radius:18px;padding:36px 42px;max-height:calc(100vh - 56px);overflow:auto;width:min(100%,1180px);font-size:16px;line-height:1.45}.reference-dialog h2,.evidence-dialog h2{font-size:34px;line-height:1.2;margin:8px 45px 16px 0}.dialog-eyebrow{font-size:12px;color:var(--rose);font-weight:700;letter-spacing:1.3px}.dialog-close{position:absolute;right:18px;top:14px;background:var(--pink-pale);color:var(--ink);border:0;border-radius:8px;font-size:30px;width:44px;height:44px;cursor:pointer}.reference-dialog ol{padding-left:22px;margin-top:22px}.reference-dialog li{padding:14px 0 14px 5px;border-top:1px solid var(--line);overflow-wrap:anywhere}.reference-dialog a{color:var(--teal);text-decoration:underline}.evidence-columns{display:grid;grid-template-columns:1fr 1fr;gap:30px}.evidence-dialog h3{font-size:18px;color:var(--rose);margin:18px 0 12px}.record-metrics{display:flex;gap:12px}.record-metrics p{flex:1;padding:12px;background:var(--maroon);color:#fbd3e8;font-size:13px;border-radius:9px}.record-metrics b{display:block;font-size:29px;color:#fff}.assignment-strip,.ppct{width:100%;display:block}.evidence-table{width:100%;border-collapse:collapse;font-size:14px;table-layout:fixed}.evidence-table th,.evidence-table td{padding:12px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}.evidence-table th{color:var(--maroon)}.evidence-caveat{background:var(--amber-pale);padding:16px;border-radius:9px;font-size:14px;margin-top:18px}.evidence-source{font-size:12px;color:var(--muted);margin-top:12px}
+@keyframes pathReveal{from{stroke-dashoffset:1;opacity:0}to{stroke-dashoffset:0;opacity:1}}
+@keyframes quietReveal{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+@keyframes growBar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes cycleNode{from{fill:#fff;stroke:#e2cdb0}to{fill:#fbebd6;stroke:#94560c}}
+.recommend-table th{width:auto}.recommend-table th,.recommend-table td{padding-top:13px;padding-bottom:13px}.recommend-table tbody th .svg-icon{width:29px;height:29px;margin-bottom:4px}.recommend-table tbody th{font-size:24px}.recommend-table td{font-size:26px}.practice-note{margin-top:15px;font-size:21px}
+.s3 .sample-strip figcaption{font-size:19px}.s3 .people-note{font-size:24px}
+.cycle-center{font-size:21px}.cycle-center-small{font-size:17px}
+.theme-chart{margin-top:8px}
+.motion-off *,.motion-off *::before,.motion-off *::after{animation:none!important;transition:none!important}
+.motion-off .cycle-edge,.motion-off .factor-links path,.motion-off .life-links path,.motion-off .constellation-lines path{stroke-dasharray:none!important;stroke-dashoffset:0!important}
+.motion-off .cycle-node rect{fill:var(--amber-pale);stroke:var(--amber)}
+@media(prefers-reduced-motion:reduce){.cycle-edge,.factor-links path,.life-links path,.constellation-lines path{stroke-dasharray:none!important;stroke-dashoffset:0!important}.cycle-node rect{fill:var(--amber-pale);stroke:var(--amber)}}
+@media(max-width:760px){.evidence-columns{grid-template-columns:1fr}.reference-dialog,.evidence-dialog{padding:28px 22px}.reference-overlay,.evidence-overlay{padding:12px}.reference-dialog h2,.evidence-dialog h2{font-size:26px}.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.grid button{padding:12px}.grid small{font-size:11px}}
+@media print{.reference-overlay,.evidence-overlay,.deck-progress{display:none!important}.pending{opacity:1!important;transform:none!important}.life-node,.life-links{opacity:1!important}.cycle-edge,.factor-links path,.life-links path,.constellation-lines path{stroke-dasharray:none!important;stroke-dashoffset:0!important}.cycle-node rect{fill:var(--amber-pale);stroke:var(--amber)}.theme-bar{transform:none!important}.slide *{animation:none!important;transition:none!important}}
 </style>
 </head>
-<body>
+<body><svg class="symbol-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><symbol id="ico-game" viewBox="0 0 24 24"><path d="M7 8h10c3 0 5 10 3 11-2 1-4-3-5-3H9c-1 0-3 4-5 3C2 18 4 8 7 8Z"/><path d="M7 10v6M4 13h6"/><circle cx="16" cy="11" r=".8"/><circle cx="19" cy="14" r=".8"/></symbol><symbol id="ico-person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3"/></symbol><symbol id="ico-sleep" viewBox="0 0 24 24"><path d="M19 15A8 8 0 0 1 9 4a9 9 0 1 0 10 11Z"/><path d="m17 3 1 2 2 1-2 1-1 2-1-2-2-1 2-1Z"/></symbol><symbol id="ico-school" viewBox="0 0 24 24"><path d="m2 8 10-5 10 5-10 5Z"/><path d="M6 10v7q6 4 12 0v-7M22 8v9"/></symbol><symbol id="ico-mood" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M7 14q5 7 10 0M8 8v1M16 8v1"/></symbol><symbol id="ico-peers" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="3"/><path d="M1 21v-2a7 7 0 0 1 14 0v2M15 15q7-2 8 6"/></symbol><symbol id="ico-purpose" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol><symbol id="ico-family" viewBox="0 0 24 24"><path d="m2 10 10-8 10 8M5 8v13h14V8"/><path d="M10 21v-7h4v7"/></symbol><symbol id="ico-book" viewBox="0 0 24 24"><path d="M12 5q-5-4-10-2v17q5-2 10 2 5-4 10-2V3q-5-2-10 2v17M5 7h4M5 11h4M15 7h4M15 11h4"/></symbol><symbol id="ico-check" viewBox="0 0 24 24"><path d="m3 12 6 6L21 4"/></symbol><symbol id="ico-time" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 3"/></symbol><symbol id="ico-link" viewBox="0 0 24 24"><path d="m10 7 3-3a5 5 0 0 1 7 7l-3 3M14 17l-3 3a5 5 0 0 1-7-7l3-3M8 16l8-8"/></symbol><symbol id="ico-heart" viewBox="0 0 24 24"><path d="M12 21 3 12C-3 4 7-1 12 6c5-7 15-2 9 6Z"/></symbol></defs></svg>
 <main class="deck" id="deck" aria-live="polite">
 
 <!-- 1 ─ Title -->
@@ -359,17 +428,24 @@ html:not(.js) .slide{display:block;position:relative;margin-bottom:24px}
       <img class="seal" src="{{asset:seal-bed.png}}" alt="HAU Basic Education seal">
       <div class="brand-text">Holy Angel University<br>12 - Aaron</div>
     </div>
-    <div class="eyebrow">Practical Research 1 · Final Defense</div>
+    <svg class="title-art" viewBox="0 0 560 300" role="img" aria-label="Gaming connected with the adolescent's surrounding life">
+<g class="constellation-lines" fill="none" stroke="#b67b99" stroke-width="2"><path d="M280 150 100 60M280 150 470 65M280 150 465 245M280 150 110 245" pathLength="1"/></g>
+<g fill="#4a1a2e" stroke="#e8a6cb" stroke-width="2"><circle cx="100" cy="60" r="42"/><circle cx="470" cy="65" r="42"/><circle cx="465" cy="245" r="42"/><circle cx="110" cy="245" r="42"/></g>
+<g class="title-mini" stroke="#fbd3e8" fill="none" stroke-width="1.5"><use href="#ico-sleep" x="78" y="38" width="44" height="44"/><use href="#ico-family" x="448" y="43" width="44" height="44"/><use href="#ico-peers" x="443" y="223" width="44" height="44"/><use href="#ico-school" x="88" y="223" width="44" height="44"/></g>
+<rect x="173" y="73" width="218" height="154" rx="16" fill="#2e0f1c" stroke="#e8a6cb" stroke-width="3"/>
+<use href="#ico-game" x="227" y="91" width="110" height="100" fill="none" stroke="#fbd3e8" stroke-width="1.2"/>
+<path d="M230 240h104M280 227v13" fill="none" stroke="#e8a6cb" stroke-width="3"/>
+</svg><div class="eyebrow">Practical Research 1 · Final Defense</div>
     <h1 class="big">Susulung<br>king Pyalung</h1>
     <p class="sub">Describing the Lived Professional Experiences of Psychologists in Luzon on Adolescent Digital Well-Being in Gaming Environments</p>
     <div class="rule"></div>
     <div class="pill">Presented by: Psychology Group</div>
     <ul class="names">
       <li>Balanon, Princess Angeli O.</li>
-      <li>Canlas, Rinoa Heart J.</li>
-      <li>Guevarra, Rhianna J.</li>
       <li>Bano, Matthew Angelo D.</li>
+      <li>Canlas, Rinoa Heart J.</li>
       <li>Flores, Chase Jarish C.</li>
+      <li>Guevarra, Rhianna J.</li>
       <li>Ocampo, Michan Calyx S.</li>
       <li>Regala, Leon Vito S.</li>
       <li>Sazon, Michelle Anne J.</li>
@@ -388,20 +464,20 @@ html:not(.js) .slide{display:block;position:relative;margin-bottom:24px}
         <p>To describe the lived professional experiences of psychologists in Luzon on adolescent digital well-being in gaming environments.</p>
       </div>
     </div>
-    <div class="scope">Scope: psychologists' professional accounts, practicing in Luzon</div>
+    <div class="scope">Scope: six professional accounts · mainly Pampanga within Luzon</div>
     <div class="sops">
       <div class="sop c1 focusable" data-focus="1">
-        <span class="tag t1">SSOP 1</span>
+        <div class="question-head"><span class="tag t1">SSOP 1</span><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-purpose"/></svg></div>
         <h3>Encounter and interpret</h3>
         <p>How do they describe encountering and interpreting adolescent digital well-being in gaming?</p>
       </div>
       <div class="sop c2 focusable" data-focus="2">
-        <span class="tag t2">SSOP 2</span>
+        <div class="question-head"><span class="tag t2">SSOP 2</span><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-link"/></svg></div>
         <h3>Weigh surrounding factors</h3>
         <p>How do they describe the factors that shape it?</p>
       </div>
       <div class="sop c3 focusable" data-focus="3">
-        <span class="tag t3">SSOP 3</span>
+        <div class="question-head"><span class="tag t3">SSOP 3</span><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-heart"/></svg></div>
         <h3>Respond in practice</h3>
         <p>(a) Benefits and concerns, (b) challenges, and (c) strategies.</p>
       </div>
@@ -427,15 +503,15 @@ html:not(.js) .slide{display:block;position:relative;margin-bottom:24px}
             <div class="person solid"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="fig" cx="32" cy="19" r="12"/><path class="fig" d="M9 60c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg>Interview</div>
             <div class="person written"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="fig" cx="32" cy="19" r="11"/><path class="fig" d="M10.5 58.5c0-12.5 9.7-20 21.5-20s21.5 7.5 21.5 20z"/></svg>Written</div>
           </div>
-          <p class="people-note"><b>6</b> PRC-licensed psychologists practicing in Luzon: <b>5</b> in-depth interviews (in person or video call), <b>1</b> written questionnaire.</p>
-        </div>
+          <p class="people-note"><b>6</b> PRC-licensed psychologists with adolescent practice experience. <b>5</b> interviews and <b>1</b> written questionnaire.</p>
+        </div><figure class="sample-strip" aria-label="Source modes: five interviews and one written questionnaire"><svg viewBox="0 0 470 92" role="img" aria-label="Five filled interview segments and one outlined written-response segment"><rect x="5" y="8" width="66" height="22" rx="5" fill="#5a1e33" stroke="#5a1e33" stroke-width="2"/><rect x="81" y="8" width="66" height="22" rx="5" fill="#5a1e33" stroke="#5a1e33" stroke-width="2"/><rect x="157" y="8" width="66" height="22" rx="5" fill="#5a1e33" stroke="#5a1e33" stroke-width="2"/><rect x="233" y="8" width="66" height="22" rx="5" fill="#5a1e33" stroke="#5a1e33" stroke-width="2"/><rect x="309" y="8" width="66" height="22" rx="5" fill="#5a1e33" stroke="#5a1e33" stroke-width="2"/><rect x="385" y="8" width="66" height="22" rx="5" fill="#fbebd6" stroke="#94560c" stroke-width="2"/><text x="5" y="65" class="chart-label">5 interviews</text><text x="345" y="65" class="chart-label">1 written</text></svg><figcaption>Achieved sample · questionnaires had no live probing</figcaption></figure>
       </div>
       <div class="col" data-at="1">
         <h4><i>2</i>Analysis</h4>
         <div class="flow">
-          <div class="stage"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h3"/></svg></div><div><b>Transcripts</b><span>Transcribed manually, checked against the recordings</span></div></div>
+          <div class="stage"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h3"/></svg></div><div><b>Transcripts</b><span>Manual transcription, with assisted transcription where needed</span></div></div>
           <div class="arrow"><svg viewBox="0 0 26 30"><path d="M13 2v24M4 18l9 9 9-9"/></svg></div>
-          <div class="stage"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 13h7v7h-7z"/><path d="M13 7h7M4 17h7"/></svg></div><div><b>Codes</b><span>Generated from the data, then organized with the bioecological model (Bronfenbrenner &amp; Morris, 2007)</span></div></div>
+          <div class="stage"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 13h7v7h-7z"/><path d="M13 7h7M4 17h7"/></svg></div><div><b>Codes</b><span>Coded from the data first; bioecological (PPCT) lens used to interpret</span></div></div>
           <div class="arrow"><svg viewBox="0 0 26 30"><path d="M13 2v24M4 18l9 9 9-9"/></svg></div>
           <div class="stage"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 4.5-8 4.5-8-4.5z"/><path d="M4 12l8 4.5 8-4.5M4 16.5l8 4.5 8-4.5"/></svg></div><div><b>Themes</b><span>Six-phase thematic analysis (Braun &amp; Clarke, 2006)</span></div></div>
         </div>
@@ -443,15 +519,15 @@ html:not(.js) .slide{display:block;position:relative;margin-bottom:24px}
       <div class="col" data-at="2">
         <h4><i>3</i>Dataset</h4>
         <div class="counts">
-          <div class="count"><b>191</b><span>coded extracts<small>passages from the six accounts</small></span></div>
+          <div class="count"><b>191</b><span>coded extracts<small>190 theme-assigned · 1 unassigned</small></span></div>
           <div class="count"><b>86</b><span>distinct code labels<small>initial codes</small></span></div>
           <div class="count"><b>15</b><span>themes<small>4 · 5 · 6 per SSOP</small></span></div>
         </div>
-        <p class="units">Three different units, not a conversion rate.</p>
+        <p class="units">Record counts; not prevalence or effect sizes.</p>
       </div>
     </div>
   </div>
-  <p class="source">Written response: no live follow-up. Counts describe this dataset only, not prevalence.</p>
+  <p class="source">Written response had no live follow-up. Sample concentrated in Pampanga. Counts describe this dataset only.</p>
 </section>
 
 <!-- 4 ─ Findings map -->
@@ -496,9 +572,9 @@ html:not(.js) .slide{display:block;position:relative;margin-bottom:24px}
         </ol>
       </div>
     </div>
-    <p class="differ">Accounts also differed: see 1.3, 1.4, 3.2, 3.3</p>
+    <p class="differ">Divergent accounts retained · 1.3, 1.4, 3.2, 3.3</p>
   </div>
-  <p class="source">Findings; Coding Workbook v3.1. Squares count themes per SSOP, not importance.</p>
+  <p class="source">Findings; Coding Workbook v3.1. Squares count developed themes per SSOP, not participant agreement.</p>
 </section>
 
 <!-- 5 ─ Conclusion SSOP 1 -->
@@ -506,23 +582,12 @@ html:not(.js) .slide{display:block;position:relative;margin-bottom:24px}
   <h2 class="title">Interpret gaming within daily life</h2>
   <div class="content">
     <div class="wrap">
-      <div class="map" role="img" aria-label="Gaming at the center, surrounded by sleep, school, mood, relationships and purpose">
-        <svg class="links" viewBox="0 0 1040 640" aria-hidden="true">
-          <g data-at="1"><line x1="520" y1="330" x2="520" y2="80"/><line x1="520" y1="330" x2="890" y2="250"/><line x1="520" y1="330" x2="770" y2="540"/><line x1="520" y1="330" x2="270" y2="540"/><line x1="520" y1="330" x2="150" y2="250"/></g>
-        </svg>
-        <div class="node" style="left:520px;top:80px" data-at="1">Sleep<small>rest, late nights</small></div>
-        <div class="node" style="left:890px;top:250px" data-at="1">School<small>attendance, focus</small></div>
-        <div class="node" style="left:770px;top:540px" data-at="1">Mood<small>stress, irritability</small></div>
-        <div class="node" style="left:270px;top:540px" data-at="1">Relationships<small>family, friends</small></div>
-        <div class="node" style="left:150px;top:250px" data-at="1">Purpose<small>what gaming does</small></div>
-        <div class="core">Gaming</div>
-        <div class="clock"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 6.5V12l3.5 2.5"/></svg>Hours alone are insufficient</div>
-      </div>
+      <div class="life-figure"><svg viewBox="0 0 1010 620" role="img" aria-labelledby="life-title life-desc"><title id="life-title">Interpret gaming within daily life</title><desc id="life-desc">Conceptual map of purpose, sleep, school, mood, and relationships. Connections are unweighted.</desc><text x="24" y="35" class="diagram-eyebrow">CONCEPTUAL MAP · THEMES 1.1–1.4</text><g class="life-links" data-at="1" fill="none" stroke="#bd91a7" stroke-width="3"><path d="M505 315 505 125M505 315 795 230M505 315 690 485M505 315 320 485M505 315 215 230" pathLength="1"/></g><circle cx="505" cy="315" r="106" fill="#5a1e33"/><circle cx="505" cy="315" r="119" fill="none" stroke="#e3d2d9" stroke-width="2"/><use href="#ico-game" x="461" y="250" width="88" height="72" fill="none" stroke="#fbd3e8" stroke-width="1.5"/><text x="505" y="351" text-anchor="middle" fill="white" font-size="30" font-weight="700">Gaming</text><g class="life-node" data-at="1"><rect x="365" y="51" width="280" height="128" rx="18" fill="white" stroke="#e3d2d9" stroke-width="2"/><use href="#ico-purpose" x="487" y="70" width="36" height="36" fill="none" stroke="#1e6f6a" stroke-width="1.8"/><text x="505" y="132" text-anchor="middle" class="node-heading">Purpose</text><text x="505" y="162" text-anchor="middle" class="node-sub">What does play provide?</text></g><g class="life-node" data-at="1"><rect x="675" y="166" width="280" height="128" rx="18" fill="white" stroke="#e3d2d9" stroke-width="2"/><use href="#ico-sleep" x="797" y="185" width="36" height="36" fill="none" stroke="#1e6f6a" stroke-width="1.8"/><text x="815" y="247" text-anchor="middle" class="node-heading">Sleep</text><text x="815" y="277" text-anchor="middle" class="node-sub">Routines and recovery</text></g><g class="life-node" data-at="1"><rect x="560" y="421" width="280" height="128" rx="18" fill="white" stroke="#e3d2d9" stroke-width="2"/><use href="#ico-school" x="682" y="440" width="36" height="36" fill="none" stroke="#1e6f6a" stroke-width="1.8"/><text x="700" y="502" text-anchor="middle" class="node-heading">School</text><text x="700" y="532" text-anchor="middle" class="node-sub">Daily responsibilities</text></g><g class="life-node" data-at="1"><rect x="170" y="421" width="280" height="128" rx="18" fill="white" stroke="#e3d2d9" stroke-width="2"/><use href="#ico-mood" x="292" y="440" width="36" height="36" fill="none" stroke="#1e6f6a" stroke-width="1.8"/><text x="310" y="502" text-anchor="middle" class="node-heading">Mood</text><text x="310" y="532" text-anchor="middle" class="node-sub">Emotions and coping</text></g><g class="life-node" data-at="1"><rect x="55" y="166" width="280" height="128" rx="18" fill="white" stroke="#e3d2d9" stroke-width="2"/><use href="#ico-peers" x="177" y="185" width="36" height="36" fill="none" stroke="#1e6f6a" stroke-width="1.8"/><text x="195" y="247" text-anchor="middle" class="node-heading">Relationships</text><text x="195" y="277" text-anchor="middle" class="node-sub">Family and connection</text></g><text x="505" y="598" text-anchor="middle" class="node-sub">Meaning and functioning matter alongside time spent.</text></svg></div>
       <div class="points">
         <p class="pt focusable" data-focus="1">Read gaming by its <b>function and daily-life effects</b>, not screen time alone.</p>
         <p class="pt focusable" data-focus="2">Digital well-being is <b>balance and control</b>, not the absence of gaming.</p>
         <p class="pt focusable" data-focus="3">Look beyond the game to the adolescent's <b>experiences and needs</b>.</p>
-        <div class="diverge"><b>One account differed</b>Long passive screen use may itself shape the developing brain (Interviewee 4). Kept as a reported view; not tested here.</div>
+        <div class="diverge"><b>One account differed</b>Interviewee 4 emphasized screen exposure itself. Her causal interpretation is an individual view, not an established finding.</div>
       </div>
     </div>
   </div>
@@ -530,44 +595,13 @@ html:not(.js) .slide{display:block;position:relative;margin-bottom:24px}
 </section>
 
 <!-- 6 ─ Conclusion SSOP 2 -->
-<section class="slide light s6" data-title="Conclusion, SSOP 2" data-kicker="Chapter 4 · Conclusion, SSOP 2" data-kclass="k2" aria-label="Slide 6: conclusion for SSOP 2">
-  <h2 class="title">No factor acts alone</h2>
-  <div class="content">
-    <div class="wrap">
-      <div class="net" role="img" aria-label="Four factor clusters connected to each other and to a center labelled interlocking, weight differs per adolescent">
-        <svg viewBox="0 0 1000 600" aria-hidden="true">
-          <line x1="200" y1="100" x2="800" y2="100"/><line x1="200" y1="500" x2="800" y2="500"/>
-          <line x1="200" y1="100" x2="200" y2="500"/><line x1="800" y1="100" x2="800" y2="500"/>
-          <line x1="400" y1="200" x2="600" y2="400"/><line x1="600" y1="200" x2="400" y2="400"/>
-        </svg>
-        <div class="fac f1"><span class="id">2.1</span><h4>The adolescent</h4><p>Emotions, motives, basic needs</p></div>
-        <div class="fac f2"><span class="id">2.2</span><h4>Family</h4><p>A source of stress and of support</p></div>
-        <div class="fac f3"><span class="id">2.3</span><h4>Online peers</h4><p>Belonging, and also risk</p></div>
-        <div class="fac f4"><span class="id">2.4</span><h4>The game itself</h4><p>Content, cost, public image</p></div>
-        <div class="hub"><span class="id">2.5</span>Interlocking; weight varies</div>
-      </div>
-      <div class="loopbox" data-at="1">
-        <h4>A cycle participants described</h4>
-        <p class="by">Described independently by Interviewees 1 and 5</p>
-        <div class="loop" role="img" aria-label="Cycle: academic or family stress, gaming for relief, late nights and school struggles, failing and more stress, back to stress">
-          <svg viewBox="0 0 648 540" aria-hidden="true">
-            <defs><marker id="ah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#94560C"/></marker></defs>
-            <path style="--k:0" d="M452.6 106.8 A200 200 0 0 1 511.9 201.6" marker-end="url(#ah)"/>
-            <path style="--k:1" d="M511.9 338.4 A200 200 0 0 1 452.6 433.2" marker-end="url(#ah)"/>
-            <path style="--k:2" d="M195.4 433.2 A200 200 0 0 1 136.1 338.4" marker-end="url(#ah)"/>
-            <path style="--k:3" d="M136.1 201.6 A200 200 0 0 1 195.4 106.8" marker-end="url(#ah)"/>
-          </svg>
-          <div class="ln n1" style="--k:0">Academic or family stress</div>
-          <div class="ln n2" style="--k:1">Gaming for relief</div>
-          <div class="ln n3" style="--k:2">Late nights, school struggles</div>
-          <div class="ln n4" style="--k:3">Failing, then more stress</div>
-        </div>
-        <p class="caveat">Pattern described by participants; causal links not tested.</p>
-      </div>
-    </div>
-  </div>
-  <p class="source">Findings, Themes 2.1–2.5. Cycle: Interviewee 1 [22:03]; Interviewee 5 [24:45].</p>
-</section>
+<section class="slide light s6" data-title="Conclusion, SSOP 2" data-kicker="Chapter 4 · Conclusion, SSOP 2" data-kclass="k2" aria-label="Slide 6: conclusion for SSOP 2"><h2 class="title">No factor acts alone</h2><div class="content"><div class="wrap"><svg class="factor-figure" viewBox="0 0 980 620" role="img" aria-labelledby="factor-title factor-desc"><title id="factor-title">Four surrounding factor clusters</title><desc id="factor-desc">Adolescent circumstances, family, online peers and game features connect to a central theme of interlocking factors. All lines have equal weight and no causal direction.</desc><text x="22" y="28" class="diagram-eyebrow">SURROUNDING FACTORS · THEMES 2.1–2.5</text><g class="factor-links" fill="none" stroke="#b9a7cf" stroke-width="3"><path d="M220 241V365M760 241V365M398 150H582M398 455H582M350 236 423 271M630 236 557 271M350 370 423 338M630 370 557 338" pathLength="1"/></g><g class="factor-node"><rect x="22" y="65" width="376" height="176" rx="18" fill="white" stroke="#b9a7cf" stroke-width="2"/><text x="46" y="98" class="diagram-eyebrow">2.1</text><use href="#ico-person" x="333" y="83" width="38" height="38" fill="none" stroke="#5e4389" stroke-width="1.8"/><text x="46" y="140" class="node-heading">The adolescent</text><text x="46" y="179" class="factor-body">Emotions and motives</text><text x="46" y="211" class="factor-body">Sleep, meals, basic needs</text></g><g class="factor-node"><rect x="582" y="65" width="376" height="176" rx="18" fill="white" stroke="#b9a7cf" stroke-width="2"/><text x="606" y="98" class="diagram-eyebrow">2.2</text><use href="#ico-family" x="893" y="83" width="38" height="38" fill="none" stroke="#5e4389" stroke-width="1.8"/><text x="606" y="140" class="node-heading">Family</text><text x="606" y="179" class="factor-body">Stress and conflict</text><text x="606" y="211" class="factor-body">Support and supervision</text></g><g class="factor-node"><rect x="22" y="365" width="376" height="176" rx="18" fill="white" stroke="#b9a7cf" stroke-width="2"/><text x="46" y="398" class="diagram-eyebrow">2.3</text><use href="#ico-peers" x="333" y="383" width="38" height="38" fill="none" stroke="#5e4389" stroke-width="1.8"/><text x="46" y="440" class="node-heading">Online peers</text><text x="46" y="479" class="factor-body">Belonging and connection</text><text x="46" y="511" class="factor-body">Harassment and exclusion</text></g><g class="factor-node"><rect x="582" y="365" width="376" height="176" rx="18" fill="white" stroke="#b9a7cf" stroke-width="2"/><text x="606" y="398" class="diagram-eyebrow">2.4</text><use href="#ico-game" x="893" y="383" width="38" height="38" fill="none" stroke="#5e4389" stroke-width="1.8"/><text x="606" y="440" class="node-heading">Game features</text><text x="606" y="479" class="factor-body">Content and game design</text><text x="606" y="511" class="factor-body">Cost and public image</text></g><circle cx="490" cy="307" r="92" fill="#5e4389"/><circle cx="490" cy="307" r="102" fill="none" stroke="#d3c7e3" stroke-width="2"/><text x="490" y="272" text-anchor="middle" fill="#ece6f4" font-size="21">2.5</text><text x="490" y="311" text-anchor="middle" fill="white" font-size="26" font-weight="700">Interlocking</text><text x="490" y="343" text-anchor="middle" fill="white" font-size="22">Varies by case</text><text x="490" y="597" text-anchor="middle" class="node-sub">Equal lines indicate connections, not measured influence.</text></svg><figure class="cycle-panel" data-at="1"><figcaption>A possible cycle</figcaption><p class="by">Interviewees 1 and 5 · Theme 2.5</p><svg class="cycle-svg" viewBox="0 0 680 548" role="img" aria-labelledby="cycle-title cycle-desc"><title id="cycle-title">A possible cycle described by participants</title><desc id="cycle-desc">Academic or family stress leads to gaming for relief. If excessive, gaming may displace sleep and schoolwork, adding stress and renewed gaming. The study did not test these causal links.</desc><defs><marker id="cycle-arrow-v2" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path class="arrow-tip" d="M1 1L11 6 1 11Z" fill="#94560c" stroke="none"/></marker></defs><circle cx="340" cy="274" r="179" fill="none" stroke="#f0dfc6" stroke-width="2" stroke-dasharray="3 10"/>
+<g fill="none" stroke="#94560c" stroke-width="4" stroke-linecap="round">
+<path class="cycle-edge" style="--k:0" pathLength="1" d="M481 96C551 110 577 157 577 210" marker-end="url(#cycle-arrow-v2)"/>
+<path class="cycle-edge" style="--k:1" pathLength="1" d="M577 330C577 391 542 427 484 444" marker-end="url(#cycle-arrow-v2)"/>
+<path class="cycle-edge" style="--k:2" pathLength="1" d="M196 444C129 427 103 389 103 330" marker-end="url(#cycle-arrow-v2)"/>
+<path class="cycle-edge" style="--k:3" pathLength="1" d="M103 210C103 154 135 115 196 97" marker-end="url(#cycle-arrow-v2)"/>
+</g><g class="cycle-node" style="--k:0"><rect x="212" y="46" width="256" height="96" rx="16"/><circle cx="234" cy="69" r="12" fill="#94560c"/><text x="234" y="75" text-anchor="middle" fill="white" font-size="16" font-weight="700">1</text><text x="347" y="87" text-anchor="middle" class="cycle-label">Academic or</text><text x="347" y="120" text-anchor="middle" class="cycle-label">family stress</text></g><g class="cycle-node" style="--k:1"><rect x="442" y="226" width="256" height="96" rx="16"/><circle cx="464" cy="249" r="12" fill="#94560c"/><text x="464" y="255" text-anchor="middle" fill="white" font-size="16" font-weight="700">2</text><text x="577" y="267" text-anchor="middle" class="cycle-label">Gaming</text><text x="577" y="300" text-anchor="middle" class="cycle-label">for relief</text></g><g class="cycle-node" style="--k:2"><rect x="212" y="406" width="256" height="96" rx="16"/><circle cx="234" cy="429" r="12" fill="#94560c"/><text x="234" y="435" text-anchor="middle" fill="white" font-size="16" font-weight="700">3</text><text x="347" y="447" text-anchor="middle" class="cycle-label">Lost sleep,</text><text x="347" y="480" text-anchor="middle" class="cycle-label">school struggles</text></g><g class="cycle-node" style="--k:3"><rect x="2" y="226" width="256" height="96" rx="16"/><circle cx="24" cy="249" r="12" fill="#94560c"/><text x="24" y="255" text-anchor="middle" fill="white" font-size="16" font-weight="700">4</text><text x="137" y="267" text-anchor="middle" class="cycle-label">Further stress,</text><text x="137" y="300" text-anchor="middle" class="cycle-label">renewed gaming</text></g><text x="340" y="252" text-anchor="middle" class="cycle-center">If play is</text><text x="340" y="283" text-anchor="middle" class="cycle-center">excessive</text><text x="340" y="320" text-anchor="middle" class="cycle-center-small">Reported loop</text></svg><p class="caveat">Conceptual synthesis of accounts.<br>Causal direction was not tested.</p></figure></div></div><p class="source">Findings 2.1–2.5 · Cycle: Interviewee 1 [22:03]; Interviewee 5 [24:45].</p></section>
 
 <!-- 7 ─ Conclusion SSOP 3 -->
 <section class="slide light s7" data-title="Conclusion, SSOP 3" data-kicker="Chapter 4 · Conclusion, SSOP 3" data-kclass="k3" aria-label="Slide 7: conclusion for SSOP 3">
@@ -575,12 +609,7 @@ html:not(.js) .slide{display:block;position:relative;margin-bottom:24px}
   <div class="content">
     <div class="wrap">
       <div class="left">
-        <div class="venn">
-          <div class="vc ben"><h4>Reported benefits</h4><p>Relief, connection, problem-solving skills</p></div>
-          <div class="vc con"><h4>Reported concerns</h4><p>Lost sleep, self-neglect, withdrawal, online risk</p></div>
-          <div class="both" data-at="1">Often in the same adolescent</div>
-        </div>
-        <p class="note" data-at="1">Two participants reported no mixed case.</p>
+        <svg class="coexist-svg" viewBox="0 0 1080 245" role="img" aria-label="Reported benefits and concerns can coexist in the same adolescent. Areas have no quantitative meaning."><rect class="benefit-shape" x="4" y="9" width="572" height="194" rx="22" fill="#e2f0ee" stroke="#1e6f6a" stroke-width="2"/><rect class="concern-shape" x="504" y="9" width="572" height="194" rx="22" fill="#fbebd6" fill-opacity=".85" stroke="#94560c" stroke-width="2"/><use href="#ico-heart" x="30" y="34" width="32" height="32" fill="none" stroke="#1e6f6a" stroke-width="1.8"/><text x="77" y="61" class="diagram-eyebrow" fill="#1e6f6a">REPORTED BENEFITS</text><text x="34" y="107" class="coexist-body">Relief and connection</text><text x="34" y="145" class="coexist-body">Problem solving and teamwork</text><use href="#ico-sleep" x="995" y="33" width="32" height="32" fill="none" stroke="#94560c" stroke-width="1.8"/><text x="626" y="61" class="diagram-eyebrow" fill="#94560c">REPORTED CONCERNS</text><text x="626" y="107" class="coexist-body">Lost sleep and self-care</text><text x="626" y="145" class="coexist-body">Conflict and online risk</text><g data-at="1"><rect x="489" y="80" width="102" height="61" rx="12" fill="#5a1e33"/><use href="#ico-person" x="519" y="91" width="42" height="42" fill="none" stroke="white" stroke-width="1.7"/><text x="540" y="235" text-anchor="middle" class="node-sub">Can coexist · diagram areas are not measured frequencies</text></g></svg><p class="note" data-at="1">Two participants reported no mixed case; views also differed on harm.</p>
         <div class="chal" data-at="2"><b>Challenges</b><span>Parents who see gaming as the whole problem; securing the adolescent's own commitment to change.</span></div>
         <div class="strat" data-at="2">
           <h5>Reported strategies</h5>
@@ -604,31 +633,7 @@ html:not(.js) .slide{display:block;position:relative;margin-bottom:24px}
 </section>
 
 <!-- 8 ─ Recommendations -->
-<section class="slide light s8" data-title="Recommendations" data-kicker="Chapter 4 · Recommendations" aria-label="Slide 8: recommendations">
-  <h2 class="title">Recommendations</h2>
-  <div class="content">
-    <div class="wrap">
-      <div class="panel focusable" data-focus="0">
-        <h3>Practice</h3>
-        <div class="row"><b>Psychologists &amp; counselors</b><span>Ask about gaming at intake; assess its purpose and its effect on sleep, school and relationships.</span></div>
-        <div class="row"><b>Parents</b><span>Ask why and what they play; set limits together.</span></div>
-        <div class="row"><b>Schools</b><span>Sleep and gaming psychoeducation; offline activities that build belonging.</span></div>
-        <div class="row"><b>Adolescents</b><span>Use phone well-being settings; notice when gaming displaces sleep, meals or school.</span></div>
-      </div>
-      <div class="panel fut focusable" data-focus="1">
-        <h3>Future research</h3>
-        <ul>
-          <li><i></i><span><b>Broader sample:</b> complete the intended 10 psychologists</span></li>
-          <li><i></i><span><b>More perspectives:</b> adolescents and parents</span></li>
-          <li><i></i><span><b>Culture:</b> Kapampangan values, family responses</span></li>
-          <li><i></i><span><b>Emerging concerns:</b> doomscrolling, social media; test screen-exposure claims separately</span></li>
-          <li><i></i><span><b>Over time:</b> follow the stress, gaming, sleep-loss cycle</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <p class="source">RA 12080 (2024): possible use in school mental-health programs; proposals are ours, not the law's.</p>
-</section>
+<section class="slide light s8" data-title="Recommendations" data-kicker="Chapter 4 · Recommendations" aria-label="Slide 8: recommendations"><h2 class="title">Recommendations</h2><div class="content"><div class="wrap"><div class="panel focusable" data-focus="0"><h3>Practice</h3><table class="recommend-table"><colgroup><col style="width:30%"><col style="width:70%"></colgroup><thead><tr><th scope="col">Stakeholder</th><th scope="col">Possible action</th></tr></thead><tbody><tr><th scope="row"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-purpose"/></svg><span>Practitioners</span></th><td>Ask purpose; assess sleep, school, relationships and routines.</td></tr><tr><th scope="row"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-family"/></svg><span>Families</span></th><td>Ask what play provides; agree on workable limits together.</td></tr><tr><th scope="row"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-school"/></svg><span>Schools</span></th><td>Offer sleep psychoeducation and offline opportunities for belonging.</td></tr><tr><th scope="row"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-person"/></svg><span>Adolescents</span></th><td>Notice when play displaces sleep, meals, self-care or school.</td></tr></tbody></table><p class="practice-note">Possibilities informed by accounts; effectiveness was not evaluated.</p></div><div class="panel fut focusable" data-focus="1"><h3>Future research</h3><ul><li><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-peers"/></svg><span><b>Broader perspectives</b><br>More practice contexts; adolescents and parents</span></li><li><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-family"/></svg><span><b>Situated culture</b><br>Explore meanings without presuming shared values</span></li><li><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-time"/></svg><span><b>Change over time</b><br>Examine stress, gaming and sleep longitudinally</span></li><li><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-purpose"/></svg><span><b>Emerging concerns</b><br>Doomscrolling, social media; test screen-exposure claims separately</span></li></ul></div></div></div><p class="source">RA 12080 (2024): school mental-health programs are a possible application. Each case still needs professional judgment.</p></section>
 
 <!-- 9 ─ Thanks -->
 <section class="slide s9" data-title="References &amp; thank you" aria-label="Slide 9: references and thank you">
@@ -647,17 +652,14 @@ html:not(.js) .slide{display:block;position:relative;margin-bottom:24px}
     <p>Bronfenbrenner, U., &amp; Morris, P. A. (2007). The bioecological model of human development. In <i>Handbook of child psychology</i> (6th ed., Vol. 1). Wiley.</p>
     <p>Republic Act No. 12080. (2024). <i>Basic Education Mental Health and Well-Being Promotion Act.</i></p>
   </div>
-  <div class="qr">
-    <img src="{{asset:qr-references.png}}" alt="QR code linking to the full reference list">
-    <b>References</b>
-    <span>Scan for the full reference list</span>
-  </div>
+  <div class="qr-card"><img src="{{asset:qr-references.png}}" alt="QR code linking to the full reference list"><b>References</b><span>Scan for the full list</span><button class="ref-open" id="openReferences">Open the full list here (V)</button></div>
   <p class="laus">Laus Deo Semper</p>
 </section>
 
 </main>
 
-<!-- operator UI -->
+<div class="ui reference-overlay" id="referenceOv" hidden><article class="reference-dialog" role="dialog" aria-modal="true" aria-labelledby="referenceHeading"><button class="dialog-close" data-close aria-label="Close references">×</button><p class="dialog-eyebrow">SUSULUNG KING PYALUNG</p><h2 id="referenceHeading">Research references</h2><p>Compiled from the supplied revised chapters and discussion. Citation text is retained; external links require an internet connection.</p><ol><li>Alzahrani, A. K. D., &amp; Griffiths, M. D. (2024). Problematic gaming and students&#x27; academic performance: A systematic review. International Journal of Mental Health and Addiction, 23(5), 4062–4095. <a href="https://doi.org/10.1007/s11469-024-01338-5" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s11469-024-01338-5</a></li><li>American Psychological Association. (2022a). Clinical psychology. <a href="https://www.apa.org/ed/graduate/specialize/clinical" target="_blank" rel="noopener noreferrer">https://www.apa.org/ed/graduate/specialize/clinical</a></li><li>American Psychological Association. (2022b). Counseling psychology. <a href="https://www.apa.org/ed/graduate/specialize/counseling" target="_blank" rel="noopener noreferrer">https://www.apa.org/ed/graduate/specialize/counseling</a></li><li>Antonio, B. A. (2023). Pamagmasabal: A proposed environmental stewardship framework for the Kapampangan [Doctoral dissertation, De La Salle University]. Animo Repository. <a href="https://animorepository.dlsu.edu.ph/etdd_tred/9" target="_blank" rel="noopener noreferrer">https://animorepository.dlsu.edu.ph/etdd_tred/9</a></li><li>Basic Education Mental Health and Well-Being Promotion Act, Republic Act No. 12080 (2024). <a href="https://lawphil.net/statutes/repacts/ra2024/ra_12080_2024.html" target="_blank" rel="noopener noreferrer">https://lawphil.net/statutes/repacts/ra2024/ra_12080_2024.html</a></li><li>Bitto Urbanova, L., Madarasova Geckova, A., Dankulincova Veselska, Z., Capikova, S., Holubcikova, J., van Dijk, J. P., &amp; Reijneveld, S. A. (2023). “I could do almost nothing without digital technology”: A qualitative exploration of adolescents&#x27; perception of the risks and challenges of digital technology. Frontiers in Psychology, 14, Article 1237452. <a href="https://doi.org/10.3389/fpsyg.2023.1237452" target="_blank" rel="noopener noreferrer">https://doi.org/10.3389/fpsyg.2023.1237452</a></li><li>Braun, V., &amp; Clarke, V. (2006). Using thematic analysis in psychology. Qualitative Research in Psychology, 3(2), 77–101. <a href="https://doi.org/10.1191/1478088706qp063oa" target="_blank" rel="noopener noreferrer">https://doi.org/10.1191/1478088706qp063oa</a></li><li>Bronfenbrenner, U. (1979). The ecology of human development: Experiments by nature and design. Harvard University Press.</li><li>Bronfenbrenner, U., &amp; Morris, P. A. (2007). The bioecological model of human development. In W. Damon &amp; R. M. Lerner (Eds.), Handbook of child psychology: Vol. 1. Theoretical models of human development (6th ed., pp. 793–828). John Wiley &amp; Sons. <a href="https://doi.org/10.1002/9780470147658.chpsy0114" target="_blank" rel="noopener noreferrer">https://doi.org/10.1002/9780470147658.chpsy0114</a></li><li>Columb, D., Griffiths, M. D., &amp; O&#x27;Gara, C. (2022). Online gaming and gaming disorder: More than just a trivial pursuit. Irish Journal of Psychological Medicine, 39(1), 1–7. <a href="https://doi.org/10.1017/ipm.2019.31" target="_blank" rel="noopener noreferrer">https://doi.org/10.1017/ipm.2019.31</a></li><li>Creswell, J. W., &amp; Poth, C. N. (2018). Qualitative inquiry and research design: Choosing among five approaches (4th ed.). SAGE Publications.</li><li>Dahl, R. E., Allen, N. B., Wilbrecht, L., &amp; Suleiman, A. B. (2018). Importance of investing in adolescence from a developmental science perspective. Nature, 554(7693), 441–450. <a href="https://doi.org/10.1038/nature25770" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/nature25770</a></li><li>Data Privacy Act of 2012, Republic Act No. 10173 (2012). <a href="https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html" target="_blank" rel="noopener noreferrer">https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html</a></li><li>Dienlin, T., &amp; Johannes, N. (2020). The impact of digital technology use on adolescent well-being. Dialogues in Clinical Neuroscience, 22(2), 135–142. <a href="https://doi.org/10.31887/DCNS.2020.22.2/tdienlin" target="_blank" rel="noopener noreferrer">https://doi.org/10.31887/DCNS.2020.22.2/tdienlin</a></li><li>Encallado, H. P., Cruz, L. D., III, Emfimo, E. T., Gavilan, J. D., &amp; Cayogyog, A. O. (2024). Navigating the digital playground: Lived experiences, risks, and benefits of online gaming among senior high school students. International Journal of Research and Innovation in Social Science, 8(6), 2773–2789. <a href="https://doi.org/10.47772/IJRISS.2024.806211" target="_blank" rel="noopener noreferrer">https://doi.org/10.47772/IJRISS.2024.806211</a></li><li>Feerrar, J. (2022). Bringing digital well-being into the heart of digital media literacies. Journal of Media Literacy Education, 14(2), 72–77. <a href="https://doi.org/10.23860/jmle-2022-14-2-6" target="_blank" rel="noopener noreferrer">https://doi.org/10.23860/jmle-2022-14-2-6</a></li><li>Giardina, A., Schimmenti, A., Starcevic, V., King, D. L., Di Blasi, M., &amp; Billieux, J. (2024). Problematic gaming, social withdrawal, and escapism: The Compensatory-Dissociative Online Gaming (C-DOG) model. Computers in Human Behavior, 155, Article 108187. <a href="https://doi.org/10.1016/j.chb.2024.108187" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.chb.2024.108187</a></li><li>Gottfried, J., &amp; Sidoti, O. (2024). Teens and video games today. Pew Research Center. <a href="https://www.pewresearch.org/internet/2024/05/09/teens-and-video-games-today/" target="_blank" rel="noopener noreferrer">https://www.pewresearch.org/internet/2024/05/09/teens-and-video-games-today/</a></li><li>Henriksen, M. G., Englander, M., &amp; Nordgaard, J. (2022). Methods of data collection in psychopathology: The role of semi-structured, phenomenological interviews. Phenomenology and the Cognitive Sciences, 21(1), 9–30. <a href="https://doi.org/10.1007/s11097-021-09730-5" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s11097-021-09730-5</a></li><li>Jensen, K. B. (2016). Metamedium. In K. B. Jensen, E. W. Rothenbuhler, J. D. Pooley, &amp; R. T. Craig (Eds.), The International Encyclopedia of Communication Theory and Philosophy. Wiley. <a href="https://doi.org/10.1002/9781118766804.wbiect166" target="_blank" rel="noopener noreferrer">https://doi.org/10.1002/9781118766804.wbiect166</a></li><li>Kemp, S. (2025, February 25). Digital 2025: The Philippines. DataReportal. <a href="https://datareportal.com/reports/digital-2025-philippines" target="_blank" rel="noopener noreferrer">https://datareportal.com/reports/digital-2025-philippines</a></li><li>King, D. L., &amp; Delfabbro, P. H. (2019). Internet gaming disorder: Theory, assessment, treatment, and prevention. Elsevier. <a href="https://doi.org/10.1016/C2016-0-04107-4" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/C2016-0-04107-4</a></li><li>Király, O., Potenza, M. N., &amp; Demetrovics, Z. (2022). Gaming disorder: Current research directions. Current Opinion in Behavioral Sciences, 47, Article 101204. <a href="https://doi.org/10.1016/j.cobeha.2022.101204" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.cobeha.2022.101204</a></li><li>Labana, R. V., Hadjisaid, J. L., Imperial, A. R., Jumawid, K. E., Lupague, M. J. M., &amp; Malicdem, D. C. (2020). Online game addiction and the level of depression among adolescents in Manila, Philippines. Central Asian Journal of Global Health, 9(1). <a href="https://doi.org/10.5195/cajgh.2020.369" target="_blank" rel="noopener noreferrer">https://doi.org/10.5195/cajgh.2020.369</a></li><li>Laffier, J., Rehman, A., &amp; Westley, M. (2025). The promise of digital wellness to promote youth well-being and healthy communities. In J. Ferreira (Ed.), Interpersonal relationships in the digital age. IntechOpen. <a href="https://doi.org/10.5772/intechopen.1008817" target="_blank" rel="noopener noreferrer">https://doi.org/10.5772/intechopen.1008817</a></li><li>Lincoln, Y. S., &amp; Guba, E. G. (1985). Naturalistic inquiry. SAGE Publications.</li><li>Llabore, M., Jr., Delos Reyes, L., Garcia, R., Pero, R., Parajas, P., Dela Merced, J., Lopez, M. E., Nicolas, J., Marquez, R., &amp; Lim, M. (2023). Effects of digital gaming in the mental health and behavioral status among adolescents. Psychology and Education: A Multidisciplinary Journal, 12(7), 730–743. <a href="https://ejournals.ph/article.php?id=21787" target="_blank" rel="noopener noreferrer">https://ejournals.ph/article.php?id=21787</a></li><li>Lo, C. K. M., Yu, L., Cho, Y. W., &amp; Chan, K. L. (2021). A qualitative study of practitioners&#x27; views on family involvement in treatment process of adolescent internet addiction. International Journal of Environmental Research and Public Health, 18(1), Article 86. <a href="https://doi.org/10.3390/ijerph18010086" target="_blank" rel="noopener noreferrer">https://doi.org/10.3390/ijerph18010086</a></li><li>Maninang, J. (2025). On kapwa: A core concept in Filipino social psychology. Philosophia: A Journal of the Department of Philosophy, Xavier University–Ateneo de Cagayan, 3(1), 5–11. <a href="https://philarchive.org/rec/MANOKA" target="_blank" rel="noopener noreferrer">https://philarchive.org/rec/MANOKA</a></li><li>Mental Health Act, Republic Act No. 11036 (2018). <a href="https://www.officialgazette.gov.ph/2018/06/20/republic-act-no-11036/" target="_blank" rel="noopener noreferrer">https://www.officialgazette.gov.ph/2018/06/20/republic-act-no-11036/</a></li><li>Meriläinen, M., Hietajarvi, L., Aurava, R., &amp; Stenros, J. (2023). Games in everyday life: Profiles of adolescent digital gaming motives and well-being outcomes. Telematics and Informatics Reports, 12, Article 100104. <a href="https://doi.org/10.1016/j.teler.2023.100104" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.teler.2023.100104</a></li><li>Musetti, A., Floros, G., Chiappedi, M., &amp; Stavropoulos, V. (2025). Gaming disorder in the ICD-11: The state of the game. BMC Psychiatry, 25, Article 1114. <a href="https://doi.org/10.1186/s12888-025-07576-8" target="_blank" rel="noopener noreferrer">https://doi.org/10.1186/s12888-025-07576-8</a></li><li>Nagata, J. M., Nayak, S., Choi, W., Potes, C., Heuer, A., Memon, Z., Talebloo, J., Li, E. J., Bao, K., Helmer, C. K., Moreno, M. A., &amp; Lavender, J. M. (2026). Health benefits of video games in adolescents and young adults. Current Pediatrics Reports, 14(1), Article 2. <a href="https://doi.org/10.1007/s40124-026-00376-y" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s40124-026-00376-y</a></li><li>Nielsen, P., Favez, N., Liddle, H., &amp; Rigter, H. (2019). Linking parental mediation practices to adolescents&#x27; problematic online screen use: A systematic literature review. Journal of Behavioral Addictions, 8(4), 649–663. <a href="https://doi.org/10.1556/2006.8.2019.61" target="_blank" rel="noopener noreferrer">https://doi.org/10.1556/2006.8.2019.61</a></li><li>Philippine Psychology Act of 2009, Republic Act No. 10029 (2010). <a href="https://lawphil.net/statutes/repacts/ra2010/ra_10029_2010.html" target="_blank" rel="noopener noreferrer">https://lawphil.net/statutes/repacts/ra2010/ra_10029_2010.html</a></li><li>Rehbein, F., Gentile, D. A., Lemmens, J., &amp; Rumpf, H.-J. (2024). Structural game characteristics and problematic gaming: Introduction of the Risk Characteristics Checklist for Games (RCCG). SUCHT, 70(2), 77–86. <a href="https://doi.org/10.1024/0939-5911/a000859" target="_blank" rel="noopener noreferrer">https://doi.org/10.1024/0939-5911/a000859</a></li><li>Ruslin, R., Mashuri, S., Rasak, M. S. A., Alhabsyi, F., &amp; Syam, H. (2022). Semi-structured interview: A methodological reflection on the development of a qualitative research instrument in educational studies. IOSR Journal of Research &amp; Method in Education, 12(1), 22–29.</li><li>Schneider, L. A., King, D. L., &amp; Delfabbro, P. H. (2017). Family factors in adolescent problematic internet gaming: A systematic review. Journal of Behavioral Addictions, 6(3), 321–333. <a href="https://doi.org/10.1556/2006.6.2017.035" target="_blank" rel="noopener noreferrer">https://doi.org/10.1556/2006.6.2017.035</a></li><li>Sussman, C. J., Harper, J. M., Stahl, J. L., &amp; Weigle, P. (2018). Internet and video game addictions: Diagnosis, epidemiology, and neurobiology. Child and Adolescent Psychiatric Clinics of North America, 27(2), 307–326. <a href="https://doi.org/10.1016/j.chc.2017.11.015" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.chc.2017.11.015</a></li><li>UNICEF Office of Research – Innocenti. (2022). Responsible innovation in technology for children: Digital technology, play and child well-being. <a href="https://www.unicef.org/innocenti/reports/responsible-innovation-technology-children" target="_blank" rel="noopener noreferrer">https://www.unicef.org/innocenti/reports/responsible-innovation-technology-children</a></li><li>Uçur, Ö., &amp; Dönmez, Y. E. (2021). Problematic internet gaming in adolescents, and its relationship with emotional regulation and perceived social support. Psychiatry Research, 296, Article 113678. <a href="https://doi.org/10.1016/j.psychres.2020.113678" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.psychres.2020.113678</a></li><li>Van Manen, M. (2016). Researching lived experience: Human science for an action sensitive pedagogy (2nd ed.). Routledge. <a href="https://doi.org/10.4324/9781315421056" target="_blank" rel="noopener noreferrer">https://doi.org/10.4324/9781315421056</a></li><li>Vanden Abeele, M. M. P. (2021). Digital wellbeing as a dynamic construct. Communication Theory, 31(4), 932–955. <a href="https://doi.org/10.1093/ct/qtaa024" target="_blank" rel="noopener noreferrer">https://doi.org/10.1093/ct/qtaa024</a></li><li>World Health Organization Regional Office for Europe. (2024). Teens, screens and mental health: New WHO report indicates need for healthier online habits among adolescents. <a href="https://www.who.int/europe/news/item/25-09-2024-teens--screens-and-mental-health" target="_blank" rel="noopener noreferrer">https://www.who.int/europe/news/item/25-09-2024-teens--screens-and-mental-health</a></li><li>World Health Organization. (2020, October 22). Addictive behaviours: Gaming disorder. <a href="https://www.who.int/news-room/questions-and-answers/item/addictive-behaviours-gaming-disorder" target="_blank" rel="noopener noreferrer">https://www.who.int/news-room/questions-and-answers/item/addictive-behaviours-gaming-disorder</a></li><li>Yang, H., Yang, S., Yang, Y., &amp; Tan, Q. Y. J. (2024). Multidimensional predictors of adolescents&#x27; nonacademic digital media use in the United States: Insights from a bioecological perspective. Journal of Children and Media, 18(2), 178–197. <a href="https://doi.org/10.1080/17482798.2024.2334933" target="_blank" rel="noopener noreferrer">https://doi.org/10.1080/17482798.2024.2334933</a></li><li>Young, C., &amp; Young, L. S. (2019). Comparing clinical and counselling psychologists&#x27; practitioner demographics, key activities, theoretical orientations, values, and career satisfaction: A contribution to the Scopes of Practice debate. South African Journal of Psychology, 49(4), 505–517. <a href="https://doi.org/10.1177/0081246318823188" target="_blank" rel="noopener noreferrer">https://doi.org/10.1177/0081246318823188</a></li></ol></article></div>
+<div class="ui evidence-overlay" id="evidenceOv" hidden><article class="evidence-dialog" role="dialog" aria-modal="true" aria-labelledby="evidenceHeading"><button class="dialog-close" data-close aria-label="Close evidence panel">×</button><p class="dialog-eyebrow">OPTIONAL Q&amp;A PANEL · OUTSIDE THE NINE-SLIDE TALK</p><h2 id="evidenceHeading">What the evidence supports</h2><div class="evidence-columns"><div><h3>The analysis record</h3><div class="record-metrics"><p><b>191</b>extracts</p><p><b>86</b>code labels</p><p><b>15</b>themes</p></div><svg class="assignment-strip" viewBox="0 0 550 115" role="img" aria-label="191 extracts: 190 theme-assigned, one unassigned"><rect x="4" y="18" width="532" height="25" rx="4" fill="#5a1e33"/><rect x="536" y="18" width="3" height="25" fill="#94560c"/><path d="M538 45v18h-70" fill="none" stroke="#94560c" stroke-width="2"/><text x="4" y="96" font-size="21" fill="#3a1424">190 theme-assigned</text><text x="315" y="96" font-size="21" fill="#94560c">1 unassigned</text></svg><h3>PPCT as an interpretive lens</h3><svg class="ppct" viewBox="0 0 550 265" role="img" aria-label="Person, process, context and time as an interpretive mapping, not a tested mechanism"><rect x="4" y="4" width="540" height="240" rx="16" fill="#ece6f4" stroke="#5e4389"/><text x="25" y="36" font-size="21" fill="#5e4389">CONTEXT · family, peers, institutions</text><rect x="40" y="58" width="465" height="156" rx="16" fill="#e2f0ee" stroke="#1e6f6a"/><text x="62" y="91" font-size="21" fill="#1e6f6a">PROCESS · recurring interactions</text><rect x="104" y="117" width="335" height="70" rx="12" fill="#5a1e33"/><text x="272" y="146" text-anchor="middle" font-size="21" fill="white">PERSON</text><text x="272" y="173" text-anchor="middle" font-size="19" fill="white">motives and circumstances</text><text x="272" y="265" text-anchor="middle" font-size="20" fill="#6b4a57">TIME · changing routines and historical conditions</text></svg><p class="evidence-source">Discussion revision; Bronfenbrenner &amp; Morris (2007). Diagram is a presentation synthesis.</p></div><div><h3>Scope and interpretation</h3><table class="evidence-table"><thead><tr><th>Supported description</th><th>Limit</th></tr></thead><tbody><tr><td>Six professional accounts</td><td>Five interviews, one questionnaire; mainly Pampanga</td></tr><tr><td>15 developed themes</td><td>Coverage may include negative cases; not agreement</td></tr><tr><td>Stress–gaming–sleep pattern</td><td>Reported interpretation; causal direction not tested</td></tr><tr><td>Reported strategies</td><td>No comparative or before/after effectiveness data</td></tr><tr><td>Luzon eligibility scope</td><td>Small achieved sample is not representative of Luzon</td></tr></tbody></table><div class="evidence-caveat">One respondent's screen-exposure claim is retained as an individual interpretation. It is not an established causal finding.</div><p class="evidence-source">Findings and Discussion revisions; Chapter 2 revision. Dataset counts have different units.</p></div></div></article></div><div class="deck-progress" aria-hidden="true"><i class="progress-segment"></i><i class="progress-segment"></i><i class="progress-segment"></i><i class="progress-segment"></i><i class="progress-segment"></i><i class="progress-segment"></i><i class="progress-segment"></i><i class="progress-segment"></i><i class="progress-segment"></i></div><!-- operator UI -->
 <div class="ui controls" id="controls" role="toolbar" aria-label="Deck controls">
   <button id="bPrev" title="Previous (Left arrow)" aria-label="Previous">‹</button>
   <span class="pos" id="pos">1 / 9</span>
@@ -665,7 +667,7 @@ html:not(.js) .slide{display:block;position:relative;margin-bottom:24px}
   <button id="bGrid" title="Jump to slide (G)">Slides</button>
   <button id="bPres" title="Presenter view (P)">Presenter</button>
   <button id="bFull" title="Full screen (F)">Full screen</button>
-  <button id="bSound" title="Sound on/off (M)">Sound off</button>
+  <button id="bEvidence" title="Evidence and scope (E)">Evidence</button><button id="bReplay" title="Replay this slide (R)">Replay</button><button id="bMotion" title="Toggle reduced motion">Motion</button>
   <button id="bHelp" title="Keys (?)">?</button>
 </div>
 <div class="ui toast" id="toast" role="status"></div>
@@ -680,8 +682,7 @@ html:not(.js) .slide{display:block;position:relative;margin-bottom:24px}
       <tr><td><kbd>G</kbd></td><td>Slide picker</td></tr>
       <tr><td><kbd>P</kbd></td><td>Presenter view with scripts and timer (second window)</td></tr>
       <tr><td><kbd>F</kbd></td><td>Full screen</td></tr>
-      <tr><td><kbd>M</kbd></td><td>Optional opening and closing tone (off by default)</td></tr>
-      <tr><td><kbd>Home</kbd> <kbd>End</kbd></td><td>First or last slide</td></tr>
+      <tr><td><kbd>R</kbd></td><td>Replay the current slide from its first step</td></tr><tr><td><kbd>E</kbd></td><td>Open the evidence and scope panel</td></tr><tr><td><kbd>V</kbd></td><td>Read the full references</td></tr><tr><td><kbd>Home</kbd> <kbd>End</kbd></td><td>First or last slide</td></tr>
       <tr><td><kbd>Esc</kbd></td><td>Close this panel</td></tr>
     </table>
     <p>Nothing advances on its own. Every scene also has a complete static state for printing and reduced-motion settings.</p>
@@ -695,50 +696,39 @@ document.documentElement.classList.add("js");
 
 /* ---------- timing, speakers, scripts ---------- */
 const NOTES = [
-  { speaker:"All", window:[0,20], cue:"Hook for at most 8 seconds, then one click widens the screen into the title. Silence before Rinoa starts.",
+  { speaker:"All", window:[0,20], cue:"Hook for at most 8 seconds, then one click widens the screen into the title. Pause before Rinoa starts.",
     steps:[{label:"Hook: two questions"},{label:"Title and researchers"}],
-    scripts:[{who:"All", text:"No script. Optional skit or the two on-screen questions only."}] },
+    scripts:[{who:"All", text:"Use the two on-screen questions as the opening. Reveal the title within eight seconds."}] },
   { speaker:"Rinoa", window:[20,60], cue:"Click once per question as Rinoa names it. All three stay visible.",
     steps:[{label:"Purpose"},{label:"SSOP 1 highlighted"},{label:"SSOP 2 highlighted"},{label:"SSOP 3 highlighted"}],
-    scripts:[{who:"Rinoa", limit:65, flag:"Script doc said 'Pampanga'. Changed to 'Luzon' to match the current title and SSOPs.",
-      text:"I am Canlas, Rinoa Heart, and I will now present the purpose statement and research questions. Our study aims to describe the lived professional experiences of psychologists in Luzon regarding adolescent digital well-being in gaming environments. Specifically, we ask how they understand digital well-being, what factors shape it, and how they respond to gaming-related benefits and concerns, challenges, and strategies in their professional practice."}] },
+    scripts:[{"who": "Rinoa", "limit": 65, "flag": "From the script doc, with 'Pampanga' changed to 'Luzon' to match the current title.", "text": "I am Canlas, Rinoa Heart, and I will now present the purpose statement and research questions. Our study aims to describe the lived professional experiences of psychologists in Luzon regarding adolescent digital well-being in gaming environments. Specifically, we ask how they understand digital well-being, what factors shape it, and how they respond to gaming-related benefits and concerns, challenges, and strategies in their professional practice."}] },
   { speaker:"Chase", window:[60,120], cue:"Click 1 reveals analysis, click 2 the counts. Pause after explaining the written questionnaire.",
     steps:[{label:"Participants"},{label:"Analysis"},{label:"Dataset counts"}],
-    scripts:[{who:"Chase", limit:100,
-      text:"For the Methodology, I am Chase Jarish C. Flores. We utilized a qualitative phenomenological design with six PRC-licensed psychologists in Luzon via five verified interviews and one questionnaire. Data was analyzed through Braun and Clarke's thematic analysis. We generated initial codes directly from participants' transcripts before organizing them within the bioecological model framework. In total, 191 extracts yielded 86 codes and 15 central themes."}] },
+    scripts:[{"who": "Chase", "limit": 100, "flag": "Edited from the script doc: dropped 'verified' (not every transcript has a documented audio check) and added the Pampanga concentration and the one unassigned extract, both stated in the revised LAS.", "text": "For the Methodology, I am Chase Jarish C. Flores. We utilized a qualitative phenomenological design with six PRC-licensed psychologists in Luzon, most of them practicing in Pampanga, through five interviews and one written questionnaire. Data was analyzed through Braun and Clarke's thematic analysis. We generated initial codes directly from participants' transcripts before interpreting them through the bioecological model. In total, 191 extracts yielded 86 codes and 15 central themes, with one extract left outside the themes."}] },
   { speaker:"Leon", window:[120,210], cue:"Leon covers SSOP 1 and 2. At 2:45, one click moves the outline to SSOP 3 for Matthew. No slide change.",
     steps:[{label:"SSOP 1 and 2 outlined", speaker:"Leon", window:[120,165]},{label:"SSOP 3 outlined", speaker:"Matthew", window:[165,210]}],
-    scripts:[
-      {who:"Leon", limit:75, step:0, flag:"DRAFT written for this deck: Leon's section in the script doc was empty. Adapt it and time it.",
-       text:"For the themes of SSOP 1 and 2, I am Regala, Leon Vito S. Gaming rarely arrived as the referral concern; it surfaced behind sleep, school, and mood problems. Psychologists judged its function over its frequency, defined well-being as balance and control, and shifted toward understanding the gamer. For SSOP 2, they weighed the adolescent's emotions and basic needs, family, online peers, and the game's content and cost, all interlocking differently per adolescent."},
-      {who:"Matthew", limit:75, step:1, flag:"86 words against a 75-word limit. Time it aloud.",
-       text:"And for our third and final SSOP, I am Matthew Angelo D. Bano. Psychologists described gaming as a source of relief, connection, and skills, such as stress relief, belonging, and problem solving. Yet it can also disrupt sleep, self-care, and safety. Often, both appear in the same adolescent, so gaming is never labeled simply good or bad. This complexity shaped their challenges: parents who saw gaming as the whole problem, and difficulty securing the adolescent's commitment. In response, they first understood the adolescent, then used gradual regulation, offline alternatives, and psychoeducation, explaining why limits matter instead of dictating them."}] },
+    scripts:[{"who": "Leon", "limit": 75, "step": 0, "flag": "Drafted for the deck because Leon's section in the script doc is empty. Adapt and time it.", "text": "I am Regala, Leon Vito S. The first four themes describe gaming surfacing behind other concerns, attention to function, balance and control, and understanding the gamer. The next five describe emotions and basic needs, family stress and support, online peers, and game content, cost and public image. These factors interlock differently in different cases. Divergent views remain part of the analysis."}, {"who": "Matthew", "limit": 75, "step": 1, "flag": "Shortened: the script doc version was 86 words against a 75-word limit.", "text": "I am Matthew Angelo D. Bano. The final six themes describe benefits, disrupted daily functioning, and their possible coexistence, followed by challenges involving parents and adolescent commitment. Reported strategies begin with understanding the adolescent and include gradual regulation, offline alternatives and psychoeducation. Two participants had not encountered a mixed case. These accounts describe professional experience; they do not demonstrate intervention effectiveness."}] },
   { speaker:"Michelle", window:[210,260], cue:"Click 1 as she names daily-life effects (domains appear), then one click each for balance and control, and looking beyond the game. Pause on 'function and daily-life effects'.",
     steps:[{label:"Screen time alone"},{label:"Life domains: function and effects"},{label:"Balance and control"},{label:"Look beyond the game"}],
-    scripts:[{who:"Michelle", limit:85,
-      text:"For the conclusion of SSOP 1, I am Sazon, Michelle Anne J. The findings show that psychologists do not view adolescent gaming simply in terms of screen time. Instead, they consider the concerns behind gaming, its purpose, and its effects on daily life. Digital well-being was understood as maintaining balance and control rather than completely avoiding gaming. Overall, the findings highlight the importance of looking beyond the game itself and understanding the adolescent's experiences, needs, and circumstances that may influence their gaming behavior and well-being."}] },
+    scripts:[{"who": "Michelle", "limit": 85, "text": "For the conclusion of SSOP 1, I am Sazon, Michelle Anne J. The findings show that psychologists do not view adolescent gaming simply in terms of screen time. Instead, they consider the concerns behind gaming, its purpose, and its effects on daily life. Digital well-being was understood as maintaining balance and control rather than completely avoiding gaming. Overall, the findings highlight the importance of looking beyond the game itself and understanding the adolescent's experiences, needs, and circumstances that may influence their gaming behavior and well-being."}] },
   { speaker:"Michan", window:[260,310], cue:"One click lights the loop once as Michan describes it. Pause as it returns to stress.",
     steps:[{label:"Four factor clusters"},{label:"Loop lights once"}],
-    scripts:[{who:"Michan", limit:85, flag:"Script names 'gaming habits' and 'school and community'. The final SSOP 2 themes are the adolescent, family, online peers, and the game's content, cost and public image (2.1–2.5). The slide follows the findings; consider aligning the script.",
-      text:"For SSOP 2, I'm Ocampo, Michan Calyx S. The findings show that adolescent digital well-being within gaming environments is shaped by several interconnected factors. Family and parental influences affect adolescents' gaming experiences, while peer relationships and social interactions shape their experiences with others. Gaming habits and patterns of use also influence digital well-being, alongside the school and community environment. Overall, psychologists emphasized that gaming behavior does not exist in isolation, but is shaped by the different relationships, habits, and environments surrounding the adolescent."}] },
-  { speaker:"Wohan", window:[310,360], cue:"Click 1: cards overlap as he explains coexistence. Click 2: challenges and strategies. Click 3: the quote. Then stop; pause before and after it.",
+    scripts:[{"who": "Michan", "limit": 85, "flag": "Rewritten: the script doc named 'gaming habits' and 'school and community', which are not the final SSOP 2 themes (2.1 to 2.5).", "text": "For SSOP 2, I am Ocampo, Michan Calyx S. Participants considered the adolescent's emotions and basic needs, family stress and support, online peers, and the game's features, cost and public image. Their importance varied by case. Interviewees 1 and 5 described a possible cycle: stress, gaming for relief, disrupted sleep or schoolwork if excessive, then further stress and renewed gaming. We did not observe this cycle over time or test its causal direction."}] },
+  { speaker:"Wohan", window:[310,360], cue:"Click 1: the shared adolescent marker appears as he explains coexistence. Click 2: challenges and strategies. Click 3: the quote. Then stop; pause before and after it.",
     steps:[{label:"Benefits and concerns"},{label:"They overlap"},{label:"Challenges and strategies"},{label:"Quote"}],
-    scripts:[{who:"Wohan", limit:85, flag:"Added 'simply' to the quote to match the transcript (Interviewee 5, 49:26). Without it the line sounds like a rejection of any reduction.",
-      text:"For SSOP 3, I'm Sumang, Wohan Jace P. Overall, psychologists usually saw gaming's benefits and concerns in the same adolescent, so they avoided calling it simply good or bad. Their main challenges were parents who often saw gaming as the whole problem, and securing the adolescent's own commitment to change. Their strategies began with understanding the adolescent, then gradual regulation, offline activities, and psychoeducation, rather than prohibition. As one psychologist put it, the goal is not to simply reduce gaming, but to understand the gamer."}] },
+    scripts:[{"who": "Wohan", "limit": 85, "flag": "From the script doc with two fixes: 'usually' became 'often' (two participants reported no mixed case), and 'simply' was added to the quote to match Interviewee 5 at 49:26.", "text": "For SSOP 3, I'm Sumang, Wohan Jace P. Overall, psychologists often saw gaming's benefits and concerns in the same adolescent, so they avoided calling it simply good or bad. Their main challenges were parents who often saw gaming as the whole problem, and securing the adolescent's own commitment to change. Their strategies began with understanding the adolescent, then gradual regulation, offline activities, and psychoeducation, rather than prohibition. As one psychologist put it, the goal is not to simply reduce gaming, but to understand the gamer."}] },
   { speaker:"Princess", window:[360,410], cue:"Princess: Practice, about 25 seconds. One click moves the outline to Future research for Rhianna.",
     steps:[{label:"Practice outlined", speaker:"Princess", window:[360,385]},{label:"Future research outlined", speaker:"Rhianna", window:[385,410]}],
-    scripts:[
-      {who:"Princess", limit:40, step:0, text:"For practice, we recommend assessing gaming beyond screen time by considering its purpose and effects. Parents and schools can set collaborative limits, promote healthy sleep, and provide offline activities, while adolescents can monitor their gaming and recognize early signs of disruption."},
-      {who:"Rhianna", limit:40, step:1, text:"For future research, we recommend expanding the sample, including adolescents and parents, and exploring emerging concerns such as doomscrolling and social media use. Studies may also examine cultural influences and how gaming, stress, and sleep patterns change over time."}] },
+    scripts:[{"who": "Princess", "limit": 40, "step": 0, "text": "For practice, we recommend assessing gaming beyond screen time by considering its purpose and effects. Parents and schools can set collaborative limits, promote healthy sleep, and provide offline activities, while adolescents monitor their gaming and recognize early signs of disruption."}, {"who": "Rhianna", "limit": 40, "step": 1, "text": "For future research, we recommend expanding the sample, including adolescents and parents, and exploring emerging concerns such as doomscrolling and social media use. Studies may also examine cultural influences and how gaming, stress, and sleep patterns change over time."}] },
   { speaker:"Rhianna", window:[410,420], cue:"Closing line, then stop. Hold this slide into Q&A. Number keys 1–9 jump back to any slide, fully built.",
     steps:[{label:"Thank you and references"}],
-    scripts:[{who:"Rhianna / All", text:"Thank you for your time and attention. We would also like to acknowledge the references and sources that supported our study. We are now ready for your questions."}] }
+    scripts:[{"who": "Rhianna / All", "text": "Thank you for your time and attention. We would also like to acknowledge the references and sources that supported our study. We are now ready for your questions."}] }
 ];
 
 const deck = document.getElementById("deck");
 const slides = Array.from(deck.querySelectorAll(".slide"));
 const N = slides.length;
-const state = { i:0, step:0, sound:false, t0:null, paused:0, pausedAt:null };
+const state = { i:0, step:0, t0:null, paused:0, pausedAt:null };
 
 /* ---------- chrome for light slides ---------- */
 const sealHau = slides[0].querySelector(".seal").getAttribute("src");
@@ -797,18 +787,14 @@ function render(fromNav){
   document.getElementById("pos").textContent = (state.i + 1) + " / " + N;
   const h = "#" + (state.i + 1) + (state.step === "all" ? ".all" : state.step ? "." + state.step : "");
   if (location.hash !== h) history.replaceState(null, "", h);
+  document.querySelectorAll(".progress-segment").forEach((p,j)=>{p.classList.toggle("done",j<state.i);p.classList.toggle("current",j===state.i);});
   updatePresenter();
 }
 function go(i, step){
   const prevI = state.i, prevStep = state.step;
   state.i = Math.max(0, Math.min(N - 1, i));
   state.step = step;
-  if (state.t0 === null && (state.i > 0 || (state.step !== 0 && state.step !== "all"))) startTimer();
-  // optional tones
-  if (state.sound){
-    if (state.i === 0 && prevI === 0 && prevStep === 0 && state.step === 1) tone(0);
-    if (state.i === N - 1 && prevI !== N - 1) tone(1);
-  }
+  if (state.t0 === null && step !== "all" && (state.i > 0 || state.step > 0)) startTimer();
   render(true);
 }
 function next(){
@@ -836,29 +822,6 @@ function toggleTimer(){
 }
 function resetTimer(){ state.t0 = null; state.paused = 0; state.pausedAt = null; updatePresenter(); }
 const mmss = s => { s = Math.round(s); const sign = s < 0 ? "-" : ""; s = Math.abs(s); return sign + Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
-
-/* ---------- sound (optional, off by default) ---------- */
-let actx = null;
-function tone(kind){
-  try{
-    actx = actx || new (window.AudioContext || window.webkitAudioContext)();
-    const t = actx.currentTime;
-    const freqs = kind === 0 ? [392, 587.33] : [587.33, 392];
-    freqs.forEach((f, k) => {
-      const o = actx.createOscillator(), g = actx.createGain();
-      o.type = "sine"; o.frequency.value = f;
-      g.gain.setValueAtTime(0.0001, t + k * 0.18);
-      g.gain.exponentialRampToValueAtTime(0.06, t + k * 0.18 + 0.04);
-      g.gain.exponentialRampToValueAtTime(0.0001, t + k * 0.18 + 1.4);
-      o.connect(g).connect(actx.destination); o.start(t + k * 0.18); o.stop(t + k * 0.18 + 1.5);
-    });
-  }catch(e){}
-}
-function toggleSound(){
-  state.sound = !state.sound;
-  document.getElementById("bSound").textContent = state.sound ? "Sound on" : "Sound off";
-  toast(state.sound ? "Opening and closing tones on" : "Sound off");
-}
 
 /* ---------- UI ---------- */
 const controls = document.getElementById("controls");
@@ -888,7 +851,7 @@ function toggleOverlay(ov){
   closeOverlays();
   if (open){ if (ov === gridOv) buildGrid(); ov.classList.add("show"); ov.setAttribute("aria-hidden", "false"); const f = ov.querySelector("button"); if (f) f.focus(); }
 }
-function closeOverlays(){ [gridOv, helpOv].forEach(o => { o.classList.remove("show"); o.setAttribute("aria-hidden", "true"); }); }
+function closeOverlays(){ [gridOv, helpOv].forEach(o => { o.classList.remove("show"); o.setAttribute("aria-hidden", "true"); }); closeExtra(); }
 [gridOv, helpOv].forEach(o => o.addEventListener("click", closeOverlays));
 
 document.getElementById("bPrev").addEventListener("click", e => { e.stopPropagation(); prev(); });
@@ -896,26 +859,29 @@ document.getElementById("bNext").addEventListener("click", e => { e.stopPropagat
 document.getElementById("bGrid").addEventListener("click", e => { e.stopPropagation(); toggleOverlay(gridOv); });
 document.getElementById("bHelp").addEventListener("click", e => { e.stopPropagation(); toggleOverlay(helpOv); });
 document.getElementById("bFull").addEventListener("click", e => { e.stopPropagation(); fullscreen(); });
-document.getElementById("bSound").addEventListener("click", e => { e.stopPropagation(); toggleSound(); });
 document.getElementById("bPres").addEventListener("click", e => { e.stopPropagation(); openPresenter(); });
 controls.addEventListener("click", e => e.stopPropagation());
-deck.addEventListener("click", () => { if (!gridOv.classList.contains("show") && !helpOv.classList.contains("show")) next(); });
+deck.addEventListener("click", e => { if (e.target.closest("button,a")) return; if (!gridOv.classList.contains("show") && !helpOv.classList.contains("show")) next(); });
 
 function onKey(e){
   if (e.ctrlKey || e.metaKey || e.altKey) return;
   const k = e.key;
   const overlayOpen = gridOv.classList.contains("show") || helpOv.classList.contains("show");
   if (k === "Escape"){ closeOverlays(); return; }
+  if (!referenceOv.hidden || !evidenceOv.hidden) return;
+  if (e.target.closest && e.target.closest("button,a,input,textarea,select") && ["Enter"," "].includes(k)) return;
   if (overlayOpen && (k === "Enter" || k === " ")) return;
   if (["ArrowRight","ArrowDown","PageDown"," ","Enter"].includes(k)){ e.preventDefault(); closeOverlays(); next(); }
   else if (["ArrowLeft","ArrowUp","PageUp","Backspace"].includes(k)){ e.preventDefault(); closeOverlays(); prev(); }
   else if (k === "Home"){ e.preventDefault(); go(0, 0); }
   else if (k === "End"){ e.preventDefault(); jump(N - 1); }
   else if (/^[1-9]$/.test(k) && Number(k) <= N){ jump(Number(k) - 1); }
+  else if (k === "r" || k === "R"){ go(state.i, 0); }
+  else if (k === "e" || k === "E"){ openExtra(evidenceOv); }
+  else if (k === "v" || k === "V"){ openExtra(referenceOv); }
   else if (k === "f" || k === "F"){ fullscreen(); }
   else if (k === "g" || k === "G"){ toggleOverlay(gridOv); }
   else if (k === "p" || k === "P"){ openPresenter(); }
-  else if (k === "m" || k === "M"){ toggleSound(); }
   else if (k === "?" || k === "h" || k === "H"){ toggleOverlay(helpOv); }
   else if (k === "t" || k === "T"){ toggleTimer(); updatePresenter(); }
 }
@@ -964,7 +930,7 @@ function openPresenter(){
     '<div class="col"><div class="box"><h1>Elapsed</h1><div class="timer" id="pTime">0:00</div><div class="pace" id="pPace"></div>' +
     '<div class="btns"><button id="pToggle">Start / pause</button><button id="pReset">Reset</button></div></div>' +
     '<div class="box"><h1>Next</h1><div class="next" id="pNext"></div><div class="btns"><button id="pPrev">‹ Back</button><button id="pFwd">Next ›</button></div></div>' +
-    '<div class="box"><h1>Keys</h1><div class="kbd">→ / Space next · ← back · 1–9 jump (fully built) · T start/pause timer · G slide picker in main window · F full screen in main window.<br>The timer starts on the first click after the hook. Total talk: 7:00, then 13:00 Q&amp;A.</div></div></div>' +
+    '<div class="box"><h1>Keys</h1><div class="kbd">→ / Space next · ← back · 1–9 jump (fully built) · T start/pause timer · G slide picker in main window · F full screen in main window.<br>The timer starts on the first forward action. Total talk: 7:00, then 13:00 Q&amp;A.</div></div></div>' +
     '</body></html>');
   pw.document.close();
   pw.document.addEventListener("keydown", onKey);
@@ -1016,6 +982,43 @@ function tick(){
   else { p.className = "pace ok"; p.textContent = "On pace · " + mmss(Math.max(0, win[1] - t)) + " left in this part"; }
 }
 setInterval(tick, 250);
+const referenceOv = document.getElementById("referenceOv"), evidenceOv = document.getElementById("evidenceOv");
+let modalReturn = null;
+function closeExtra(){
+  const wasOpen = !referenceOv.hidden || !evidenceOv.hidden;
+  referenceOv.hidden = evidenceOv.hidden = true;
+  if (wasOpen && modalReturn && modalReturn.isConnected) modalReturn.focus();
+}
+function openExtra(el){ closeOverlays(); modalReturn=document.activeElement; el.hidden=false; el.querySelector("button").focus(); }
+[referenceOv,evidenceOv].forEach(el=>{
+  el.addEventListener("click",e=>{ if(e.target===el || e.target.closest("[data-close]")) closeExtra(); });
+  el.addEventListener("keydown",e=>{
+    if(e.key!=="Tab") return;
+    const fs=Array.from(el.querySelectorAll("button,a[href]")).filter(x=>!x.hidden), first=fs[0], last=fs[fs.length-1];
+    if(e.shiftKey && document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey && document.activeElement===last){e.preventDefault();first.focus();}
+  });
+});
+document.getElementById("openReferences").addEventListener("click",e=>{e.stopPropagation();openExtra(referenceOv);});
+document.getElementById("bEvidence").addEventListener("click",()=>openExtra(evidenceOv));
+document.getElementById("bReplay").addEventListener("click",()=>go(state.i,0));
+const motionButton=document.getElementById("bMotion");
+const prefersMotion=matchMedia("(prefers-reduced-motion: reduce)");
+function setMotion(reduced){document.documentElement.classList.toggle("motion-off",reduced);motionButton.textContent=reduced?"Motion off":"Motion on";motionButton.setAttribute("aria-pressed",String(!reduced));}
+setMotion(prefersMotion.matches);
+motionButton.addEventListener("click",()=>setMotion(!document.documentElement.classList.contains("motion-off")));
+prefersMotion.addEventListener("change",e=>setMotion(e.matches));
+document.addEventListener("focusin",showControls);
+document.addEventListener("pointerdown",e=>{if(e.pointerType==="touch")showControls();});
+let touchStart=null;
+deck.addEventListener("touchstart",e=>{touchStart=[e.touches[0].clientX,e.touches[0].clientY];},{passive:true});
+deck.addEventListener("touchend",e=>{if(!touchStart)return;const dx=e.changedTouches[0].clientX-touchStart[0],dy=e.changedTouches[0].clientY-touchStart[1];touchStart=null;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)){dx<0?next():prev();}},{passive:true});
+window.addEventListener("hashchange",()=>{
+  const m=location.hash.match(/^#(\d+)(?:\.(\w+))?$/);if(!m)return;
+  const i=Math.min(N,Math.max(1,Number(m[1])))-1;
+  const st=m[2]==="all"?"all":Math.min(stepCount(i)-1,Math.max(0,Number(m[2])||0));
+  state.i=i;state.step=st;render();
+});
 
 /* ---------- print: show every scene fully built ---------- */
 window.addEventListener("beforeprint", () => slides.forEach(s => applyStep(s, "all")));

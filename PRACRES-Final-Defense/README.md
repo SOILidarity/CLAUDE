@@ -14,7 +14,9 @@ Open `Susulung-king-Pyalung-Final-Defense.html` in Chrome or Edge. It is one sel
 | `P` | Presenter view: scripts, cues, word counts, pace timer |
 | `F` | Full screen |
 | `G` | Slide picker |
-| `M` | Optional opening and closing tone (off by default) |
+| `R` | Replay the current slide from its first step |
+| `E` | Evidence and scope panel (optional, for Q&A) |
+| `V` | Full reference list inside the file |
 | `T` | Start or pause the timer |
 
 Nothing advances on its own. Presenter view opens a second window, so allow pop-ups for the file. Drag it to the laptop screen and put the main window on the projector.
@@ -29,5 +31,9 @@ Edit `deck.src.html`, then run `python3 build.py` to rebuild the single file. Sc
 
 - The guidelines mention PowerPoint files; confirm with the adviser that an HTML deck is accepted. The printed PDF is a fallback.
 - The QR code is the one from the proposal deck. It opens `https://q.me-qr.com/qqtihfix`; confirm it lands on references only, not the shared research folder.
-- Scripts flagged in presenter view: Leon's part is a draft (his section was empty), Matthew's is 86 words against a 75 limit, Michan's names factors that are no longer the final SSOP 2 themes, Rinoa's said "Pampanga" (now "Luzon"), and Wohan's quote now includes "simply" as in the transcript.
+- Presenter view flags every script that differs from the script doc: Leon's was drafted (his section was empty), Matthew's was shortened to fit 75 words, Michan's was rewritten to match the final SSOP 2 themes, Chase's no longer says "verified", Rinoa's says "Luzon", and Wohan's quote includes "simply".
 - Test on the classroom projector: contrast, text size, and the clicker.
+
+## Revised LAS files
+
+`LAS-revised/` holds the edited `LAS Findings (filled).docx` and `LAS Discussion (filled).docx`. Upload each to Drive with Manage versions > Upload new version so the links and Drive comments stay.
