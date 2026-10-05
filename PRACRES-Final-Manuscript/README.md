@@ -6,10 +6,10 @@ The full research paper (Chapters 1 to 4, references, and Appendices A to D), bu
 
 | File | Use |
 |---|---|
-| `Susulung-king-Pyalung-Final-Manuscript.docx` | The manuscript to edit and submit (123 pages). |
+| `Susulung-king-Pyalung-Final-Manuscript.docx` | The manuscript to edit and submit (119 pages). |
 | `Susulung-king-Pyalung-Final-Manuscript-preview.pdf` | How the file looks when rendered, for checking on a phone. Word may break a few pages differently. |
 
-The `.docx` has 72 margin comments by "Claude". Each explains a change, and comments marked **DECISION NEEDED** or "check" flag what the group still has to confirm. Remove them all before submitting: in Word, **Review > Delete > Delete All Comments in Document**.
+The `.docx` has 74 margin comments by "Claude". Each explains a change, and comments marked **DECISION NEEDED** or "check" flag what the group still has to confirm. Remove them all before submitting: in Word, **Review > Delete > Delete All Comments in Document**.
 
 ## Contents
 
