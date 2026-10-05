@@ -34,6 +34,6 @@ Edit `deck.src.html`, then run `python3 build.py` to rebuild the single file. Sc
 - Presenter view flags every script that differs from the script doc: Leon's was drafted (his section was empty), Matthew's was shortened to fit 75 words, Michan's was rewritten to match the final SSOP 2 themes, Chase's no longer says "verified", Rinoa's says "Luzon", and Wohan's quote includes "simply".
 - Test on the classroom projector: contrast, text size, and the clicker.
 
-## Revised LAS files
+## LAS files
 
-`LAS-revised/` holds the edited `LAS Findings (filled).docx` and `LAS Discussion (filled).docx`. Upload each to Drive with Manage versions > Upload new version so the links and Drive comments stay.
+The final LAS are the Google Docs "LAS Findings (final)" and "LAS Discussion (final)" in the DEADLINES folder on Drive. They cover seven psychologists (Q-CLZ-01 is Interviewee 7) and 203 extracts. The `.docx` files in `LAS-revised/` are earlier six-participant drafts, kept for reference only; do not upload them.
