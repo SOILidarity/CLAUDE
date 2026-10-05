@@ -31,7 +31,7 @@ Edit `deck.src.html`, then run `python3 build.py` to rebuild the single file. Sc
 
 - The guidelines mention PowerPoint files; confirm with the adviser that an HTML deck is accepted. The printed PDF is a fallback.
 - The QR code is the one from the proposal deck. It opens `https://q.me-qr.com/qqtihfix`; confirm it lands on references only, not the shared research folder.
-- Presenter view flags every script that differs from the script doc: Leon's was drafted (his section was empty), Matthew's was shortened to fit 75 words, Michan's was rewritten to match the final SSOP 2 themes, Chase's no longer says "verified", Rinoa's says "Luzon", and Wohan's quote includes "simply".
+- Presenter view uses the scripts as suggested in the script doc on Oct 5 (seven psychologists, 203 extracts, every script within its word limit). If a presenter rejects or rewrites a suggestion, update the matching `NOTES` entry.
 - Test on the classroom projector: contrast, text size, and the clicker.
 
 ## LAS files
