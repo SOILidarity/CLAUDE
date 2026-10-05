@@ -136,7 +136,7 @@ svg [data-t][data-a="draw"].on{stroke-dashoffset:0}
 .bridge .seven i{display:block;width:74px;height:84px;opacity:0;transform:translateY(18px) scale(.9);transition:opacity .45s ease calc(var(--k) * 140ms),transform .45s var(--ease) calc(var(--k) * 140ms)}
 .bridge .seven svg{width:100%;height:100%;fill:var(--pink)}
 .bridge.show .seven i{opacity:1;transform:none}
-.bridge p{font-size:58px;font-weight:600;color:#fff;opacity:0;transform:translateY(12px);transition:opacity .6s ease 1s,transform .6s ease 1s}
+.bridge p{max-width:1300px;text-align:center;font-size:52px;line-height:1.3;font-weight:500;color:#F7E6EE;opacity:0;transform:translateY(12px);transition:opacity .8s ease .2s,transform .8s ease .2s}
 .bridge.show p{opacity:1;transform:none}
 .ttl .brand{left:110px;top:84px}.ttl .brand-text{color:#fff}
 .ttl .eyebrow{position:absolute;left:110px;top:228px;font-size:25px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--pink)}
@@ -418,8 +418,7 @@ svg [data-t][data-a="draw"].on{stroke-dashoffset:0}
     <p class="en" id="cEn">Is it just how many hours they play, or how uneasy they feel each day?</p>
   </div>
   <div class="layer bridge" id="bridge" aria-hidden="true">
-    <div class="seven"><i style="--k:0"><svg viewBox="0 0 64 72" aria-hidden="true"><circle cx="32" cy="19" r="13"/><path d="M8 70c0-15 10.7-25 24-25s24 10 24 25z"/></svg></i><i style="--k:1"><svg viewBox="0 0 64 72" aria-hidden="true"><circle cx="32" cy="19" r="13"/><path d="M8 70c0-15 10.7-25 24-25s24 10 24 25z"/></svg></i><i style="--k:2"><svg viewBox="0 0 64 72" aria-hidden="true"><circle cx="32" cy="19" r="13"/><path d="M8 70c0-15 10.7-25 24-25s24 10 24 25z"/></svg></i><i style="--k:3"><svg viewBox="0 0 64 72" aria-hidden="true"><circle cx="32" cy="19" r="13"/><path d="M8 70c0-15 10.7-25 24-25s24 10 24 25z"/></svg></i><i style="--k:4"><svg viewBox="0 0 64 72" aria-hidden="true"><circle cx="32" cy="19" r="13"/><path d="M8 70c0-15 10.7-25 24-25s24 10 24 25z"/></svg></i><i style="--k:5"><svg viewBox="0 0 64 72" aria-hidden="true"><circle cx="32" cy="19" r="13"/><path d="M8 70c0-15 10.7-25 24-25s24 10 24 25z"/></svg></i><i style="--k:6"><svg viewBox="0 0 64 72" aria-hidden="true"><circle cx="32" cy="19" r="13"/><path d="M8 70c0-15 10.7-25 24-25s24 10 24 25z"/></svg></i></div>
-    <p>We asked seven licensed psychologists in Luzon.</p>
+    <p>We brought this question to psychologists who see it in practice.</p>
   </div>
   <div class="layer ttl" id="ttl">
     <div class="brand"><img class="seal" src="{{asset:seal-hau.png}}" alt="Holy Angel University seal"><img class="seal" src="{{asset:seal-bed.png}}" alt="HAU Basic Education seal"><div class="brand-text">Holy Angel University<br>12 - Aaron</div></div>
@@ -609,12 +608,11 @@ svg [data-t][data-a="draw"].on{stroke-dashoffset:0}
 <script>
 (function(){
 const NOTES = [
-  { speaker:"All", window:[0,20], cue:"Operator: click on the MAIN screen (not the presenter window) so the browser allows sound. Click 1 starts the game sounds (Welcome, Double Kill, Triple Kill, Maniac, about 8 s) while the gamer plays. The mother walks in on Maniac. Click 2 the instant she grabs the phone: Defeat. The narrator steps forward and asks the question as the words appear; everyone asks the English line to the panel. Click 3 as the narrator says 'We asked seven licensed psychologists in Luzon': seven figures appear, then the title arrives by itself with quiet music. Aim for 20 s in total.",
-    steps:[{label:"Lobby (before the timer starts)"},{label:"Match: game sounds play"},{label:"Phone grabbed: Defeat, then the question"},{label:"We asked seven psychologists, then the title"}],
+  { speaker:"All", window:[0,20], cue:"Operator: click on the MAIN screen (not the presenter window) so the browser allows sound. Click 1 starts the game sounds (Welcome, Double Kill, Triple Kill, Maniac, about 8 s) while the gamer plays. The mother walks in on Maniac. Click 2 the instant she grabs the phone: Defeat. The narrator steps forward and asks the question as the words appear; everyone asks the English line to the panel. Click 3 right after: a silent caption appears (nobody reads it aloud; hold still), then the title arrives by itself with quiet music. Aim for 20 s in total.",
+    steps:[{label:"Lobby (before the timer starts)"},{label:"Match: game sounds play"},{label:"Phone grabbed: Defeat, then the question"},{label:"Silent caption, then the title"}],
     scripts:[{who:"Mother", text:"Ilang oras ka na diyan?! Alas-dos na!"},
              {who:"Narrator, to the panel", text:"Is it really about the clock? Ilang oras lang ba? O naiilang ba ang bata sa kanyang mundo, kaya sa laro nagtatago?"},
-             {who:"All, to the panel", text:"Is it just how many hours they play, or how uneasy they feel each day?"},
-             {who:"Narrator (click 3)", text:"We asked seven licensed psychologists in Luzon."}] },
+             {who:"All, to the panel", text:"Is it just how many hours they play, or how uneasy they feel each day?"}] },
   { speaker:"Rinoa", window:[20,60], cue:"One click brings the slide; everything builds by itself within 2 seconds. No more clicks until Chase.",
     steps:[{label:"Purpose and the three SSOPs"}],
     scripts:[{who:"Rinoa", limit:65, text:"I am Canlas, Rinoa Heart, and I will present the purpose and research questions. Our study aims to describe the lived professional experiences of psychologists in Luzon regarding adolescent digital well-being in gaming environments. Specifically, we ask how they encounter and interpret it, what factors shape it, and how they respond in practice through the benefits and concerns they identify, their challenges, and their strategies."}] },

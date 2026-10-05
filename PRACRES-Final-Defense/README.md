@@ -32,7 +32,7 @@ The deck opens on a lobby screen. The operator clicks the **main** screen (not t
 
 1. **Click 1:** game sounds play over about 8 s (Welcome to Mobile Legends, Double Kill, Triple Kill, Maniac) while a clock on the phone screen races from 10:47 PM to 2:16 AM. The gamer plays; the mother walks in on "Maniac".
 2. **Click 2, the instant she grabs the phone:** "Defeat". Mother: *"Ilang oras ka na diyan?! Alas-dos na!"* The narrator steps forward as the question appears word by word: *"Is it really about the clock? Ilang oras lang ba? O naiilang ba ang bata sa kanyang mundo, kaya sa laro nagtatago?"* Everyone, to the panel: *"Is it just how many hours they play, or how uneasy they feel each day?"*
-3. **Click 3, as the narrator says it:** *"We asked seven licensed psychologists in Luzon."* Seven figures appear, then the title arrives by itself and quiet background music starts.
+3. **Click 3, right after:** a silent caption appears, *"We brought this question to psychologists who see it in practice."* Nobody reads it aloud; the group holds still. The title then arrives by itself and quiet background music starts.
 
 The music fades out automatically on slide 9 and stays off for Q&A, including any number-key jumps.
 
